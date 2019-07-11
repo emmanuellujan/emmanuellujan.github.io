@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>E. Luján, Ph.D.</title>
-    <link>http://emmanuellujan.github.io/</link>
+    <link>https://emmanuellujan.github.io/</link>
     <description>Recent content on E. Luján, Ph.D.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 08 Jul 2019 16:56:09 -0300</lastBuildDate>
     
-	<atom:link href="http://emmanuellujan.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://emmanuellujan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>5G Narrowband IoT Modeling</title>
-      <link>http://emmanuellujan.github.io/nbiot/</link>
+      <link>https://emmanuellujan.github.io/nbiot/</link>
       <pubDate>Mon, 08 Jul 2019 16:56:09 -0300</pubDate>
       
-      <guid>http://emmanuellujan.github.io/nbiot/</guid>
+      <guid>https://emmanuellujan.github.io/nbiot/</guid>
       <description>One of the IoT challenges is providing communication support to an increasing number of sensors. In recent years, a narrowband radio technology has emerged to address this situation: Narrowband Internet of Things (NB-IoT), which is an integral part of 5G. Despite of the efforts, massive connectivity become particularly demanding in extreme coverage scenarios such as underground or deep inside buildings sites. Here we propose a novel strategy for this coverage contexts focused on optimizing NB-IoT shared channels through the adaptation of the link parameters: modulation and coding scheme, as well as the number of repetitions.</description>
     </item>
     
     <item>
       <title>Pulsed Electric Field Treatment Modeling</title>
-      <link>http://emmanuellujan.github.io/pulsed-electric-field-treatments/</link>
+      <link>https://emmanuellujan.github.io/pulsed-electric-field-treatments/</link>
       <pubDate>Mon, 08 Jul 2019 16:55:56 -0300</pubDate>
       
-      <guid>http://emmanuellujan.github.io/pulsed-electric-field-treatments/</guid>
+      <guid>https://emmanuellujan.github.io/pulsed-electric-field-treatments/</guid>
       <description>In this line of work, computational/mathematical models are used for studying pulsed electric field (PEF) treatments applied to solid tumors, e.g. electrolytic ablation, irreversible electroporation, electrochemical treatment and gene electrotransfer. We seek optimal combination of electrode geometries, field intensity, pulse length, heat distribution and conductivity to induce neoplastic cells death of ​​primary tumor preserving most of healthy tissue. These kind of therapies present high efficacy and low side effects, they could represent an alternative to traditional methods such surgery, radiotherapy or chemotherapy.</description>
     </item>
     
     <item>
       <title>Tumor Growth Modeling</title>
-      <link>http://emmanuellujan.github.io/tumor-growth/</link>
+      <link>https://emmanuellujan.github.io/tumor-growth/</link>
       <pubDate>Mon, 08 Jul 2019 16:47:55 -0300</pubDate>
       
-      <guid>http://emmanuellujan.github.io/tumor-growth/</guid>
+      <guid>https://emmanuellujan.github.io/tumor-growth/</guid>
       <description>Computational oncology, which encompasses any form of computer-based modeling related to tumor biology and cancer therapy, have become target of numerous studies. In particular, straightforward mathematical models based on reaction-diffusion equations describing tumor proliferation and invasion into peripheral host tissue have proved to be of clinical relevance. In this context, we described the micro-environmental influence on micro-tumor infiltration patterns through in-silico/in-vitro experimentation. Particularly, in our last publication was presented the latest version of the software utilized for, but not limited to, those studies: LibreGrowth, a libre tumor growth code able to simulate the core growth and peripheral tumor cell infiltration, considering a benign and a malignant stages.</description>
     </item>
     
