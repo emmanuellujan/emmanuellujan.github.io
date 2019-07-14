@@ -3426,14 +3426,14 @@
 	}
 
 		#banner:after {
-			-moz-transition: opacity 2.5s ease;
-			-webkit-transition: opacity 2.5s ease;
-			-ms-transition: opacity 2.5s ease;
-			transition: opacity 2.5s ease;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
+			-moz-transition: opacity 0.9s ease;
+			-webkit-transition: opacity 0.9s ease;
+			-ms-transition: opacity 0.9s ease;
+			transition: opacity 0.9s ease;
+			-moz-transition-delay: 0.0s;
+			-webkit-transition-delay: 0.0s;
+			-ms-transition-delay: 0.0s;
+			transition-delay: 0.0s;
 			-moz-pointer-events: none;
 			-webkit-pointer-events: none;
 			-ms-pointer-events: none;
@@ -3443,7 +3443,7 @@
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.55;
+			opacity: 0.45;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -3455,10 +3455,10 @@
 		}
 
 		#banner > .inner {
-			-moz-transition: opacity 1.5s ease, -moz-transform 0.5s ease-out, -moz-filter 0.5s ease, -webkit-filter 0.5s ease;
-			-webkit-transition: opacity 1.5s ease, -webkit-transform 0.5s ease-out, -webkit-filter 0.5s ease, -webkit-filter 0.5s ease;
-			-ms-transition: opacity 1.5s ease, -ms-transform 0.5s ease-out, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
-			transition: opacity 1.5s ease, transform 0.5s ease-out, filter 0.5s ease, -webkit-filter 0.5s ease;
+			-moz-transition: opacity 0.0s ease, -moz-transform 0.0s ease-out, -moz-filter 0.0s ease, -webkit-filter 0.0s ease;
+			-webkit-transition: opacity 0.0s ease, -webkit-transform 0.0s ease-out, -webkit-filter 0.0s ease, -webkit-filter 0.0s ease;
+			-ms-transition: opacity 0s ease, -ms-transform 0.0s ease-out, -ms-filter 0.0s ease, -webkit-filter 0.0s ease;
+			transition: opacity 0.0s ease, transform 0.0s ease-out, filter 0.0s ease, -webkit-filter 0.0s ease;
 			padding: 0 !important;
 			position: relative;
 			z-index: 2;
@@ -3772,10 +3772,10 @@
 /* Wrapper */
 
 	#wrapper {
-		-moz-transition: -moz-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
-		-webkit-transition: -webkit-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
-		-ms-transition: -ms-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
-		transition: filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
+		-moz-transition: -moz-filter 0.0s ease, -webkit-filter 0.0s ease, opacity 0.0s ease-out;
+		-webkit-transition: -webkit-filter 0.0s ease, -webkit-filter 0.0s ease, opacity 0.0s ease-out;
+		-ms-transition: -ms-filter 0.0s ease, -webkit-filter 0.0s ease, opacity 0.0s ease-out;
+		transition: filter 0.0s ease, -webkit-filter 0.0s ease, opacity 0.0s ease-out;
 		padding-top: 3.25em;
 	}
 
