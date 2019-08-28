@@ -21,12 +21,12 @@
     </item>
     
     <item>
-      <title>Pulsed Electric Field Treatment Modeling</title>
-      <link>/pulsed-electric-field-treatments/</link>
+      <title>Electroporation Treatment Modeling</title>
+      <link>/electroporation-treatments/</link>
       <pubDate>Mon, 08 Jul 2019 16:55:56 -0300</pubDate>
       
-      <guid>/pulsed-electric-field-treatments/</guid>
-      <description>In this line of work, computational/mathematical models are used for studying pulsed electric field (PEF) treatments applied to solid tumors, e.g. electrolytic ablation, irreversible electroporation, electrochemical treatment and gene electrotransfer. We seek optimal combination of electrode geometries, field intensity, pulse length, heat distribution and conductivity to induce neoplastic cells death of ​​primary tumor preserving most of healthy tissue. These kind of therapies present high efficacy and low side effects, they could represent an alternative to traditional methods such surgery, radiotherapy or chemotherapy.</description>
+      <guid>/electroporation-treatments/</guid>
+      <description>In this line of work, computational/mathematical models are used for studying electroporation (EP) based treatments applied to solid tumors, e.g. irreversible electroporation (IRE), electrochemical treatment (ECT), and gene electrotransfer (GET). We seek optimal combination of electrode geometries, field intensity, pulse length, heat distribution and conductivity to induce neoplastic cells death of ​​primary tumor preserving most of healthy tissue. These kind of therapies present high efficacy and low side effects, they could represent an alternative to traditional methods such surgery, radiotherapy or chemotherapy.</description>
     </item>
     
     <item>
