@@ -226,6 +226,7 @@ ul {
 .header nav ul,
 .header nav li {
   margin: 0;
+  text-align: justify;
 }
 
 .header nav ul.flat {
@@ -239,6 +240,7 @@ ul {
   margin-right: 10px;
   margin-top: 10px;
   text-transform: capitalize;
+  text-align: justify;
 }
 
 .header .site-affilation {
@@ -341,6 +343,7 @@ ul {
 
 .project_description {
  margin: .5em .9em 0em;
+ text-align: justify;
 }
 
 .section .section-header {
