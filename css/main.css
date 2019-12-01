@@ -76,6 +76,7 @@ blockquote cite {
 }
 span {
     display: block;
+    text-align: justify;
 }
 
 a,
@@ -314,6 +315,7 @@ ul {
   font-size: 15px;
   margin-left: .9em;
   margin-top: .1em;
+  text-align: justify;
 }
 
 .year {
@@ -327,6 +329,7 @@ ul {
 
 .publications {
   margin-left: -.5em;
+  text-align: justify;
 }
 
 .code_blog {
@@ -357,6 +360,7 @@ ul {
 
 .recent-posts .posts .introduction {
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 .recent-posts .posts .introduction .meta,
@@ -365,24 +369,29 @@ ul {
   font-size: 0.725rem;
   color: #999;
   margin-bottom: 4px;
+  text-align: justify;
 }
 
 .introduction .introduction-header {
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 .introduction .introduction-header .title {
   margin: 0;
+  text-align: justify;
 }
 
 .introduction .introduction-header .meta {
   padding-left: 5px;
   margin-top: 10px;
+  text-align: justify;
 }
 
 .list .posts .introduction .meta {
   margin-bottom: 0;
   margin-left: 5px;
+  text-align: justify;
 }
 
 .footer {
