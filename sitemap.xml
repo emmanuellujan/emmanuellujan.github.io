@@ -3,33 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/nbiot/</loc>
+    <loc>https://example.edu/nbiot/</loc>
     <lastmod>2019-07-08T16:56:09-03:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://example.edu/</loc>
     <lastmod>2019-07-08T16:56:09-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/electroporation-treatments/</loc>
+    <loc>https://example.edu/electroporation-treatments/</loc>
     <lastmod>2019-07-08T16:55:56-03:00</lastmod>
   </url>
   
   <url>
-    <loc>/tumor-growth/</loc>
+    <loc>https://example.edu/tumor-growth/</loc>
     <lastmod>2019-07-08T16:47:55-03:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://example.edu/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://example.edu/tags/</loc>
     <priority>0</priority>
   </url>
   
