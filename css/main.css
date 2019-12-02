@@ -232,6 +232,7 @@ ul {
 
 .header nav ul.flat {
   padding: 0;
+  text-align: right;
 }
 
 .header nav ul.flat li {
@@ -247,6 +248,7 @@ ul {
 .header .site-affilation {
   display: flex;
   justify-content: space-between;
+/*  text-align: left;*/
 }
 
 .header .site-affilation .email {
@@ -255,6 +257,7 @@ ul {
   display: block;
   font-family: "Ubuntu Mono";
   font-weight: bolder;
+/*  text-align: left;*/
 }
 
 .header .site-affilation .position {
@@ -269,10 +272,12 @@ ul {
   margin: 0;
   padding: 0;
   border: none;
+  
 }
 
 .header .site-affilation nav ul svg {
   max-height: 15px;
+  
 }
 
 /* header for projects */
@@ -347,6 +352,7 @@ ul {
 .project_description {
  margin: .5em .9em 0em;
  text-align: justify;
+ word-wrap : break-word;
 }
 
 .section .section-header {
