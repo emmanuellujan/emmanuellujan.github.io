@@ -16,8 +16,8 @@ jobs:
       with:
         version: 1.5
     - run: julia -e '
-            using Pkg; Pkg.add(["Franklin"]);
-            run(`$(npm_cmd()) install highlight.js`);
+            using Pkg; Pkg.add(["NodeJS", "Franklin", "BibTeX"]);
+            using NodeJS; run(`$(npm_cmd()) install highlight.js`);
             using Franklin;
             Pkg.activate("."); Pkg.instantiate();
             optimize()'
