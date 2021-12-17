@@ -48,11 +48,6 @@ Computational oncology, which encompasses any form of computer-based modeling re
 
 ### Upcoming Publications
 
-* [Performance of D2D/NB-IoT Communications in Urban and Suburban Environments.]
-  ()
-   R. Sumoza, **E. Luján**, E. Mocskos.
-   Winter Simulation Conference. 2021.
-   
 * [A differentiable multi-scale software stack for the integration of large-scale materials simulations.]
   ()
   **E. Luján**, Jeremiah DeGreeff, Michael F. Herbst, Dallas Foster, William S. Moses, Valentin Churavy, Alan Edelman. 2022.
@@ -71,12 +66,10 @@ Computational oncology, which encompasses any form of computer-based modeling re
   **E. Luján**, J. A. Zuloaga Mellino, A. Otero, L. Rey Vega, C. Galarza, E. Mocskos.
   Internet of Things Journal, IEEE. 2019.
   
-  
 * [An integrated platform for smart energy management: the CC-SEM project.]
   (https://aprendeenlinea.udea.edu.co/revistas/index.php/ingenieria/article/view/336282)
   **E. Luján**, A. Otero, S. Valenzuela, E. Mocskos, L. A. Steffenel and S. Nesmachnow.
   Revista Facultad de Ingenieria, Universidad de Antioquia. 2019.
-
 
 * [Towards an optimal dose-response relationship in Gene Electrotransfer Protocols.]
   (https://www.sciencedirect.com/science/article/pii/S0013468619313544)
@@ -105,6 +98,11 @@ Computational oncology, which encompasses any form of computer-based modeling re
 
 
 ### Publications in Peer-Reviewed Conferences
+
+* [Performance of D2D/NB-IoT Communications in Urban and Suburban Environments.]
+  (https://ssl.linklings.net/conferences/wsc/wsc2021_program/views/includes/files/con236s3-file1.pdf)
+   R. Sumoza, **E. Luján**, E. Mocskos.
+   Winter Simulation Conference. 2021.
 
 * [Lite NB-IoT Simulator for Uplink Layer]
   (https://ieeexplore.ieee.org/abstract/document/8882144/)
