@@ -2,7 +2,8 @@
 @def tags = ["syntax", "code"]
 
 
-@@niceplot ![](/assets/scripts/niceplot.gif) @@
+<!--@@niceplot ![](/assets/scripts/niceplot.gif) @@-->
+**CS** ∩ **ML** ∩ **SE** ∩ **HPC**
 
 ## Projects
 
