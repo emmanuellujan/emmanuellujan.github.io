@@ -2,7 +2,7 @@
 @def tags = ["syntax", "code"]
 
 
-<!--@@niceplot ![](/assets/scripts/niceplot.gif) @@-->
+
 **CS** ∩ **ML** ∩ **SE** ∩ **HPC**
 
 ## Projects
@@ -22,7 +22,7 @@ Scientific machine learning is a burgeoning discipline which encompasses classic
 @@
 [Models and simulations in 5G Narrowband-IoT]
 (https://github.com/CSC-CONICET/Lite-NBIoT-NPUSCH-Simulator)
-One of the IoT challenges is providing communication support to an increasing number of sensors. In recent years, a narrowband radio technology has emerged to address this situation: Narrowband Internet of Things (NB-IoT), which is an integral part of 5G. Despite of the efforts, massive connectivity become particularly demanding in extreme coverage scenarios such as underground or deep inside buildings sites. Here we use novel computational models and simulations to address those issues. We expect to influence future base station software design and implementation, favoring connection support under extreme environments.
+One of the IoT challenges is providing communication support to an increasing number of sensors. In recent years, a narrowband radio technology has emerged to address this situation: Narrowband Internet of Things (NB-IoT), which is an integral part of 5G. Despite the efforts, massive connectivity becomes particularly demanding in extreme coverage scenarios such as underground or deep inside buildings sites. We use novel computational models and simulations with the aim of enhancing the future design of base station software, favoring connection support in extreme environments.
 @@
 
 @@row
@@ -31,7 +31,7 @@ One of the IoT challenges is providing communication support to an increasing nu
 @@
 [Models and simulations in Electroporation Treatments]
 (https://github.com/LSC-UBA/OpenEP)
-In this line of work, computational/mathematical models are used for studying electroporation (EP) based treatments applied to solid tumors, e.g. irreversible electroporation (IRE), electrochemotherapy (ECT), and gene electrotransfer (GET). We seek optimal combination of electrode geometries, field intensity, pulse length, heat distribution and conductivity to induce neoplastic cells death of ​​primary tumor preserving most of healthy tissue. These kind of therapies present high efficacy and low side effects, they could represent an alternative to traditional methods such surgery, radiotherapy or chemotherapy.
+Computational/mathematical models are used to study electroporation based treatments applied to solid tumors, e.g. irreversible electroporation, electrochemotherapy, and gene electrotransfer. We seek optimal combination of electrode geometries, field intensity, pulse length, heat distribution and conductivity to induce neoplastic cells death of ​​primary tumor preserving most of healthy tissue. These types of therapies present high efficacy and low side effects, they could represent an alternative to traditional methods such surgery, radiotherapy or chemotherapy.
 @@
 
 @@row
@@ -47,14 +47,7 @@ Computational oncology, which encompasses any form of computer-based modeling re
 
 ## Publications
 
-<!--### Upcoming Publications-->
-
-<!--* [A differentiable multi-scale software stack for the integration of large-scale materials simulations.]-->
-<!--  ()-->
-<!--  **E. Lujan**, Jeremiah DeGreeff, Michael F. Herbst, Dallas Foster, William S. Moses, Valentin Churavy, Alan Edelman. 2022.-->
-<!-- -->
-
-### Publications in Peer-Reviewed Journals
+### Publications in peer-reviewed journals
   
 * [OpenEP: an open-source simulator for electroporation-based tumor treatments.]
   (https://www.nature.com/articles/s41598-020-79858-y)
@@ -98,7 +91,7 @@ Computational oncology, which encompasses any form of computer-based modeling re
   Electrochimica Acta, Elsevier. 2015.
 
 
-### Publications in Peer-Reviewed Conferences
+### Publications in peer-reviewed conferences
 
 * [Performance of D2D/NB-IoT Communications in Urban and Suburban Environments.]
   (https://ieeexplore.ieee.org/document/9715330)
@@ -131,7 +124,7 @@ Computational oncology, which encompasses any form of computer-based modeling re
   (https://arxiv.org/abs/2107.09443)
   K. Zubov, Z. McCarthy, Y. Ma, F. Calisto, V. Pagliarino, S. Azeglio, L. Bottero, **E. Lujan**, V. Sulzer, A. Bharambe, N. Vinchhi, K. Balakrishnan, D. Upadhyay, C. Rackauckas.
 
-### Abstracts, Posters, and Presentations
+### Presentations, posters, and abstracts
 
 * [Automating the composition of ML interatomic potentials in Julia.]
   (https://pretalx.com/juliacon2023/talk/GGEKXE/)
