@@ -1,18 +1,19 @@
 @def title = "Emmanuel LUJAN, Ph.D. Eng."
 @def tags = ["syntax", "code"]
 
-
-
+<p style="text-align: center; color:#a00">
 **CS** ∩ **ML** ∩ **SE** ∩ **HPC**
+</p>
 
-## Projects
+
+### Projects
 
 @@row
 @@container
 @@left ![](/assets/CESMIX.jpg) @@
 @@
 [Models, simulations, scientific machine learning, and Julia programming]
-(https://julia.mit.edu/)
+(https://github.com/cesmix-mit)
 Scientific machine learning is a burgeoning discipline which encompasses classical scientific computing, typically driven by differential equation models, and novel machine learning techniques. We work on accelerating the training of physics-informed neural networks, automatically discretize partial differential equations using neural networks and long-established numerical methods, and its application in different domains such as well extraction models and molecular dynamics. These contributions are implemented in Julia, a high-level, high-performance, dynamic programming language strong in numerical analysis and computational science.
 @@
 
@@ -22,7 +23,7 @@ Scientific machine learning is a burgeoning discipline which encompasses classic
 @@
 [Models and simulations in 5G Narrowband-IoT]
 (https://github.com/CSC-CONICET/Lite-NBIoT-NPUSCH-Simulator)
-One of the IoT challenges is providing communication support to an increasing number of sensors. In recent years, a narrowband radio technology has emerged to address this situation: Narrowband Internet of Things (NB-IoT), which is an integral part of 5G. Despite the efforts, massive connectivity becomes particularly demanding in extreme coverage scenarios such as underground or deep inside buildings sites. We use novel computational models and simulations with the aim of enhancing the future design of base station software, favoring connection support in extreme environments.
+One of the IoT challenges is providing communication support to an increasing number of sensors. In recent years, a narrowband radio technology has emerged to address this situation: Narrowband Internet of Things (NB-IoT), which is an integral part of 5G. Despite the efforts, massive connectivity becomes particularly demanding in extreme coverage scenarios such as underground or deep inside buildings sites. We use novel computational models and simulations to enhance the future design of base station software, favoring connection support in extreme environments.
 @@
 
 @@row
@@ -44,10 +45,9 @@ Computational oncology, which encompasses any form of computer-based modeling re
 @@
 
 
+### Publications
 
-## Publications
-
-### Publications in peer-reviewed journals
+#### Publications in peer-reviewed journals
   
 * [OpenEP: an open-source simulator for electroporation-based tumor treatments.]
   (https://www.nature.com/articles/s41598-020-79858-y)
@@ -91,7 +91,7 @@ Computational oncology, which encompasses any form of computer-based modeling re
   Electrochimica Acta, Elsevier. 2015.
 
 
-### Publications in peer-reviewed conferences
+#### Publications in peer-reviewed conferences
 
 * [Performance of D2D/NB-IoT Communications in Urban and Suburban Environments.]
   (https://ieeexplore.ieee.org/document/9715330)
@@ -118,22 +118,22 @@ Computational oncology, which encompasses any form of computer-based modeling re
   **E. Lujan**, H. Schinca, N. Olaiz, S. Urquiza, F. Molina, P. Turjanski and G. Marshall.
   IFMBE Proceedings. Vol 53. Springer. 1st World Congress on Electroporation. Portorož. Slovenia. Young investigator competition finalist. 2015.
 
-### Pre-prints
+#### Pre-prints
 
 * [NeuralPDE: Automating Physics-Informed Neural Networks (PINNs) with Error Approximations]
   (https://arxiv.org/abs/2107.09443)
   K. Zubov, Z. McCarthy, Y. Ma, F. Calisto, V. Pagliarino, S. Azeglio, L. Bottero, **E. Lujan**, V. Sulzer, A. Bharambe, N. Vinchhi, K. Balakrishnan, D. Upadhyay, C. Rackauckas.
 
-### Presentations, posters, and abstracts
+#### Presentations, posters, and abstracts
 
 * [Automating the composition of ML interatomic potentials in Julia.]
   (https://pretalx.com/juliacon2023/talk/GGEKXE/)
-  **E. Lujan**
+  **E. Lujan**.
   JuliaCon. 2023.
 
 * [Atomistic suite for CESMIX in Julia.]
   (https://docs.google.com/presentation/d/1d4vU7Y9wf4YgLu4bjkxzJNIE40i0i7fs/edit?usp=sharing&ouid=118164340519016025759&rtpof=true&sd=true)
-  **E. Lujan**
+  **E. Lujan**.
   JuliaCon. 2022.
 
 * [Towards MDP.jl: The Julia Library of MD Potentials.]
