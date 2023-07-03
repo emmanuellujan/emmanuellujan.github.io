@@ -1,10 +1,11 @@
 @def title = "Emmanuel LUJAN, Ph.D. Eng."
 @def tags = ["syntax", "code"]
 
+@@
 <p style="text-align: center; color:#a00">
 **CS** ∩ **ML** ∩ **SE** ∩ **HPC**
 </p>
-
+@@
 
 ### Projects
 
