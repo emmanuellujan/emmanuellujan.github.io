@@ -20,8 +20,6 @@ accelerating atomistic simulations through scientific machine learning, software
 📫 [eljn@mit.edu](mailto:eljn@mit.edu)
 
 📍Boston, Massachusetts
-              
-📜 [Google Scholar](https://scholar.google.com/citations?user=V9w6CAoAAAAJ&hl=en)
 
 💼 [LinkedIn](https://www.linkedin.com/in/emmanuellujan/)
 

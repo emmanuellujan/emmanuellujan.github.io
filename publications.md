@@ -5,6 +5,8 @@ hascode = true
 tags = ["publications"]
 +++
 
+📜 [Google Scholar](https://scholar.google.com/citations?user=V9w6CAoAAAAJ&hl=en)
+
 #### Pre-prints
 
 * [NeuralPDE: Automating Physics-Informed Neural Networks (PINNs) with Error Approximations]
