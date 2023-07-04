@@ -15,8 +15,7 @@
 ================================================================== */
 
 html {
-  /*font-family: Helvetica, Arial, sans-serif;*/
-  font-family: "Ubuntu", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: var(--normal);
   color: var(--text-color);
 }
@@ -40,19 +39,8 @@ html {
 
 .franklin-content .container img {
   width: auto;
-  width: 150px;
   padding-left: 0;
   border-radius: 10px;
-}
-
-.franklin-content .niceplot{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center
-}
-
-.franklin-content .niceplot img{
-    position:relative;
 }
 
 .franklin-content .footnote {
@@ -199,7 +187,8 @@ td {
 }
 
 .franklin-content a {
-  color: #004de6;
+  /*color: #004de6;*/
+  color: #9A4A4A;
   text-decoration: none;
 }
 
@@ -253,7 +242,9 @@ td {
 ================================================================== */
 
 .franklin-content img {
-  width: 50%;
+  width: 70%;
+  text-align: center;
+  padding-left: 10%;
 }
 
 .franklin-content .img-small img {
@@ -286,6 +277,11 @@ body { counter-reset: eqnum; }
   padding-right: 5px;
 }
 
+.nonumber .katex-display::after {
+  counter-increment: nothing;
+  content: "";
+}
+
 /* ==================================================================
     CODE & HIGHLIGHT.JS
 ================================================================== */
@@ -313,15 +309,10 @@ code {
   border-radius: 10px;
 }
 
-.hljs-meta,
-.hljs-metas,
-.hljs-metap { font-weight: bold; }
+.hljs-meta { font-weight: bold;}
 
-.hljs-meta { color: rgb(25, 179, 51); }
-
-.hljs-metas { color: red; }
-
-.hljs-metap { color: rgb(51, 131, 231); }
+.hljs-meta.shell_ {color: crimson;}
+.hljs-meta.prompt_ {color: rgb(25, 179, 51);}
 
 .code-output {
   background: var(--output-background);
@@ -344,3 +335,4 @@ code {
   border-radius: 0 10px 10px 0;
   border-left: 5px solid #4c9cf1;
 }
+

@@ -1,0 +1,14 @@
+.profile_image img {
+  margin-right: 25px;
+  max-width: 40%;
+  padding: 0px;
+  border-radius: 50%;
+  float: left;
+}
+
+.project_image img {
+  margin-right: 15px;
+  max-width: 20%;
+  padding: 0px;
+  float: left;
+}
