@@ -106,18 +106,20 @@ tags = ["publications"]
   (https://wc2019.electroporation.net/event/program?organize=bySession)
   M. Marino, N. Olaiz, S. Michinski, P. Giunta, **E. Lujan**, E. Goldberg, A. Soba, C. Suárez, G. Marshall.
   3rd World Congress on Electroporation and Pulsed Electric Fields in Biology, Medicine, and Food and Environmental Technologies. 2019
- 
+
+* Invited speaker at [“Workshop Internacional: Planificación de Transporte y Ciudades Inteligentes”.]
+  (fing.edu.uy/eventos/WPTCI)
+  University of the Republic. Uruguay. 
+
 * [Mathematical model of glioma evolution and treatment by chemo and radiotherapy.]
   (http://9cab2c.fi.mdp.edu.ar)
   K. Díaz , **E. Lujan**, A. Soba , G. Marshall , C. Suárez.
   9 Argentinian Congress of Bioinformatics and Computational Biology (9CAB2C). 2018.
 
-
 * [Towards an optimal dose-response relationship in electroporation-based tumor treatments.]
   (https://wc2017.electroporation.net/event/program)
   **E. Lujan**, M. Marino, N. Olaiz, G. Marshall.
   2nd World Congress on Electroporation and Pulsed Electric Fields in Biology, Medicine and Food and Environmental Technologies. Norfolk, USA. 2017.
-
 
 * [The concept of electroporation energy in electorporation-based models.]
    (https://wc2017.electroporation.net/event/program)
@@ -144,9 +146,15 @@ tags = ["publications"]
   M. Marino, N. Olaiz, E. Signori, F. Maglietti, C. Suárez, L. Colombo, P. Turjanski, S. Michinski, **E. Lujan**, G. Marshall.
   The 14th International Conference on Progress in Vaccination Against Cancer (PICAC-14). Rome. Italy. 2015.
 
+* Invited speaker. 
+  [HPC-Day 2012 – High Performance Computing Day 41 JAIIO – Jornadas Argentinas de Informática]
+  (https://41jaiio.sadio.org.ar/hpc).
+  University of La Plata, Argentina. Title: “Feasibility study of a portable kit for Chagas-Mazza disease diagnosis and data centralization”.
+  08/30/2012. 
+
 * [Feasibility study of a portable kit for Chagas-Mazza disease diagnosis and data centralization.]
   (https://www.researchgate.net/publication/266318154_Feasibility_study_of_a_portable_kit_for_Chagas-Mazza_disease_diagnosis_and_data_centralization)
-  **E. Lujan**
+  **E. Lujan**.
   High-Performance Computing Latin America Symposium, Buenos Aires, Argentina. 2012.
 
 

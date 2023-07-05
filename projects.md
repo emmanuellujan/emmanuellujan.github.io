@@ -5,7 +5,7 @@ hascode = true
 tags = ["projects"]
 +++
 
-### Projects
+### Selected research projects
 
 @@project_image
 ![](/assets/CESMIX.jpg)
