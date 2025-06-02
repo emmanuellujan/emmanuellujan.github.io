@@ -93,6 +93,11 @@ tags = ["publications"]
 
 #### Presentations, posters, and abstracts
 
+* [Accelerating Neural Network Interatomic Potentials through Dimension Reduction Using Julia.]
+  (https://www.widscambridge.org/selected-posters-2024)
+  R. Alomairy, **E. Lujan**, S. Wyant, J. Samaroo, J. Zou, R. Meyer, A. Edelman.
+  Women in Data Science (WiDS) Cambridge. 2024.
+
 * [Automating the composition of ML interatomic potentials in Julia.]
   (https://pretalx.com/juliacon2023/talk/GGEKXE/)
   **E. Lujan**.
