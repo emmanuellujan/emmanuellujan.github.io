@@ -59,6 +59,12 @@ tags = ["publications"]
 
 #### Publications in peer-reviewed conferences
 
+* [Decision-Support and Modeling with Large Language Models for Geothermal Well Arrays.]
+  (https://pangea.stanford.edu/ERE/db/IGAstandard/record_detail.php?id=38088)
+   E. Ouko, **E. Lujan**, A. Edelman, R. Metcalfe
+   Stanford Geothermal Workshop. 2025.
+
+
 * [Performance of D2D/NB-IoT Communications in Urban and Suburban Environments.]
   (https://ieeexplore.ieee.org/document/9715330)
    R. Sumoza, **E. Lujan**, E. Mocskos.
