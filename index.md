@@ -7,15 +7,9 @@
 ![](/assets/elujan.jpg)
 @@
 
-💻 Computational Scientist.\
-Research Software Engineer. 
+💻 I'm a Research Scientist at the MIT's Computer Science & Artificial Intelligence Laboratory.
 
-🚀 Postdoctoral Associate @ [Julia Lab](https://julia.mit.edu/people/), [MIT](https://web.mit.edu/)
-
-⚛ Currently working on the [CESMIX](https://srnw.mit.cesmix.staging.ltd/) project, 
-accelerating atomistic simulations through scientific machine learning, software composability, differentiable programming, and HPC.
-
-🧐 Interests: CS ∩ ML ∩ SE ∩ HPC
+⚛ My research integrates numerical simulation, artificial intelligence, and high-performance computing, with applications in atomistic simulations, geothermal modeling, and computational linear algebra.
 
 📫 [eljn@mit.edu](mailto:eljn@mit.edu)
 
