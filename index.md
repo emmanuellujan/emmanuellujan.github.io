@@ -7,7 +7,7 @@
 ![](/assets/elujan.jpg)
 @@
 
-💻 Research Scientist at the MIT's Computer Science & Artificial Intelligence Laboratory
+💻 Research Scientist @ MIT's Computer Science & Artificial Intelligence Laboratory
 
 ⚛ Interests: AI ∩ Simulation ∩ HPC
 
