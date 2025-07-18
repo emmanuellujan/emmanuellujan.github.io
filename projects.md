@@ -11,7 +11,7 @@ tags = ["projects"]
 ![](/assets/SMARTSOLVE.jpg)
 @@
 [Using Julia & AI to build the connective tissue of linear algebra]
-(https://github.com/cesmix-mit)
+(https://github.com/cesmix-mit](https://sites.mit.edu/smartsolve/)
 The DARPA–MIT SmartSolve project seeks to advance AI‑guided algorithmic discovery and accelerate computations by generating improved strategies for algorithm and architecture selection. Our current work targets challenges in computational linear algebra, addressing the increasing complexity of choosing efficient solvers, data formats, precision settings, and hardware resources for structurally diverse matrices—an area where conventional approaches leave significant room for improvement. Our methodology involves building a comprehensive performance database through systematic benchmarking and applying automated Pareto analysis to reveal optimal trade‑offs between accuracy and speed. This database serves as the foundation for a data‑driven model that synthesizes dispatch strategies tailored for high‑performance linear algebra software.
 
 
