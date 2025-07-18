@@ -13,14 +13,11 @@
 
 📫 [eljn@mit.edu](mailto:eljn@mit.edu)
 
-📍Boston, Massachusetts
+💻 [Google Scholar](https://scholar.google.com/citations?user=V9w6CAoAAAAJ&hl=en&oi=sra)
+
+💻 [GitHub](github.com/emmanuellujan)
 
 💼 [LinkedIn](https://www.linkedin.com/in/emmanuellujan/)
-
-
-
-
-
 
 
 
