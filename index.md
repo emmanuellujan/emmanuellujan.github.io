@@ -17,12 +17,9 @@
 
 💼 [LinkedIn](https://www.linkedin.com/in/emmanuellujan/)
 
-
 ~~~
 <br>
-<br>
 ~~~
-  
 
 ## Projects
 
