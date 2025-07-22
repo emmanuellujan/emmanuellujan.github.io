@@ -75,6 +75,11 @@ Computational oncology, which encompasses any form of computer-based modeling re
    **E. Lujan** and A. Edelman
    IEEE High Performance Extreme Computing Conference. 2025. Submitted.
 
+* [Data-Driven Dynamic Algorithm Dispatch with Large Language Models.]
+  (https://ieee-hpec.org/)
+   R. Shah, **E. Lujan**, R. Alomairy, and A. Edelman.
+   IEEE High Performance Extreme Computing Conference. 2025. Submitted.
+
 * [Decision-Support and Modeling with Large Language Models for Geothermal Well Arrays.]
   (https://pangea.stanford.edu/ERE/db/IGAstandard/record_detail.php?id=38088)
    E. Ouko, **E. Lujan**, A. Edelman, R. Metcalfe
@@ -148,11 +153,6 @@ Computational oncology, which encompasses any form of computer-based modeling re
 
 
 #### Presentations, posters, and abstracts
-
-* [Data-Driven Dynamic Algorithm Dispatch with Large Language Models.]
-  (https://ieee-hpec.org/)
-   R. Shah, **E. Lujan**, R. Alomairy, and A. Edelman.
-   IEEE High Performance Extreme Computing Conference. 2025. Submitted.
 
 * [Automated Algorithm Selection Discovery via LLMs.]
   (https://pretalx.com/juliacon-2025/talk/review/FXWAYZEZ9XEPYPHL3JJNAS7NBACU3GXE)
