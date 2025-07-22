@@ -5,21 +5,34 @@ hascode = true
 tags = ["publications"]
 +++
 
-📜 [Google Scholar](https://scholar.google.com/citations?user=V9w6CAoAAAAJ&hl=en)
-
 #### Pre-prints
 
 * [NeuralPDE: Automating Physics-Informed Neural Networks (PINNs) with Error Approximations]
   (https://arxiv.org/abs/2107.09443)
   K. Zubov, Z. McCarthy, Y. Ma, F. Calisto, V. Pagliarino, S. Azeglio, L. Bottero, **E. Lujan**, V. Sulzer, A. Bharambe, N. Vinchhi, K. Balakrishnan, D. Upadhyay, C. Rackauckas.
 
-#### Publications in peer-reviewed journals
+#### Publications in peer-reviewed journals and conferences
+
+* [When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra.]
+  (https://ieee-hpec.org/)
+   **E. Lujan** and A. Edelman
+   IEEE High Performance Extreme Computing Conference. 2025. Submitted.
+
+* [Decision-Support and Modeling with Large Language Models for Geothermal Well Arrays.]
+  (https://pangea.stanford.edu/ERE/db/IGAstandard/record_detail.php?id=38088)
+   E. Ouko, **E. Lujan**, A. Edelman, R. Metcalfe
+   Stanford Geothermal Workshop. 2025.
   
 * [OpenEP: an open-source simulator for electroporation-based tumor treatments.]
   (https://www.nature.com/articles/s41598-020-79858-y)
   M. Marino, **E. Lujan**, E. Mocskos, G. Marshall.
   Scientific Reports, Nature. 2021.
   [Code](https://github.com/LSC-UBA/OpenEP)
+
+* [Performance of D2D/NB-IoT Communications in Urban and Suburban Environments.]
+  (https://ieeexplore.ieee.org/document/9715330)
+   R. Sumoza, **E. Lujan**, E. Mocskos.
+   Winter Simulation Conference. 2021.
 
 * [Extreme coverage in 5G Narrowband IoT: a LUT-based strategy to optimize shared channels.]
   (https://ieeexplore.ieee.org/document/8932462)
@@ -41,10 +54,25 @@ tags = ["publications"]
   **E. Lujan**, M. S. Rosito, A. Soba, C. Suárez.
   Computer Physics Communications Journal, Elsevier. 2019.
 
+* [Lite NB-IoT Simulator for Uplink Layer]
+  (https://ieeexplore.ieee.org/abstract/document/8882144/)
+  J. A. Zuloaga Mellino, **E. Lujan**, A. Otero, E. Mocskos, L. Rey Vega, C. Galarza.
+  XVIII Workshop on Information Processing and Control, IEEE. 2019.
+
 * [Microenvironmental influence on microtumour infiltration patterns: 3d mathematical modelling supported by in vitro studies.]
   (https://www.ncbi.nlm.nih.gov/pubmed/29741547)
   **E. Lujan**, D. Soto, M. S. Rosito, A. Soba, L. Guerra, J. C. Calvo, G. Marshall, C. Suárez.
   Integrative Biology, Royal Society of Chemistry. 2018.
+
+* [Cloud Computing for Smart Energy Management (CC-SEM project)]
+  (https://link.springer.com/chapter/10.1007/978-3-030-12804-3_10)
+  **E. Lujan**, A. Otero, S. Valenzuela, E. Mocskos, L. A. Steffenel and S. Nesmachnow.
+  Communications in Computer and Information Science, Springer. Congreso Iberoamericano de Ciudades Inteligentes (ICSC-CITIES 2018). Soria, España. 2018.
+
+* [Modelado matemático de un patrón de invasión tumoral a través de ecuaciones de reacción-difusión y fractales DLA (Diffusion Limited Aggregation).]
+  (https://cimec.org.ar/ojs/index.php/mc/article/view/5268)
+  **E. Lujan**, D. Soto, M. S. Rosito, A. Soba, L. Guerra, G. Marshall, C. Suárez.
+  Mecánica Computacional, Vol. XXXV, 2017, pp. 387–400.
 
 * [Mathematical modelling of microtumour infiltration based on in vitro experiments.]
   (https://www.ncbi.nlm.nih.gov/pubmed/27466056)
@@ -56,35 +84,6 @@ tags = ["publications"]
   **E. Lujan**, H. Schinca, N. Olaiz, S. Urquiza, F. Molina, P. Turjanski and G. Marshall.
   Electrochimica Acta, Elsevier. 2015.
 
-
-#### Publications in peer-reviewed conferences
-
-* [Decision-Support and Modeling with Large Language Models for Geothermal Well Arrays.]
-  (https://pangea.stanford.edu/ERE/db/IGAstandard/record_detail.php?id=38088)
-   E. Ouko, **E. Lujan**, A. Edelman, R. Metcalfe
-   Stanford Geothermal Workshop. 2025.
-
-
-* [Performance of D2D/NB-IoT Communications in Urban and Suburban Environments.]
-  (https://ieeexplore.ieee.org/document/9715330)
-   R. Sumoza, **E. Lujan**, E. Mocskos.
-   Winter Simulation Conference. 2021.
-
-* [Lite NB-IoT Simulator for Uplink Layer]
-  (https://ieeexplore.ieee.org/abstract/document/8882144/)
-  J. A. Zuloaga Mellino, **E. Lujan**, A. Otero, E. Mocskos, L. Rey Vega, C. Galarza.
-  XVIII Workshop on Information Processing and Control, IEEE. 2019.
-
-* [Cloud Computing for Smart Energy Management (CC-SEM project)]
-  (https://link.springer.com/chapter/10.1007/978-3-030-12804-3_10)
-  **E. Lujan**, A. Otero, S. Valenzuela, E. Mocskos, L. A. Steffenel and S. Nesmachnow.
-  Communications in Computer and Information Science, Springer. Congreso Iberoamericano de Ciudades Inteligentes (ICSC-CITIES 2018). Soria, España. 2018.
-  
-* [Modelado matemático de un patrón de invasión tumoral a través de ecuaciones de reacción-difusión y fractales DLA (Diffusion Limited Aggregation).]
-  (https://cimec.org.ar/ojs/index.php/mc/article/view/5268)
-  **E. Lujan**, D. Soto, M. S. Rosito, A. Soba, L. Guerra, G. Marshall, C. Suárez.
-  Mecánica Computacional, Vol. XXXV, 2017, pp. 387–400.
-
 * [Electrolytic ablation dose planning methodology]
   (https://link.springer.com/chapter/10.1007/978-981-287-817-5_23)
   **E. Lujan**, H. Schinca, N. Olaiz, S. Urquiza, F. Molina, P. Turjanski and G. Marshall.
@@ -92,6 +91,16 @@ tags = ["publications"]
 
 
 #### Presentations, posters, and abstracts
+
+* [Data-Driven Dynamic Algorithm Dispatch with Large Language Models.]
+  (https://ieee-hpec.org/)
+   R. Shah, **E. Lujan**, R. Alomairy, and A. Edelman.
+   IEEE High Performance Extreme Computing Conference. 2025. Submitted.
+
+* [Automated Algorithm Selection Discovery via LLMs.]
+  (https://pretalx.com/juliacon-2025/talk/review/FXWAYZEZ9XEPYPHL3JJNAS7NBACU3GXE)
+   R. Shah, **E. Lujan**, and R. Alomairy.
+   JuliaCon 2025, Lightning Talk.
 
 * [Accelerating Neural Network Interatomic Potentials through Dimension Reduction Using Julia.]
   (https://www.widscambridge.org/selected-posters-2024)
