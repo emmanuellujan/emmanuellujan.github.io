@@ -155,9 +155,9 @@ Computational oncology, which encompasses any form of computer-based modeling re
 
 #### Presentations, posters, and abstracts
 
-* [	Fast density functional theory for training machine learning interatomic potentials via large-scale atomistic sampling.]
+* [Fast density functional theory for training machine learning interatomic potentials via large-scale atomistic sampling.]
   (https://iaifi.org/summer-workshop)
-  **E Lujan**.
+  **E. Lujan**.
   Institute for Artificial Intelligence and Fundamental Interactions (IAIFI) Summer Workshop, Harvard University. 2025.
 
 * [Automated Algorithm Selection Discovery via LLMs.]
