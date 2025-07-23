@@ -17,3 +17,7 @@
 .franklin-content {
   text-align: justify;
 }
+
+.franklin-content .left-align {
+  text-align: left;
+}
