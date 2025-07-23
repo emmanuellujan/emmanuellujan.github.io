@@ -9,7 +9,9 @@
 
 💻 Research Scientist
 
-🏛️ MIT's Computer Science & Artificial Intelligence Laboratory
+~~~
+<p class="left-align">🏛️ MIT's Computer Science & Artificial Intelligence Laboratory</p>
+~~~
 
 ⚛ Interests: AI ∩ Simulation ∩ HPC
 
