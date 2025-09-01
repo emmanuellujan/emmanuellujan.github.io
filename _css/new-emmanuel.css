@@ -24,4 +24,14 @@
 
 .franklin-content h2 {
     margin-top: 1em;
+    color: #515151;
+}
+
+.franklin-content h1
+{
+	color: #515151;
+}
+
+body {
+    color: #515151;
 }
