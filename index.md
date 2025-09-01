@@ -12,12 +12,12 @@
 ~~~
 
 ~~~
-<p class="left-align">⚛ Research interests integrate artificial intelligence, simulation, and high-level high‑performance programming—with applications in computational linear algebra and material science.
+<p class="left-align">⚛ Research interests integrate artificial intelligence, simulation, and high-level high‑performance programming—with applications in computational linear algebra and materials science.
 </p>
 ~~~
 
 ~~~
-<p class="left-align">🖂 eljn@mit.edu
+<p class="left-align">✉ eljn@mit.edu
 </p>
 ~~~
 
