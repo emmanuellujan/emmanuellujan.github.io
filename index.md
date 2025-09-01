@@ -7,17 +7,14 @@
 ![](/assets/elujan.jpg)
 @@
 
-💻 Research Scientist
+🏛️ Research Scientist at MIT’s Computer Science and Artificial Intelligence Laboratory and member of the Julia Lab. 
 
-~~~
-<p class="left-align">🏛️ MIT's Computer Science & Artificial Intelligence Laboratory</p>
-~~~
-
-⚛ Interests: AI ∩ Simulation ∩ HPC
+⚛ Research interest integrate artificial intelligence, simulation, and high-level high‑performance programming—with applications in computational linear algebra and material science.
 
 📨 eljn@mit.edu
 
 ~~~
+<br>
 <br>
 ~~~
 
