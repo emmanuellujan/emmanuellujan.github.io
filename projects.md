@@ -45,4 +45,4 @@ Computational/mathematical models are used to study electroporation based treatm
 [Models and simulations in Tumor Growth]
 (https://github.com/LSC-UBA/LibreGrowth)
 Computational oncology, which encompasses any form of computer-based modeling related to tumor biology and cancer therapy, have become target of numerous studies. In particular, mathematical models based on reaction-diffusion equations describing tumor proliferation and invasion into peripheral host tissue have proved to be of clinical relevance. In this context, we described the micro-environmental influence on micro-tumor infiltration patterns through in-silico/in-vitro experimentation. In order to simulate the core growth and peripheral tumor cell infiltration, considering a benign and a malignant stages, we implemented a reaction-diffusion based model, with spatially variable diffusion coefficient, into a three-dimensional domain. We hope to shed light in current therapy optimization strategies.
-
+<br>
