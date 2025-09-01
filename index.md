@@ -15,9 +15,7 @@
 
 ⚛ Interests: AI ∩ Simulation ∩ HPC
 
-📫 [eljn@mit.edu](mailto:eljn@mit.edu)
-
-💼 [LinkedIn](https://www.linkedin.com/in/emmanuellujan/)
+📨 eljn@mit.edu
 
 ~~~
 <br>

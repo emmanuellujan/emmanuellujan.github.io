@@ -1,6 +1,6 @@
 .profile_image img {
   margin-right: 25px;
-  max-width: 35%;
+  max-width: 23%;
   padding: 0px;
   border-radius: 50%;
   float: left;
@@ -20,4 +20,8 @@
 
 .franklin-content .left-align {
   text-align: left;
+}
+
+.franklin-content h2 {
+    margin-top: 1em;
 }
