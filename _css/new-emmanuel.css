@@ -32,6 +32,15 @@
 	color: #515151;
 }
 
+.franklin-content a {
+    color: black;
+}
+
 body {
     color: #515151;
+}
+
+.nav-main li a
+{
+color: black;
 }
