@@ -8,7 +8,7 @@
 @@
 
 ~~~
-<p class="left-align">🏛️ Research Scientist at MIT’s Computer Science and Artificial Intelligence Laboratory and member of the Julia Lab. </p>
+<p class="left-align">🏛 Research Scientist at MIT’s Computer Science and Artificial Intelligence Laboratory and member of the Julia Lab. </p>
 ~~~
 
 ~~~
@@ -17,7 +17,7 @@
 ~~~
 
 ~~~
-<p class="left-align">📨 eljn@mit.edu
+<p class="left-align">🖂 eljn@mit.edu
 </p>
 ~~~
 
