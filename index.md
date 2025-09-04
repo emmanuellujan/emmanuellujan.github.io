@@ -7,18 +7,12 @@
 ![](/assets/elujan.jpg)
 @@
 
-~~~
-<p class="left-align">🏛 Research Scientist at MIT’s Computer Science and Artificial Intelligence Laboratory and member of the Julia Lab. </p>
-~~~
+&#x1F3DB;&#xFE0E; Research Scientist at MIT’s Computer Science and Artificial Intelligence Laboratory and member of the Julia Lab.
+
+⚛ Research interests lie at the intersection of artificial intelligence, scientific simulation, and high-level high-performance programming—with applications in computational linear algebra and materials science.
 
 ~~~
-<p class="left-align">⚛ Research interests integrate artificial intelligence, simulation, and high-level high‑performance programming—with applications in computational linear algebra and materials science.
-</p>
-~~~
-
-~~~
-<p class="left-align">✉ eljn@mit.edu
-</p>
+<p class="left-align">✉ eljn@mit.edu</p>
 ~~~
 
 ## Projects
@@ -72,12 +66,13 @@ Computational oncology, which encompasses any form of computer-based modeling re
 * [When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra.]
   (https://ieee-hpec.org/)
    **E. Lujan** and A. Edelman
-   IEEE High Performance Extreme Computing Conference. 2025. Submitted.
+   IEEE High Performance Extreme Computing Conference. 2025.
 
 * [Data-Driven Dynamic Algorithm Dispatch with Large Language Models.]
   (https://ieee-hpec.org/)
+  **Outstanding Short Paper Award**.
    R. Shah, **E. Lujan**, R. Alomairy, and A. Edelman.
-   IEEE High Performance Extreme Computing Conference. 2025. Submitted.
+   IEEE High Performance Extreme Computing Conference. 2025.
 
 * [Decision-Support and Modeling with Large Language Models for Geothermal Well Arrays.]
   (https://pangea.stanford.edu/ERE/db/IGAstandard/record_detail.php?id=38088)
