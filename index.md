@@ -7,7 +7,7 @@
 ![](/assets/elujan.jpg)
 @@
 
-&#x1F3DB;&#xFE0E; Research Scientist at MIT’s Computer Science and Artificial Intelligence Laboratory and member of the Julia Lab.
+🏛︎ Research Scientist at MIT’s Computer Science and Artificial Intelligence Laboratory and member of the Julia Lab.
 
 ⚛ Research interests lie at the intersection of artificial intelligence, scientific simulation, and high-level high-performance programming—with applications in computational linear algebra and materials science.
 
