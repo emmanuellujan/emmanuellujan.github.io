@@ -7,7 +7,8 @@
   --output-background: hsl(0, 0%, 98%);
   --small: 14px;
   --normal: 19px;
-  --text-color: hsv(0, 0%, 20%);
+  /* Fix invalid hsv() usage; use a sane default. */
+  --text-color: hsl(0, 0%, 20%);
 }
 
 /* ==================================================================

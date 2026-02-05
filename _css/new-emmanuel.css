@@ -1,46 +1,156 @@
+/*
+  new-emmanuel.css
+  Opinionated overrides on top of franklin.css for a more modern, readable layout.
+*/
+
+:root {
+  --text: #1f2937;
+  --muted: #4b5563;
+  --link: #9a4a4a;
+  --bg: #ffffff;
+  --bg-elev: #f7f7f8;
+  --border: #e5e7eb;
+}
+
+html {
+  font-family: "Source Sans Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Content readability */
+.franklin-content {
+  text-align: left;            /* justified text hurts readability */
+  line-height: 1.6;
+}
+
+.franklin-content p {
+  margin: 0.65rem 0;
+}
+
+.franklin-content h1,
+.franklin-content h2,
+.franklin-content h3 {
+  color: var(--text);
+}
+
+.franklin-content h1 {
+  border-bottom: 1px solid var(--border);
+}
+
+.franklin-content h2 {
+  margin-top: 1.6em;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Links */
+.franklin-content a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.franklin-content a:hover {
+  text-decoration: underline;
+}
+
+/* Header / nav */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-main ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0.6rem 1rem;
+  list-style: none;
+}
+
+.nav-main li a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+}
+
+.nav-main li a:hover {
+  background: var(--bg-elev);
+}
+
+/* Profile image */
 .profile_image img {
-  margin-right: 25px;
-  max-width: 30%;
-  padding: 0px;
-  border-radius: 50%;
+  margin: 0 24px 12px 0;
+  width: min(180px, 35vw);
+  height: auto;
+  padding: 0;
+  border-radius: 999px;
   float: left;
+  border: 1px solid var(--border);
+}
+
+/* Project images and spacing */
+.project_image {
+  clear: both; /* start each project on a new row */
 }
 
 .project_image img {
-  margin-right: 15px;
-  margin-bottom: 0px;
-  max-width: 20%;
-  padding: 0px;
+  margin: 0.25rem 16px 0.75rem 0;
+  width: min(140px, 30vw);
+  height: auto;
+  padding: 0;
   float: left;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
 }
 
-.franklin-content {
-  text-align: justify;
-}
-
+/* Left-align helper */
 .franklin-content .left-align {
   text-align: left;
 }
 
-.franklin-content h2 {
-    margin-top: 1em;
-    color: #515151;
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --link: #f0b7b7;
+    --bg: #0b0f17;
+    --bg-elev: #111827;
+    --border: #263041;
+  }
+
+  header {
+    background: rgba(11, 15, 23, 0.75);
+  }
 }
 
-.franklin-content h1
-{
-	color: #515151;
-}
+/* Small screens */
+@media (max-width: 520px) {
+  .profile_image img {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
 
-.franklin-content a {
-    color: black;
-}
-
-body {
-    color: #515151;
-}
-
-.nav-main li a
-{
-color: black;
+  .project_image img {
+    float: none;
+    display: block;
+    margin: 0.5rem auto 0.75rem auto;
+    width: min(220px, 75vw);
+  }
 }
