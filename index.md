@@ -63,22 +63,32 @@ Computational oncology, which encompasses any form of computer-based modeling re
 
 #### Publications in peer-reviewed journals and conferences
 
+* [A Full Three-Dimensional GPU-Accelerated Model for Deep Borehole Heat Exchangers(DBHEs) Enabling Simulation of Well Arrays]
+  (https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Wittenstein.pdf)
+  C. Wittenstein, **E. Lujan**, A. Inglis, R. Metcalfe, A. Edelman, H. Ranocha.
+  PROCEEDINGS, 51st Workshop on Geothermal Reservoir Engineering. Stanford University, Stanford, California, 2026.
+
+* [Arrays of Networked Standard Geothermal Wells]
+  (https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Metcalfe.pdf)
+  R, Metcalfe, **E. Lujan**, C. Wittenstein, A. Inglis, A. Edelman.
+  PROCEEDINGS, 51st Workshop on Geothermal Reservoir Engineering. Stanford University, Stanford, California, 2026.
+
 * [When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra.]
   (https://ieee-hpec.org/)
-   **E. Lujan** and A. Edelman
+   **E. Lujan**, A. Edelman
    IEEE High Performance Extreme Computing Conference. 2025.
 
 * [Data-Driven Dynamic Algorithm Dispatch with Large Language Models.]
   (https://ieee-hpec.org/)
   **Outstanding Short Paper Award**.
-   R. Shah, **E. Lujan**, R. Alomairy, and A. Edelman.
+   R. Shah, **E. Lujan**, R. Alomairy, A. Edelman.
    IEEE High Performance Extreme Computing Conference. 2025.
 
 * [Decision-Support and Modeling with Large Language Models for Geothermal Well Arrays.]
   (https://pangea.stanford.edu/ERE/db/IGAstandard/record_detail.php?id=38088)
    E. Ouko, **E. Lujan**, A. Edelman, R. Metcalfe
-   Stanford Geothermal Workshop. 2025.
-  
+   PROCEEDINGS, 50st Workshop on Geothermal Reservoir Engineering. Stanford University, Stanford, California, 2025.
+   
 * [OpenEP: an open-source simulator for electroporation-based tumor treatments.]
   (https://www.nature.com/articles/s41598-020-79858-y)
   M. Marino, **E. Lujan**, E. Mocskos, G. Marshall.
