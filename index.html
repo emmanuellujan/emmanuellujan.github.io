@@ -5,13 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Emmanuel Lujan — Research Scientist, MIT CSAIL</title>
   <meta name="description" content="Research Scientist at MIT CSAIL Julia Lab. AI-guided algorithmic discovery, scientific simulation, and high-performance computing." />
-  <meta property="og:title" content="Emmanuel Lujan — Research Scientist, MIT CSAIL" />
-  <meta property="og:description" content="Research Scientist at MIT CSAIL Julia Lab. AI-guided algorithmic discovery, scientific simulation, and high-performance computing." />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Emmanuel Lujan" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Emmanuel Lujan — Research Scientist, MIT CSAIL" />
-  <meta name="twitter:description" content="Research Scientist at MIT CSAIL Julia Lab. AI-guided algorithmic discovery, scientific simulation, and high-performance computing." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%238b1a2a'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='700' fill='white'>EL</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,20 +14,18 @@
       --bg: #fafaf9;
       --surface: #ffffff;
       --border: #e8e6e2;
+      --border-light: #f0eeea;
       --text: #1a1917;
       --muted: #6b6860;
+      --muted-light: #9a9690;
       --accent: #8b1a2a;
       --accent-light: #f5eced;
       --max-w: 760px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
     body {
       font-family: 'Inter', system-ui, sans-serif;
@@ -45,344 +36,246 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a:focus-visible,
-    button:focus-visible {
+    a:focus-visible, button:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 3px;
       border-radius: 4px;
     }
     .skip-link {
-      position: absolute;
-      left: 16px;
-      top: 12px;
+      position: absolute; left: 16px; top: 12px;
       transform: translateY(-160%);
-      padding: 10px 14px;
-      border-radius: 6px;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      z-index: 200;
-      transition: transform .15s ease;
+      padding: 10px 14px; border-radius: 6px;
+      background: var(--accent); color: #fff;
+      text-decoration: none; font-size: 13px; font-weight: 600;
+      z-index: 200; transition: transform .15s ease;
     }
-    .skip-link:focus-visible {
-      transform: translateY(0);
-      outline-color: #fff;
-    }
+    .skip-link:focus-visible { transform: translateY(0); outline-color: #fff; }
 
-    /* ── Nav ── */
+    /* Nav */
     nav {
-      position: sticky;
-      top: 0;
+      position: sticky; top: 0;
       background: rgba(250, 250, 249, 0.9);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
       z-index: 100;
     }
     .nav-inner {
-      max-width: var(--max-w);
-      margin: auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      height: 52px;
+      max-width: var(--max-w); margin: auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: flex-end; height: 52px;
     }
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: var(--muted);
-      text-decoration: none;
-      letter-spacing: .01em;
-      transition: color .15s;
+      font-size: 13.5px; font-weight: 500; color: var(--muted);
+      text-decoration: none; letter-spacing: .01em; transition: color .15s;
     }
     .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--accent); }
 
-    /* ── Layout ── */
-    .page {
-      max-width: var(--max-w);
-      margin: auto;
-      padding: 0 24px 80px;
-    }
+    /* Layout */
+    .page { max-width: var(--max-w); margin: auto; padding: 0 24px 80px; }
+    section { padding-top: 64px; scroll-margin-top: 72px; }
 
-    section {
-      padding-top: 64px;
-      scroll-margin-top: 72px;
-    }
-
-    /* ── Hero ── */
-    .hero {
-      padding-top: 72px;
-      padding-bottom: 12px;
-    }
-    .hero-top {
-      display: flex;
-      align-items: flex-start;
-      gap: 28px;
-      margin-bottom: 20px;
-    }
-    .hero-copy {
-      min-width: 0;
-    }
+    /* About hero */
+    .hero { padding-top: 72px; padding-bottom: 12px; }
+    .hero-top { display: flex; align-items: flex-start; gap: 28px; margin-bottom: 20px; }
+    .hero-copy { min-width: 0; }
     .hero-photo {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      border: 2px solid var(--border);
-      flex-shrink: 0;
+      width: 96px; height: 96px; border-radius: 50%;
+      object-fit: cover; object-position: center top;
+      border: 2px solid var(--border); flex-shrink: 0;
     }
     .hero-eyebrow {
-      font-size: 12.5px;
-      font-weight: 500;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 14px;
+      font-size: 12.5px; font-weight: 500; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
     }
     h1 {
       font-family: 'Lora', Georgia, serif;
-      font-size: clamp(28px, 4vw, 38px);
-      font-weight: 600;
-      line-height: 1.18;
-      letter-spacing: -.01em;
-      color: var(--text);
+      font-size: clamp(28px, 4vw, 38px); font-weight: 600;
+      line-height: 1.18; letter-spacing: -.01em; color: var(--text);
     }
     .hero-bio {
-      font-size: 16px;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 28px;
+      font-size: 15.5px; color: var(--muted); line-height: 1.7; margin-bottom: 28px;
+      text-align: justify; -webkit-hyphens: auto; hyphens: auto;
     }
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .hero-links { display: flex; flex-wrap: wrap; gap: 10px; }
     .link-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 7px 14px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      background: var(--surface);
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border-radius: 6px; font-size: 13px; font-weight: 500;
+      text-decoration: none; border: 1px solid var(--border);
+      color: var(--muted); background: var(--surface);
       transition: border-color .15s, color .15s;
     }
     .link-pill:hover { border-color: var(--accent); color: var(--accent); }
     .link-pill svg { flex-shrink: 0; }
+    .hero-address {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 16px; font-size: 13px; color: var(--muted);
+    }
+    .hero-address svg { flex-shrink: 0; opacity: .8; }
 
-    /* ── Section headings ── */
+    /* Top-level section headings */
     h2 {
       font-family: 'Lora', Georgia, serif;
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: -.01em;
-      color: var(--text);
-      margin-bottom: 24px;
-      padding-bottom: 10px;
+      font-size: 20px; font-weight: 600; letter-spacing: -.01em;
+      color: var(--text); margin-bottom: 24px; padding-bottom: 10px;
       border-bottom: 1px solid var(--border);
     }
 
-    /* ── Research areas ── */
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 0;
-    }
+    /* Research interest tags */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 0; }
     .tag {
-      font-size: 12.5px;
-      font-weight: 500;
-      padding: 5px 12px;
-      border-radius: 4px;
-      background: var(--accent-light);
-      color: var(--accent);
-      letter-spacing: .01em;
+      font-size: 12.5px; font-weight: 500; padding: 5px 12px; border-radius: 4px;
+      background: var(--accent-light); color: var(--accent); letter-spacing: .01em;
     }
 
-    /* ── Projects ── */
-    .projects-grid {
-      display: grid;
-      gap: 16px;
-    }
+    /* Projects */
+    .projects-grid { display: grid; gap: 16px; }
     .project-card {
-      padding: 20px 22px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
+      padding: 20px 22px; border: 1px solid var(--border); border-radius: 8px;
       background: var(--surface);
-      transition: border-color .15s;
+      transition: border-color .2s, box-shadow .2s, transform .2s;
     }
-    .project-card:hover { border-color: #ccc; }
+    .project-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 6px 24px rgba(139, 26, 42, 0.10);
+      transform: translateY(-2px);
+    }
     .project-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 6px;
-      flex-wrap: wrap;
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 12px; margin-bottom: 6px; flex-wrap: wrap;
     }
-    .project-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text);
-    }
+    .project-title { font-size: 15px; font-weight: 600; color: var(--text); }
+    .project-title a { color: inherit; text-decoration: none; }
+    .project-title a:hover { color: var(--accent); }
     .project-funder {
-      font-size: 11.5px;
-      font-weight: 500;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      color: var(--muted);
-      white-space: nowrap;
+      font-size: 11.5px; font-weight: 500; letter-spacing: .04em;
+      text-transform: uppercase; color: var(--muted); white-space: nowrap;
     }
-    .project-desc {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
+    .project-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
     .project-link {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 12.5px;
-      font-weight: 500;
-      color: var(--accent);
-      text-decoration: none;
+      display: inline-block; margin-top: 10px; font-size: 12.5px;
+      font-weight: 500; color: var(--accent); text-decoration: none;
     }
     .project-link:hover { text-decoration: underline; }
-    .project-title a {
-      color: inherit;
-      text-decoration: none;
-    }
-    .project-title a:hover { color: var(--accent); }
 
-    /* ── Publications ── */
-    .pub-subsection {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 18px;
+    /* Research Output stats meta */
+    .hero-meta {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px;
+      font-size: 12.5px; color: var(--muted); margin-bottom: 40px;
     }
-    .pub-subsection.spaced {
-      margin-top: 40px;
-    }
-    .pub-list { list-style: none; display: grid; gap: 16px; }
-    .pub-item {
-      padding-left: 14px;
-      border-left: 2px solid var(--border);
-    }
-    .pub-item:hover { border-left-color: var(--accent); }
-    .pub-title {
-      font-size: 14.5px;
-      font-weight: 500;
-      color: var(--text);
-      line-height: 1.45;
-      margin-bottom: 3px;
-    }
-    .pub-title a { color: inherit; text-decoration: none; }
-    .pub-title a:hover { color: var(--accent); }
-    .pub-meta {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-    .pub-authors { font-style: italic; }
-    .pub-badge {
-      display: inline-block;
-      margin-top: 4px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      padding: 2px 7px;
-      border-radius: 3px;
-      background: #fff8e1;
-      color: #7a5c00;
-      border: 1px solid #f0d080;
+    .hero-meta a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .hero-meta a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .hero-stat { display: flex; gap: 4px; align-items: baseline; }
+    .hero-stat strong { color: var(--text); font-size: 13.5px; font-weight: 600; }
+
+    /* Research subsection headings */
+    .section-heading {
+      margin-top: 0;
+      font-family: 'Lora', Georgia, serif;
+      font-size: 16px; font-weight: 600; letter-spacing: -.01em;
+      color: var(--text); margin-bottom: 4px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-light);
     }
 
-    /* ── Contact ── */
-    .contact-grid {
-      display: grid;
-      gap: 10px;
+    /* Publication / talk lists */
+    .pub-list { list-style: none; }
+    .pub-item, .forthcoming-item, .talk-item {
+      display: grid; grid-template-columns: 1fr auto; column-gap: 16px;
+      align-items: baseline;
+      padding: 8px 12px; margin: 0 -12px;
+      border-bottom: 1px solid var(--border-light);
+      border-radius: 6px; transition: background .15s;
     }
-    .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14.5px;
-      color: var(--muted);
-    }
-    .contact-row a { color: var(--text); text-decoration: none; }
-    .contact-row a:hover { color: var(--accent); }
-    .contact-label {
-      font-size: 11.5px;
-      font-weight: 600;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      color: var(--muted);
-      min-width: 80px;
-    }
-    .section-link {
-      display: inline-block;
-      margin-top: 20px;
+    .pub-item:hover, .forthcoming-item:hover, .talk-item:hover { background: var(--accent-light); }
+
+    .pub-content, .talk-content { grid-column: 1; grid-row: 1; min-width: 0; }
+
+    .pub-date, .talk-date {
+      grid-column: 2; grid-row: 1;
+      font-size: 11.5px; font-weight: 500; color: var(--muted);
+      text-align: right; white-space: nowrap; line-height: 1.55;
     }
 
-    /* ── Footer ── */
+    .pub-title-row, .talk-title-row {
+      margin-bottom: 3px; line-height: 1.4;
+    }
+    .pub-title-row a, .talk-title, a.talk-title-text {
+      font-size: 15px; font-weight: 500; color: var(--text);
+      text-decoration: none; line-height: 1.4;
+    }
+    .pub-title-row a:hover, a.talk-title-text:hover {
+      color: var(--accent); text-decoration: underline; text-underline-offset: 3px;
+    }
+    .pub-title-text, .talk-title-text {
+      font-size: 15px; font-weight: 500; color: var(--text); line-height: 1.4;
+    }
+
+    .pub-badge-award {
+      display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: .05em;
+      text-transform: uppercase; padding: 2px 7px; border-radius: 2px;
+      white-space: nowrap; margin-left: 7px; vertical-align: middle;
+      background: var(--accent-light); color: var(--accent); border: 1px solid #e3bcc3;
+    }
+    .pub-badge-type {
+      display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: .04em;
+      text-transform: uppercase; padding: 1px 7px; border-radius: 2px;
+      white-space: nowrap; margin-left: 7px; vertical-align: middle;
+      background: var(--border-light); color: var(--muted); border: 1px solid var(--border);
+    }
+
+    .pub-authors, .talk-authors {
+      font-size: 14px; color: var(--muted); margin-bottom: 2px; line-height: 1.5;
+    }
+    .pub-venue, .talk-venue {
+      font-size: 14px; color: var(--muted); font-style: italic; line-height: 1.5;
+    }
+    .pub-venue { margin-bottom: 6px; }
+
+    .pub-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0; }
+    .pub-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 0; margin-right: 18px; border: none; background: none;
+      font-size: 12px; font-weight: 500; letter-spacing: .01em;
+      color: var(--accent); cursor: pointer; text-decoration: none;
+      font-family: inherit; transition: opacity .15s;
+    }
+    .pub-btn:last-child { margin-right: 0; }
+    .pub-btn:hover { opacity: 0.7; }
+    .pub-btn.copied { color: #2a7a3a; }
+    .pub-btn svg { opacity: 0.7; }
+    .pub-btn-muted { color: var(--muted-light); cursor: default; pointer-events: none; }
+
+    .pub-abstract {
+      display: none; font-size: 14px; color: var(--muted); line-height: 1.65;
+      text-align: justify; -webkit-hyphens: auto; hyphens: auto;
+      margin-top: 8px; padding: 10px 0 0 16px;
+      border-top: 1px solid var(--border-light);
+    }
+    .pub-abstract.open { display: block; }
+
+    /* Footer */
     footer {
-      margin-top: 80px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      font-size: 12.5px;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
+      margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border);
+      font-size: 12.5px; color: var(--muted);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
     }
-    footer a {
-      color: inherit;
-      text-decoration: none;
-    }
+    footer a { color: inherit; text-decoration: none; }
     footer a:hover { color: var(--accent); }
+    .disclaimer {
+      text-align: center; font-size: 0.72rem; color: var(--muted-light);
+      margin: 0.5rem 0 1.5rem;
+    }
 
-    /* ── Responsive ── */
+    /* Responsive */
     @media (max-width: 600px) {
-      .nav-inner {
-        justify-content: center;
-        height: auto;
-        padding: 10px 16px;
-      }
-      .nav-links {
-        gap: 14px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+      .nav-inner { justify-content: center; height: auto; padding: 10px 16px; }
+      .nav-links { gap: 14px; flex-wrap: wrap; justify-content: center; }
       .page { padding: 0 16px 60px; }
       section { padding-top: 48px; }
       .hero { padding-top: 48px; }
-      .hero-top {
-        flex-direction: column;
-        gap: 18px;
-      }
+      .hero-top { flex-direction: column; gap: 18px; }
       .hero-bio { font-size: 15px; }
-      .contact-row {
-        flex-wrap: wrap;
-        align-items: baseline;
-      }
-      .contact-label { min-width: 68px; }
+      .pub-item, .forthcoming-item, .talk-item { column-gap: 12px; }
     }
   </style>
 </head>
@@ -394,16 +287,15 @@
   <div class="nav-inner">
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#projects">Current Projects</a></li>
+      <li><a href="#research-output">Research Output</a></li>
     </ul>
   </div>
 </nav>
 
 <main class="page" id="main-content">
 
-  <!-- Hero -->
+<!-- About -->
   <section class="hero" id="about">
     <div class="hero-top">
       <img class="hero-photo" src="eljn.png" alt="Portrait of Emmanuel Lujan" width="96" height="96" />
@@ -413,12 +305,19 @@
       </div>
     </div>
     <p class="hero-bio">
-      I am a Research Scientist at MIT CSAIL and the Julia Lab, 
-      working where AI meets scientific simulation and high-performance computing. 
-      I am interested in how generative and agentic AI can help navigate 
+      I am a Research Scientist at MIT CSAIL and the Julia Lab,
+      working where AI meets scientific simulation and high-performance computing.
+      I am interested in how generative and agentic AI can help navigate
       high-dimensional, underexplored algorithmic design spaces.
-
     </p>
+    <div id="interests" class="tags" style="margin-bottom:24px;">
+      <span class="tag">Artificial Intelligence</span>
+      <span class="tag">Multi-Agent AI</span>
+      <span class="tag">AI-Guided Algorithmic Discovery</span>
+      <span class="tag">High-Performance Computing</span>
+      <span class="tag">Computational Linear Algebra</span>
+      <span class="tag">Scientific Simulation</span>
+    </div>
     <div class="hero-links">
       <a class="link-pill" href="mailto:eljn@mit.edu">
         <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -441,186 +340,1378 @@
         LinkedIn
       </a>
     </div>
+    <p class="hero-address">
+      <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      MIT CSAIL · 32 Vassar St, Cambridge, MA 02139
+    </p>
   </section>
 
-  <!-- Research -->
-  <section id="research">
-    <h2>Research</h2>
-    <div class="tags" style="margin-bottom:32px;">
-      <span class="tag">Artificial Intelligence</span>
-      <span class="tag">Multi-Agent AI</span>
-      <span class="tag">AI-Guided Algorithmic Discovery</span>
-      <span class="tag">High-Performance Computing</span>
-      <span class="tag">Computational Linear Algebra</span>
-      <span class="tag">Scientific Simulation</span>
-      <span class="tag">Machine Learning Interatomic Potentials</span>
-    </div>
-
-    <h3 class="pub-subsection">Recent Work</h3>
+  <!-- Current Projects -->
+  <section id="projects">
+    <h2>Current Projects</h2>
     <div class="projects-grid">
 
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-title">AI-guided Discovery of Fast Linear Algebra</span>
-          <span class="project-funder">DARPA · DOE/NNSA · MIT · 2024–present</span>
-        </div>
-        <p class="project-desc">
-          I co-lead a DARPA–MIT initiative on AI-guided algorithmic discovery
-          for fast linear algebra. This research aims to generate novel,
-          high-performance variants of existing algorithms that exploit
-          matrix structure, including mixed precision and tiling, and
-          to develop new strategies for algorithm and architecture selection.
-        </p>
-        <a class="project-link" href="https://smartsolveai.mit.edu" target="_blank" rel="noopener">smartsolveai.mit.edu →</a>
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-title">AI-guided Discovery of Fast Linear Algebra</span>
+        <span class="project-funder">DARPA · DOE/NNSA · MIT · 2024–present</span>
       </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-title"><a href="https://chefsi.mit.edu/" target="_blank" rel="noopener">Tackling Performance Bottlenecks in Exascale Simulation</a></span>
-          <span class="project-funder">DOE/NNSA · MIT · 2025–present</span>
-        </div>
-        <p class="project-desc">
-          As part of MIT’s CHEFSI project, I work on addressing a major bottleneck
-          in finite-element simulation: the solution of large linear systems.
-          Our goal is to develop new high-performance solutions that integrate
-          optimal solver selection, mixed-precision methods, and scalable distributed
-          execution for exascale simulation.
-        </p>
-        <a class="project-link" href="https://chefsi.mit.edu/" target="_blank" rel="noopener">chefsi.mit.edu →</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-title">Deep-Borehole Heat Exchanger Arrays</span>
-          <span class="project-funder">MIT · 2025–present</span>
-        </div>
-        <p class="project-desc">
-          I collaborate with Robert Metcalfe, Turing Award laureate,
-          on integrating AI with physics-based simulation to reduce
-          the levelized cost of energy (LCOE) in deep-borehole heat exchanger arrays.
-        </p>
-        <a class="project-link" href="https://geothermalarrays.github.io/" target="_blank" rel="noopener">geothermalarrays.mit.edu →</a>
-      </div>
-
+      <p class="project-desc">
+        I co-lead a DARPA–MIT initiative on AI-guided algorithmic discovery
+        for fast linear algebra. This research aims to generate novel,
+        high-performance variants of existing algorithms that exploit
+        matrix structure, including mixed precision and tiling, and
+        to develop new strategies for algorithm and architecture selection.
+      </p>
+      <a class="project-link" href="https://smartsolveai.mit.edu" target="_blank" rel="noopener">smartsolveai.mit.edu →</a>
     </div>
 
-  </section>
-
-  <!-- Latest Articles -->
-  <section id="publications">
-    <h2>Selected Publications</h2>
-    <h3 class="pub-subsection">Recent Work</h3>
-    <ul class="pub-list">
-
-      <li class="pub-item">
-        <p class="pub-title">
-          <a href="https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Wittenstein.pdf" target="_blank" rel="noopener">
-            A Full 3D GPU-Accelerated Model for Deep Borehole Heat Exchanger Arrays
-          </a>
-        </p>
-        <p class="pub-meta">
-          <span class="pub-authors">C. Wittenstein, <strong>E. Lujan</strong>, A. Inglis, R. Metcalfe, A. Edelman, H. Ranocha</span><br>
-          Stanford Geothermal Workshop, 2026
-        </p>
-      </li>
-
-      <li class="pub-item">
-        <p class="pub-title">
-          <a href="https://ieeexplore.ieee.org/abstract/document/11196484" target="_blank" rel="noopener">
-            When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra
-          </a>
-        </p>
-        <p class="pub-meta">
-          <span class="pub-authors"><strong>E. Lujan</strong>, A. Edelman</span><br>
-          IEEE High Performance Extreme Computing Conference (HPEC), 2025
-        </p>
-      </li>
-
-      <li class="pub-item">
-        <p class="pub-title">
-          <a href="https://ieee-hpec.org/wp-content/uploads/2026/01/120.pdf" target="_blank" rel="noopener">
-            Data-Driven Dynamic Algorithm Dispatch with Large Language Models
-          </a>
-        </p>
-        <p class="pub-meta">
-          <span class="pub-authors">R. Shah, <strong>E. Lujan</strong>, R. Alomairy, A. Edelman</span><br>
-          IEEE High Performance Extreme Computing Conference (HPEC), 2025
-        </p>
-        <span class="pub-badge">Outstanding Short Paper Award</span>
-      </li>
-
-    </ul>
-    <h3 class="pub-subsection spaced">Earlier Work</h3>
-    <ul class="pub-list">
-
-      <li class="pub-item">
-        <p class="pub-title">
-          <a href="https://arxiv.org/abs/2107.09443" target="_blank" rel="noopener">
-            NeuralPDE: Automating Physics-Informed Neural Networks (PINNs) with Error Approximations
-          </a>
-        </p>
-        <p class="pub-meta">
-          <span class="pub-authors">K. Zubov, Z. McCarthy, Y. Ma, F. Calisto, V. Pagliarino, S. Azeglio, L. Bottero, <strong>E. Lujan</strong>, et al.</span><br>
-          arXiv:2107.09443
-        </p>
-      </li>
-
-      <li class="pub-item">
-        <p class="pub-title">
-          <a href="https://www.nature.com/articles/s41598-020-79858-y" target="_blank" rel="noopener">
-            OpenEP: An Open-Source Simulator for Electroporation-Based Tumor Treatments
-          </a>
-        </p>
-        <p class="pub-meta">
-          <span class="pub-authors">M. Marino, <strong>E. Lujan</strong>, E. Mocskos, G. Marshall</span><br>
-          Scientific Reports, Nature, 2021
-        </p>
-      </li>
-
-      <li class="pub-item">
-        <p class="pub-title">
-          <a href="https://ieeexplore.ieee.org/document/8932462" target="_blank" rel="noopener">
-            Extreme Coverage in 5G Narrowband IoT: A LUT-Based Strategy to Optimize Shared Channels
-          </a>
-        </p>
-        <p class="pub-meta">
-          <span class="pub-authors"><strong>E. Lujan</strong>, J. A. Zuloaga Mellino, A. Otero, L. Rey Vega, C. Galarza, E. Mocskos</span><br>
-          IEEE Internet of Things Journal, 2019
-        </p>
-      </li>
-
-    </ul>
-    <a class="project-link section-link" href="https://scholar.google.com/citations?user=V9w6CAoAAAAJ" target="_blank" rel="noopener">View full publication list →</a>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p class="hero-bio" style="margin-bottom: 20px;">
-      I welcome inquiries from prospective collaborators, 
-      students interested in AI and HPC for scientific computing, 
-      and researchers in related areas.
-    </p>
-    <div class="contact-grid">
-      <div class="contact-row">
-        <span class="contact-label">Email</span>
-        <a href="mailto:eljn@mit.edu">eljn@mit.edu</a>
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-title"><a href="https://chefsi.mit.edu/" target="_blank" rel="noopener">Tackling Performance Bottlenecks in Exascale Simulation</a></span>
+        <span class="project-funder">DOE/NNSA · MIT · 2025–present</span>
       </div>
-      <div class="contact-row">
-        <span class="contact-label">Office</span>
-        <span>MIT CSAIL · 32 Vassar St, Cambridge, MA 02139</span>
-      </div>
+      <p class="project-desc">
+        As part of MIT's CHEFSI project, I work on addressing a major bottleneck
+        in finite-element simulation: the solution of large linear systems.
+        Our goal is to develop new high-performance solutions that integrate
+        optimal solver selection, mixed-precision methods, and scalable distributed
+        execution for exascale simulation.
+      </p>
+      <a class="project-link" href="https://chefsi.mit.edu/" target="_blank" rel="noopener">chefsi.mit.edu →</a>
     </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-title">Deep-Borehole Heat Exchanger Arrays</span>
+        <span class="project-funder">MIT · 2025–present</span>
+      </div>
+      <p class="project-desc">
+        I collaborate with Robert Metcalfe, Turing Award laureate,
+        on integrating AI with physics-based simulation to reduce
+        the levelized cost of energy (LCOE) in deep-borehole heat exchanger arrays.
+      </p>
+      <a class="project-link" href="https://geothermalarrays.github.io/" target="_blank" rel="noopener">geothermalarrays.mit.edu →</a>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- Research Output -->
+  <section id="research-output">
+    <h2>Research Output</h2>
+    <div class="hero-meta">
+      <a href="https://scholar.google.com/citations?user=V9w6CAoAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+    </div>
+
+    <p style="font-style:italic;opacity:0.75;margin:12px 0 32px;">🚧 This section is a work in progress.</p>
+
+    <h3 class="section-heading">Forthcoming</h3>
+  <ul class="pub-list">
+
+    <li class="forthcoming-item">
+      <div class="pub-date">→</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <span class="pub-title-text">Parallel Agentic AI for Discovering Specialization and Task-Distribution Algorithms</span>
+        </div>
+        <div class="pub-authors">SmartSolveAI Team</div>
+        <div class="pub-venue">Manuscript in preparation</div>
+      </div>
+    </li>
+
+  </ul>
+
+  <h3 class="section-heading" style="margin-top:56px;">Peer-Reviewed Journal &amp; Conference Papers</h3>
+  <ul class="pub-list">
+
+    <li class="pub-item">
+      <div class="pub-date">Feb 2026</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Metcalfe.pdf" target="_blank" rel="noopener">Arrays of Networked Standard Geothermal Wells</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+        </div>
+        <div class="pub-authors">Robert Metcalfe, <span style="text-decoration:underline">Emmanuel Lujan</span>, Collin Wittenstein, Andrew Inglis, Alan Edelman</div>
+        <div class="pub-venue">PROCEEDINGS, 51st Workshop on Geothermal Reservoir Engineering, Stanford University, 2026</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Metcalfe.pdf" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('metcalfe2026arrays', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('metcalfe2026arrays', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-metcalfe2026arrays">Time to scale the harvesting of geothermal heat for conversion to grid electricity. And not just because geothermal is clean. No, we choose geothermal because it is firm, inexhaustible, safe, and competitively harvestable almost anywhere (cheap). How best to scale geothermal? We urge the development of geothermal arrays. With our Internet mindsets in place, let’s not continue toward ever bigger geothermal mainframes. Instead, let’s deploy geothermal arrays by networking smaller, standard, competitively-sourced wells. While accelerating progress continues at the well level, in this paper let’s move up to the “array” level. We engage in dialogue with a large language model (GPT) about how soon we can deliver energy with capacity factors (CFs) approaching 100% and with levelized costs of electricity (LCOE) at a new plateau, less than a cent per kilowatt-hour (&lt;1¢/kWh).</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Feb 2026</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Wittenstein.pdf" target="_blank" rel="noopener">A Full Three-Dimensional GPU-Accelerated Model for Deep Borehole Heat Exchangers (DBHEs) Enabling Simulation of Well Arrays</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+        </div>
+        <div class="pub-authors">Collin Wittenstein, <span style="text-decoration:underline">Emmanuel Lujan</span>, Andrew Inglis, Robert Metcalfe, Alan Edelman, Hendrik Ranocha</div>
+        <div class="pub-venue">PROCEEDINGS, 51st Workshop on Geothermal Reservoir Engineering, Stanford University, 2026</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Wittenstein.pdf" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('wittenstein2026full', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('wittenstein2026full', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-wittenstein2026full">Deep borehole heat exchangers (DBHEs) present significant computational challenges due to their multi-scale geometry and long operational timescales. We present a GPU-accelerated three-dimensional model that makes well array simulations computationally tractable through an operator splitting strategy tailored to the problem’s physics. The method separates vertical diffusion (stabilized explicit Runge–Kutta–Chebyshev), horizontal diffusion (alternating direction implicit), and advection (semi-Lagrangian), achieving near-unconditional stability with high efficiency. We validate against three published models using different numerical approaches, showing excellent to good agreement. The vendor-agnostic Julia implementation enables full three-dimensional simulation of multi-well arrays on a single GPU, opening new possibilities for systematic design optimization and long-term performance assessment of geothermal well systems. The implementation is released as the open-source Julia package GeothermalWells.jl.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Sep 2025</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://ieeexplore.ieee.org/abstract/document/11196484" target="_blank" rel="noopener">When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Alan Edelman</div>
+        <div class="pub-venue">IEEE High Performance Extreme Computing Conference (HPEC), 2025</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://ieeexplore.ieee.org/abstract/document/11196484" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2025structure', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2025structure', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2025structure">Algorithmic dispatch is essential for performance in linear-algebra–intensive systems. A persistent challenge lies in the treatment of structured matrices. Although such matrices are often described as “sparse,” the term structured is more precise, as it highlights exploitable properties—such as bandedness or triangularity—whose algorithmic advantages extend beyond sparsity alone. When the dispatch strategy leaves these structures unrecognized, valuable opportunities for optimization are lost. Recent advances in generative AI offer the promise of linking these silent structures to more effective algorithmic and architectural choices, supplying much of the missing connective tissue in computational linear algebra. This work introduces analytical criteria—grounded in time-complexity analysis—to determine when structure-aware dispatch delivers tangible gains. We examine the overheads of structure detection and data-format conversion, characterizing their impact on speedup and slowdown. We illustrate these concepts through a case study on LU factorization applied to banded matrices stored in a dense format, demonstrating results that align with theoretical bounds and reveal substantial gains in both performance and memory usage.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Sep 2025</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://ieee-hpec.org/wp-content/uploads/2026/01/120.pdf" target="_blank" rel="noopener">Data-Driven Dynamic Algorithm Dispatch with Large Language Models</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+          <span class="pub-badge pub-badge-award">Outstanding Short Paper</span>
+        </div>
+        <div class="pub-authors">Rushil N. Shah, <span style="text-decoration:underline">Emmanuel Lujan</span>, Rabab Alomairy, Alan Edelman</div>
+        <div class="pub-venue">IEEE High Performance Extreme Computing Conference (HPEC), 2025</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://ieee-hpec.org/wp-content/uploads/2026/01/120.pdf" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('shah2025data', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('shah2025data', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-shah2025data">We introduce a large language model (LLM)-driven approach for generating dynamic algorithmic dispatch heuristics in high-performance linear algebra. By combining prompt engineering with LLaMA 3 and a curated performance database, the model learns to synthesize selection heuristics that exploit structural patterns to identify fast algorithmic choices. A case study on LU factorization demonstrates the model’s ability to replicate expert-designed strategies. This work, developed as part of the DARPA–MIT SmartSolve project, highlights the promise of LLMs for algorithmic discovery and the development of more adaptive, fast linear algebra software.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Feb 2025</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://pangea.stanford.edu/ERE/pdf/IGAstandard/SGW/2025/Ouko.pdf" target="_blank" rel="noopener">Decision-Support and Modeling with Large Language Models for Geothermal Well Arrays</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+        </div>
+        <div class="pub-authors">Edwin Ouko, <span style="text-decoration:underline">Emmanuel Lujan</span>, Alan Edelman, Robert Metcalfe</div>
+        <div class="pub-venue">PROCEEDINGS, 50th Workshop on Geothermal Reservoir Engineering, Stanford University, 2025</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://pangea.stanford.edu/ERE/pdf/IGAstandard/SGW/2025/Ouko.pdf" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('ouko2025decision', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('ouko2025decision', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-ouko2025decision">Geothermal well arrays, which organize multiple geothermal wells into carefully planned geometric configurations, provide opportunities to enhance energy production capacity and increase fault tolerance. The development and adoption of these emerging geothermal technologies could be accelerated through the recent advances in large language models (LLMs) and high-level high-performance languages. A challenge in LLM-based applications is the reliability of the generated outputs, as they can be prone to subjective biases and “hallucinations”. This study assesses the potential of cutting-edge LLMs—such as ChatGPT, Gemini, Claude, Grok, and domain-specific models like AskGDR—as expert assistants that can synthesize insightful interpretations of complex geothermal data, as well as improve feature capabilities of geothermal models and numerical software. We developed a novel approach, leveraging Google’s recently introduced AI assistant, NotebookLM, to accelerate the generation of unpublished quantitative geothermal benchmarks. In particular, we use these benchmarks and LLM-based interviews to analyze opportunities and limitations of two promising technologies: geothermal well arrays and closed-loop coaxial wells. This line of research could play a transformative role in the geothermal sector by enabling the next-generation of decision-support applications.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Dec 2021</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://ieeexplore.ieee.org/document/9715330" target="_blank" rel="noopener">Performance of D2D/NB-IoT Communications in Urban and Suburban Environments</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+        </div>
+        <div class="pub-authors">Rodolfo Leonardo Sumoza Matos, <span style="text-decoration:underline">Emmanuel Lujan</span>, Esteban Eduardo Mocskos</div>
+        <div class="pub-venue">2021 Winter Simulation Conference (WSC), IEEE, 2021</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://d1wqtxts1xzle7.cloudfront.net/113292356/303-libre.pdf?1713012380=&response-content-disposition=inline%3B+filename%3DPerformance_of_D2D_NB_IOT_Communications.pdf&Expires=1780167083&Signature=KbR-EweoK8~n6Hqiw8qNaDRuyDWC2bvWiXEb22iwptm4cnwlJLqga29unsU5NYwGT7HzKR0Rrcmb5rS9BXXvDFMctNu0n3AW2lmMvn4IUcmQY9~tqZ3M3GiUOakQEsS6kFUT2cnG9j3E09HuGS7lk43kYS6Lj7g1AtKs8lGe-EZ499KMlHt5dGF~p3dxOMThhs8TvlYqFWEktHYvgqKlwxx4n~3k3B3ZuTa-arH4-Z3WZ0tVv9mV816h6JeSnCGzvALasyDPha~sheJGMfR29oMRQ-G9tt9uiaG0mU9KSA0d9xrm1oVoz4AhV91hojZA8RxNBzK6FSnhn6sKPRlFxw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('matos2021performance', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('matos2021performance', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-matos2021performance">Smart cities are witnessing exceptional growth in their connections, increasing the need for LPWA communications, i.e. low-bitrate, coverage enhancement, ultra-low power consumption, and massive terminal access. 5G Narrowband-IoT has emerged to satisfy these requirements. Notwithstanding, it presents limitations in extreme coverage scenarios, where devices can lose connectivity unnecessarily. The addition of Device-to-Device (D2D) communications, connecting out-of-coverage devices with a base station through a relay, is a solid approach for mitigating these issues. This study targets two typical scenarios, urban and suburban, measuring the impact of the duty cycle, path-loss, retransmissions and interference, regarding the expected delivery ratio, end-to-end delay, and the QoS. Our simulations show how the behavior of these quantities leads to a novel strategy to avoid disconnection.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Jan 2021</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://www.nature.com/articles/s41598-020-79858-y" target="_blank" rel="noopener">OpenEP: An Open-Source Simulator for Electroporation-Based Tumor Treatments</a>
+          <span class="pub-badge pub-badge-type">Journal Paper</span>
+        </div>
+        <div class="pub-authors">Matías Marino, <span style="text-decoration:underline">Emmanuel Lujan</span>, Esteban Mocskos, Guillermo Marshall</div>
+        <div class="pub-venue">Scientific Reports, Nature, 2021</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://www.nature.com/articles/s41598-020-79858-y" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('marino2021openep', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('marino2021openep', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-marino2021openep">Electroporation (EP), the increase of cell membrane permeability due to the application of electric pulses, is a universal phenomenon with a broad range of applications. In medicine, some of the foremost EP-based tumor treatments are electrochemotherapy (ECT), irreversible electroporation, and gene electrotransfer (GET). We present OpenEP, an open-source specific purpose simulator for EP-based tumor treatments, modeling among other variables, threshold, and electroporated tissue variations in time. Distributed under a free/libre user license, OpenEP allows the customization of tissue type; electrode geometry and material; pulse type, intensity, length, and frequency. OpenEP facilitates the prediction of an optimal EP-based protocol, such as ECT or GET, defined as the critical pulse dosage yielding maximum electroporated tissue with minimal damage. OpenEP displays a highly efficient shared memory implementation by taking advantage of parallel resources; this permits a rapid prediction of optimal EP-based treatment efficiency by pulse number tuning.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Dec 2019</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://ieeexplore.ieee.org/document/8932462" target="_blank" rel="noopener">Extreme Coverage in 5G Narrowband IoT: A LUT-Based Strategy to Optimize Shared Channels</a>
+          <span class="pub-badge pub-badge-type">Journal Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Juan A. Zuloaga Mellino, Alejandro D. Otero, Leonardo Rey Vega, Cecilia G. Galarza, Esteban E. Mocskos</div>
+        <div class="pub-venue">IEEE Internet of Things Journal, 2019</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://arxiv.org/pdf/1908.02798" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2019extreme', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2019extreme', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2019extreme">One of the main challenges in Internet of Things (IoT) is providing communication support to an increasing number of connected devices. In recent years, the narrowband radio technology has emerged to address this situation: narrowband IoT (NB-IoT), which is now part of 5G. Supporting massive connectivity becomes particularly demanding in extreme coverage scenarios, such as underground or deep inside building sites. We propose a novel strategy for these situations focused on optimizing NB-IoT shared channels through the selection of link parameters: modulation and coding scheme, as well as the number of repetitions. Specifically, our strategy is based on a lookup table (LUT) scheme which is used for rapidly delivering the optimal link parameters given a target QoS. Results show that, especially under extreme conditions, only a few options for link parameters are available, favoring robustness against measurement uncertainties. Our strategy minimizes resource usage in all scenarios of the acknowledged mode and remarkably reduces losses in the unacknowledged mode.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Sep 2019</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://ieeexplore.ieee.org/document/8882144/" target="_blank" rel="noopener">Lite NB-IoT Simulator for Uplink Layer</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+        </div>
+        <div class="pub-authors">Juan A. Zuloaga Mellino, <span style="text-decoration:underline">Emmanuel Lujan</span>, Alejandro Otero, Esteban Mocskos, Leonardo Rey Vega, Cecilia Galarza</div>
+        <div class="pub-venue">XVIII Workshop on Information Processing and Control (RPIC), Argentina, 2019</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://www.researchgate.net/publication/334707381_Lite_NB-IoT_Simulator_for_Uplink_Layer#fullTextFileContent" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('mellino2019lite', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('mellino2019lite', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-mellino2019lite">The Internet of Things (IoT) is a new paradigm that gives rise to Low Power Wide Area Networks (LP-WAN). Narrow Band Internet of Things (NB-IoT) is a particular network architecture built on the legacy of LTE that is most suitable for IoT applications. In this paper, we present our work towards the implementation of a protocol simulator for NB-IoT communications. A summary of the NB-IoT physical layer is presented, deepening on the description of the uplink channel and ending with a description of the uplink scheduling process. As an application of our toolbox, we present NB-IoT uplink block error rate (BLER) curves traced via link layer simulations and derive the optimal link adaptation for an Additive White Gaussian Noise (AWGN) channel.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">May 2019</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010465519301547" target="_blank" rel="noopener">LibreGrowth: A Tumor Growth Code Based on Reaction-Diffusion Equations Using Shared Memory</a>
+          <span class="pub-badge pub-badge-type">Journal Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, María Sol Rosito, Alejandro Soba, Cecilia Suárez</div>
+        <div class="pub-venue">Computer Physics Communications, 2019</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://drive.google.com/file/u/0/d/1tL236t3_Z232LtMSzJybazsx8borqJoy/view" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2019libregrowth', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2019libregrowth', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2019libregrowth">In recent years, in-silico experimentation within the field of oncological medicine has been intensively investigated with the aim of better understanding tumor dynamics and dose–response relationships in cancer treatments. Here we present LibreGrowth, a libre tumor growth code able to simulate the core growth and peripheral tumor cell infiltration, considering a benign and a malignant stages. We implemented a reaction–diffusion based model, with spatially variable diffusion coefficient, into a three-dimensional domain, using C++ and OpenMP over a GNU/Linux system. LibreGrowth aims to provide a flexible implementation for depicting heterogeneous tissues and infiltration processes, and to shed light in current therapy optimization strategies.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">2019</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0013468619313544" target="_blank" rel="noopener">Towards an Optimal Dose-Response Relationship in Gene Electrotransfer Protocols</a>
+          <span class="pub-badge pub-badge-type">Journal Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Matías Marino, Nahuel Olaiz, Guillermo Marshall</div>
+        <div class="pub-venue">Electrochimica Acta, 2019</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://drive.google.com/file/u/0/d/1G0sttM9G263pGftRF76odTpmcohBZkiY/view" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2019towards', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2019towards', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2019towards">In search of an optimal gene electrotransfer (GET) protocol, an electroporation-based (EP) tumor treatment with great potential as a non-viral gene-delivery system, the concept of the dose-response relationship is introduced. It is shown that a reliable dose parameter is the pulse dosage and reliable response parameters are the reversibly electroporated tissue area as well as the unwanted damaged tissue area and plasmid damage due to pH. An optimal dose-response relationship in a GET protocol is predicted as the critical pulse dosage yielding maximum reversibly electroporated tissue area with minimal tissue area damage induced by pH fronts. Moreover, since damage induced by pH changes is proportional to the Coulomb dosage, damage induced by pH fronts is negligible in typical EP-based tumor protocols such as in electrochemotherapy (ECT) and irreversible electroporation (IRE) but not in GET, due to the most often longer pulses applied.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">2019</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://revistas.udea.edu.co/index.php/ingenieria/article/view/336282" target="_blank" rel="noopener">An Integrated Platform for Smart Energy Management: The CC-SEM Project</a>
+          <span class="pub-badge pub-badge-type">Journal Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Alejandro Otero, Sebastian Valenzuela, Esteban Mocskos, Luiz Angelo Steffenel, Sergio Nesmachnow</div>
+        <div class="pub-venue">Revista Facultad de Ingeniería, Universidad de Antioquia, 2019</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://revistas.udea.edu.co/index.php/ingenieria/article/view/336282/20795137" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2019integrated', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2019integrated', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2019integrated">Energy management focuses on improving the efficient use of resources and increasing energy access in a path towards a more sustainable society. Cloud Computing for Smart Energy Management project (CC-SEM) is a research effort for building an integrated platform for smart monitoring, controlling, and planning energy consumption and generation in urban scenarios. CC-SEM includes the design of a low-cost IoT device capable of monitoring, operating, and controlling home appliances; an analysis of 5G Narrowband IoT as a suitable cellular technology for Smart Grid outage restoration; an analysis of domestic consumption patterns to help predict home consumption; and a forecasting and performance evaluation methodology for the generation of individual photovoltaic systems. CC-SEM presents a set of tools for controlling home devices, planning/simulating scenarios of energy generation, and advances in the communication infrastructure for transmitting the generated data.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Sep 2018</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://link.springer.com/chapter/10.1007/978-3-030-12804-3_10" target="_blank" rel="noopener">Cloud Computing for Smart Energy Management (CC-SEM Project)</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Alejandro Otero, Sebastian Valenzuela, Esteban Mocskos, Luiz Angelo Steffenel, Sergio Nesmachnow</div>
+        <div class="pub-venue">Congreso Iberoamericano de Ciudades Inteligentes (ICSC-CITIES), 2018</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://link.springer.com/chapter/10.1007/978-3-030-12804-3_10" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2018cloud', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2018cloud', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2018cloud">This paper describes the Cloud Computing for Smart Energy Management (CC-SEM) project, a research effort focused on building an integrated platform for smart monitoring, controlling, and planning energy consumption and generation in urban scenarios. The project integrates cutting-edge technologies (Big Data analysis, computational intelligence, Internet of Things, High Performance Computing and Cloud Computing), specific hardware for energy monitoring/controlling built within the project, and explores their communication. The proposed platform considers the point of view of both citizens and administrators, providing a set of tools for controlling home devices (for end users), planning/simulating scenarios of energy generation (for energy companies and administrators), and shows some advances in communication infrastructure for transmitting the generated data.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">May 2018</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://doi.org/10.1039/c8ib00049b" target="_blank" rel="noopener">Microenvironmental Influence on Microtumour Infiltration Patterns: 3D Mathematical Modelling Supported by In Vitro Studies</a>
+          <span class="pub-badge pub-badge-type">Journal Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Daniela Soto, María S. Rosito, Alejandro Soba, Liliana N. Guerra, Juan C. Calvo, Guillermo Marshall, Cecilia Suárez</div>
+        <div class="pub-venue">Integrative Biology, Oxford University Press, 2018</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://d1wqtxts1xzle7.cloudfront.net/99394708/CONICET_Digital_Nro.dfe01121-0652-4580-acfe-3a7c26abe6c5_D-libre.pdf?1677913825=&response-content-disposition=inline%3B+filename%3DMicroenvironmental_influence_on_microtum.pdf&Expires=1780176245&Signature=CIV1duqKq79RlFbF7F-GH3r1Otm5KuJpO9JODCV8qF6i4QktKfr52Jf8tHU9pX~yjR2r5R4oG42IVEHelPPt2yhMzHUoZQ7ZluSpXG8cm1WezjbMt3dZWz0e~rCzF2NVSkmjdc4gjluiX48~hiEq6vhAVALbna~-TKEJx6fzr1-v5mt3nw~HBWCHmWby4UQHl95iOpxHCiePR-qE3VjZ4loSsyV8V~Z9ZZWrd74Fn8OcSuM9mIWG55vdbKzK9sJcPPf5LdFx3YBorweH0iVjLO5fpAfdzvahD7zygBDvoroHS4Kmoh-f6U8YeJskwU9y7TM07twnutuWpRYQewgC9Q__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2018microenvironmental', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2018microenvironmental', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2018microenvironmental">Tumour infiltration extent and its spatial organization depend both on the tumour type and stage and on the bio-physicochemical characteristics of the microenvironment. This work presents an experimental/numerical combined method for the development of a three-dimensional mathematical model with the ability to reproduce the growth and infiltration patterns of a given avascular microtumour in response to different microenvironmental conditions. The model is based on a diffusion–convection reaction equation that considers logistic proliferation, volumetric growth, a rim of proliferative cells at the tumour surface, and invasion with diffusive and convective components. The in vitro model consists of multicellular tumour spheroids (MTSs) of an epithelial mammary tumour cell line (LM3) immersed in a collagen I gel matrix. It was experimentally determined that adipocyte conditioned media had the ability to change the MTS infiltration pattern from collective and laminar to an individual and atomized one. Numerical simulations adequately reproduced both kinds of infiltration patterns, which were determined by area quantification, analysis of fractal dimensions and lacunarity, and Bland–Altman analysis.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Nov 2017</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://cimec.org.ar/ojs/index.php/mc/article/view/5268" target="_blank" rel="noopener">Modelado Matemático de un Patrón de Invasión Tumoral a través de Ecuaciones de Reacción-Difusión y Fractales DLA</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Daniela Soto, María R. Rosito, Alejandro Soba, Liliana N. Guerra, Guillermo Marshall, Cecilia Suárez</div>
+        <div class="pub-venue">ENIEF — Mecánica Computacional, Bioengineering and Biomechanics, vol. 35, 2017</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://cimec.org.ar/ojs/index.php/mc/article/view/5268/5217" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2017modelado', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2017modelado', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2017modelado">Se presenta un modelo matemático basado en una ecuación de reacción-difusión-convección que logra describir un patrón de infiltración microtumoral resultante de la incorporación de medio condicionado proveniente de adipocitos al microambiente tumoral de esferoides multicelulares. La descripción del tipo de invasión se logra incorporando una difusión espacialmente variable dependiente de una matriz fractal generada por el método DLA (Diffusion Limited Aggregation). Los valores de los principales parámetros del modelo se estiman a partir de datos experimentales. Las simulaciones obtenidas se ajustan cualitativa y semicuantitativamente a los resultados in vitro, según muestran los análisis de fractalidad realizados por los métodos de boxcounting y lagunaridad.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Jul 2016</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://pubs.rsc.org/EN/content/articlelanding/2016/ib/c6ib00110f" target="_blank" rel="noopener">Mathematical Modelling of Microtumour Infiltration Based on In Vitro Experiments</a>
+          <span class="pub-badge pub-badge-type">Journal Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Liliana N. Guerra, Alejandro Soba, Nicolás Visacovsky, Daniel Gandía, Juan Carlos Calvo, Cecilia Ana Suárez</div>
+        <div class="pub-venue">Integrative Biology, 2016</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://pubs.rsc.org/en/content/getauthorversionpdf/c6ib00110f" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2016mathematical', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2016mathematical', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2016mathematical">The objective of this study was to build a mathematical model able to describe the growth and the real invasion pattern of multicellular tumour spheroids immersed in a collagen matrix. The model may be used in a descriptive (case-specific) as well as in a predictive (population-dependent) way, depending on the type of the input parameters (a shape function obtained from a given experimental case or an aleatory shape function generated by data mining and Monte Carlo tools from the entire dataset, respectively). This kind of empirical-numerical interaction has wide application potential at the basic research and at the clinical level.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">2016</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://link.springer.com/chapter/10.1007/978-981-287-817-5_23" target="_blank" rel="noopener">Electrolytic Ablation Dose Planning Methodology</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Herman Schinca, Nahuel Olaiz, Santiago Urquiza, Fernando Víctor Molina, Pablo Turjanski, Guillermo Marshall</div>
+        <div class="pub-venue">1st World Congress on Electroporation and Pulsed Electric Fields in Biology, Medicine and Food &amp; Environmental Technologies, Springer, 2016</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://www.researchgate.net/publication/281731444_Electrolytic_Ablation_Dose_Planning_Methodology" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2016electrolytic', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2016electrolytic', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2016electrolytic">Electrolytic ablation (EA), a medical treatment increasingly used in solid tumor ablation, consists in the passage of a low direct electric current through two or more electrodes inserted in the tissue thus inducing pH fronts that destroys the tumor. The combined use of EA with a recently introduced one-probe two electrode device (OPTED) results in a minimally invasive tissue ablation technique. Despite its success related to low cost and minimum side effects, EA has drawbacks such as the difficulty in determining the current and time needed to assure total tumor ablation while avoiding healthy tissue intrusion. Here we introduce a realistic dose planning methodology in terms of the coulomb dosage administered and the associated pH tracking, that predicts an optimal EA/OPTED protocol treatment for a given tumor size.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Oct 2015</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0013468615307283?via%3Dihub" target="_blank" rel="noopener">Optimal Dose-Response Relationship in Electrolytic Ablation of Tumors with a One-Probe-Two-Electrode Device</a>
+          <span class="pub-badge pub-badge-type">Journal Paper</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Herman Schinca, Nahuel Olaiz, Santiago Urquiza, Fernando Víctor Molina, Pablo Turjanski, Guillermo Marshall</div>
+        <div class="pub-venue">Electrochimica Acta, vol. 186, pp. 494–503, Pergamon, 2015</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://d1wqtxts1xzle7.cloudfront.net/107348990/j.electacta.2015.10.14720231113-1-or4jxr-libre.pdf?1699916565=&response-content-disposition=inline%3B+filename%3DOptimal_dose_response_relationship_in_el.pdf&Expires=1780177173&Signature=gX-N7eC3J32tpJW50EWW0lbmo4oUIbHIJOsMPvU0Uu3yCQC3qFTXZPU9ZgZDUKJEwHyn8qUl-Cmw5Te41wYRiDEpBFqQNEt5YPZ7pUytulKfuRzuC7a0bRvtm2LK0~Fc1GCmympHwSoTt8FJ8rUNs0VKw6ybbH45k7NtE509DZPXntaBrRMcZO0hAuq9-Q5NkdxrIuppL48sqCasOdniTLxv5opNnR3h8-o-iczwH~Q4SxLoYF5EGyqj-ZQOZJyYRyzaZo-s1PnvFrjtuYwS9GyRkk96WZZhClhubMzTbbLnFE2qLcGe~rNoiWdkAKdKeMCU6nx6jC2nHFVPilDCMA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2015optimal', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2015optimal', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2015optimal">Electrolytic ablation (EA) of tumors consists in the passage of a low constant electric current through two or more electrodes inserted in the tissue thus inducing pH fronts that produce tumor necrosis. Combined with a recently introduced one-probe two electrode device (OPTED) this procedure results in a minimally invasive treatment. In this work, a theoretical model is introduced describing the EA/OPTED as an electrolytic process and the underlying electrochemical reactions through the Nernst-Planck equations for ion transport. Model results show that the coulomb dosage is a reliable dose parameter and predicts an optimal dose-response relationship for a given tumor size subjected to an EA/OPTED, considering the optimum as the minimum coulomb dosage necessary to achieve total tumor destruction while minimizing healthy tissue damage. Moreover, it predicts a nonlinear relationship between coulomb dosage and necrotized tumor volume, dosage and NTV scaling as Q¹⋅⁴.</div>
+
+      </div>
+    </li>
+
+  </ul>
+
+  <h3 class="section-heading" style="margin-top:48px;">Preprints</h3>
+  <ul class="pub-list">
+
+    <li class="pub-item">
+      <div class="pub-date">Jul 2021</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://arxiv.org/abs/2107.09443" target="_blank" rel="noopener">NeuralPDE: Automating Physics-Informed Neural Networks (PINNs) with Error Approximations</a>
+          <span class="pub-badge pub-badge-type">Preprint</span>
+        </div>
+        <div class="pub-authors">Kirill Zubov, Zoe McCarthy, Yingbo Ma, Francesco Calisto, Valerio Pagliarino, Simone Azeglio, Luca Bottero, <span style="text-decoration:underline">Emmanuel Lujan</span>, Valentin Sulzer, Ashutosh Bharambe, et al.</div>
+        <div class="pub-venue">arXiv:2107.09443, 2021</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://arxiv.org/abs/2107.09443" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            arXiv
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('zubov2021neuralpde', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('zubov2021neuralpde', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-zubov2021neuralpde">Physics-informed neural networks (PINNs) are an increasingly powerful way to solve partial differential equations, generate digital twins, and create neural surrogates of physical models. In this manuscript we detail the various methodologies of PINNs and showcase the various types of problems a PINN software can solve. We then detail the inner workings of NeuralPDE.jl and show how a formulation structured around numerical quadrature gives rise to new loss functions which allow for adaptivity towards bounded error tolerances. We showcase how NeuralPDE uses a purely symbolic formulation so that all of the underlying training code is generated from an abstract formulation, and show how to make use of GPUs and solve systems of PDEs. We end by focusing on a complex multiphysics example, the Doyle-Fuller-Newman (DFN) Model, and showcase how this PDE can be formulated and solved with NeuralPDE.</div>
+
+      </div>
+    </li>
+
+  </ul>
+
+  <h3 class="section-heading" style="margin-top:48px;">Scientific Software</h3>
+  <ul class="pub-list">
+
+    <li class="pub-item">
+      <div class="pub-date">Jul 2025</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://zenodo.org/records/15784217" target="_blank" rel="noopener">SmartSolve.jl: AI for Algorithmic Discovery</a>
+          <span class="pub-badge pub-badge-type">Software</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Rushil N. Shah, Rabab Alomairy, Alan Edelman</div>
+        <div class="pub-venue">Zenodo, 2025</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://github.com/JuliaLabs/SmartSolve.jl" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="pub-btn" href="https://zenodo.org/records/15784217" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="5"/><path d="M6 4v4M4 6h4"/></svg>
+            DOI
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2025smartsolve', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2025smartsolve', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2025smartsolve">SmartSolve.jl is a Julia-based toolbox for AI-guided algorithmic discovery, designed to accelerate computations by generating enhanced algorithmic and architectural selection strategies. Envisioned as a general-purpose tool for scientific computing, current efforts focus on challenges in computational linear algebra. The toolbox addresses the growing complexity of selecting efficient solvers, data formats, precision strategies, and hardware resources for structurally diverse matrices—where conventional approaches offer substantial opportunities for improvement. SmartSolve.jl constructs a performance database through systematic benchmarking and applies automated Pareto analysis to identify optimal trade-offs between accuracy and speed. This database underpins a data-driven model that synthesizes dispatch strategies tailored to high-performance linear algebra software.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">2021</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://github.com/cesmix-mit/PotentialLearning.jl" target="_blank" rel="noopener">PotentialLearning.jl: Open-Source Toolbox for Optimizing Atomistic Data and Interatomic Potential Models</a>
+        
+          <span class="pub-badge pub-badge-type">Software</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span> (leading developer), MIT-CESMIX team</div>
+        <div class="pub-venue">GitHub · MIT-CESMIX · 2021–present</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://github.com/cesmix-mit/PotentialLearning.jl" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+
+      </div>
+    </li>
+
+
+    <li class="pub-item">
+      <div class="pub-date">Jan 2021</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://www.nature.com/articles/s41598-020-79858-y" target="_blank" rel="noopener">OpenEP: An Open-Source Simulator for Electroporation-Based Tumor Treatments</a>
+          <span class="pub-badge pub-badge-type">Software</span>
+        </div>
+        <div class="pub-authors">Matías Marino, <span style="text-decoration:underline">Emmanuel Lujan</span>, Esteban Mocskos, Guillermo Marshall</div>
+        <div class="pub-venue">Scientific Reports, Nature, 2021</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://github.com/LSC-UBA/OpenEP" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="pub-btn" href="https://www.nature.com/articles/s41598-020-79858-y" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="copyBib('marino2021openep', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+
+      </div>
+    </li>
+  </ul>
+
+  <h3 class="section-heading" style="margin-top:48px;">Research Talks &amp; Posters</h3>
+  <ul class="pub-list">
+
+    <li class="pub-item">
+      <div class="pub-date">Apr 2026</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://dspace.mit.edu/handle/1721.1/166195" target="_blank" rel="noopener">Accelerating Linear Solves in Finite Element Simulations with Julia &amp; AI</a>
+          <span class="pub-badge pub-badge-type">Poster</span>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Felipe Tomé, Rabab Alomairy, Julian Samaroo, Daniel Pickard, Theo Rulko, Evelyne Ringoot, Yaman Otuzbir, Artemis Pados, Victoria Carrica, et al.</div>
+        <div class="pub-venue">MIT CHEFSI TST Meeting, 2026</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://dspace.mit.edu/handle/1721.1/166195" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="copyBib('lujan2026accelerating', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Apr 2026</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://dspace.mit.edu/handle/1721.1/166196" target="_blank" rel="noopener">Neural Sparse Linear Solver Selection</a>
+          <span class="pub-badge pub-badge-type">Poster</span>
+        </div>
+        <div class="pub-authors">Artemis Pados, Christopher Rackauckas, Alan Edelman, <span style="text-decoration:underline">Emmanuel Lujan</span>, Daniel Pickard, Felipe Tomé</div>
+        <div class="pub-venue">MIT CHEFSI TST Meeting, 2026</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://dspace.mit.edu/handle/1721.1/166196" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="copyBib('pados2026neural', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Aug 2025</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <span class="pub-title-text">Fast Density Functional Theory for Training Machine Learning Interatomic Potentials via Large-Scale Atomistic Sampling</span>
+          <span class="pub-badge pub-badge-type">Poster</span>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Spencer Wyant, Rabab Alomairy</div>
+        <div class="pub-venue">IAIFI Summer Workshop, Harvard University · Cambridge, MA, 2025</div>
+        <div class="pub-actions">
+          <span class="pub-btn pub-btn-muted" title="PDF not yet available">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </span>
+          <a class="pub-btn" href="https://iaifi.org/past-workshops.html" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Workshop
+          </a>
+        </div>
+      </div>
+    </li>
+
+    <li class="talk-item">
+      <div class="talk-date">Jul 2025</div>
+      <div class="talk-content">
+        <div class="talk-title-row">
+          <a class="talk-title-text" href="https://pretalx.com/juliacon-2025/talk/DH7MKC/" target="_blank" rel="noopener">Automated Algorithm Selection Discovery via LLMs</a>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="talk-authors">Rushil N. Shah, <span style="text-decoration:underline">Emmanuel Lujan</span>, Rabab Alomairy</div>
+        <div class="talk-venue">JuliaCon 2025, Lightning Talk</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://pretalx.com/juliacon-2025/talk/DH7MKC/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+          <a class="pub-btn" href="https://www.youtube.com/watch?v=aGtQbmgIaCM" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><polygon points="2,1 11,6 2,11"/></svg>
+            Video
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('shah2025llms', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('shah2025llms', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-shah2025llms">This talk presents the DARPA–MIT SmartSolve project, which automatically selects optimal algorithms and data structures for linear algebra operations. We benchmark diverse algorithms across matrix patterns—dense, sparse, and banded—measuring computation time, casting time, and accuracy. Pareto analysis identifies efficient algorithm–data structure combinations. We then explore how large language models (LLaMA 3) can assist in algorithm classification and recommendation. Selecting the optimal combination can achieve over a 50× speedup compared to default selections in major linear algebra libraries.</div>
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Mar 2024</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://www.researchgate.net/publication/380728194_Accelerating_Neural_Network_Interatomic_Potentials_through_Dimension_Reduction_Using_Julia" target="_blank" rel="noopener">Accelerating Neural Network Interatomic Potentials through Dimension Reduction Using Julia</a>
+          <span class="pub-badge pub-badge-type">Poster</span>
+        </div>
+        <div class="pub-authors">Rabab Alomairy, <span style="text-decoration:underline">Emmanuel Lujan</span>, Spencer Wyant, Julian Samaroo, Joanna Zou, Ralf Meyer, Alan Edelman</div>
+        <div class="pub-venue">Women in Data Science (WiDS) Cambridge, 2024</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://www.researchgate.net/publication/380728194_Accelerating_Neural_Network_Interatomic_Potentials_through_Dimension_Reduction_Using_Julia" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <a class="pub-btn" href="https://www.widscambridge.org/selected-posters-2024" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Poster page
+          </a>
+          <a class="pub-btn" href="https://www.youtube.com/watch?v=06MYrn86iyo&list=PLYx2nCJDi_QHf0Gj5Jx-y4wTGYYZYYM5W&index=3" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><polygon points="2,1 11,6 2,11"/></svg>
+            Video
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('alomairy2024accelerating', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('alomairy2024accelerating', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-alomairy2024accelerating">Machine learning surrogate models address computational bottlenecks in atomistic simulations. We introduce dimension reduction techniques applied to linear regression and neural network interatomic potentials, using Julia packages including PotentialLearning.jl and InteratomicPotentials.jl. Our approach focuses on accelerating energy and force calculations for larger systems through Atomic Cluster Expansion descriptors for Hf and HfO₂ materials, enabling rapid approximations with linear scalability with the number of atoms while maintaining accuracy across diverse atomistic systems.</div>
+
+      </div>
+    </li>
+
+    <li class="talk-item">
+      <div class="talk-date">Jul 2023</div>
+      <div class="talk-content">
+        <div class="talk-title-row">
+          <a class="talk-title-text" href="https://pretalx.com/juliacon2023/talk/GGEKXE/" target="_blank" rel="noopener">Automating the Composition of ML Interatomic Potentials in Julia</a>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="talk-authors"><span style="text-decoration:underline">Emmanuel Lujan</span></div>
+        <div class="talk-venue">JuliaCon 2023, MIT · Cambridge, MA</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://pretalx.com/juliacon2023/talk/GGEKXE/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+          <a class="pub-btn" href="https://www.youtube.com/watch?v=OIYGWLIu57k" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><polygon points="2,1 11,6 2,11"/></svg>
+            Video
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2023automating', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2023automating', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2023automating">Simplifying the composition of machine learning (ML) interatomic potentials is key to finding combinations, between data, descriptors, and learning methods, that exceed the accuracy and performance of the state-of-the-art. The Julia programming language, and its burgeoning atomistic ecosystem, can facilitate the composition of neural networks and other ML models with cutting-edge interatomic potentials, through mechanisms such as multiple dispatch, differentiable programming, ML and GPU abstractions, as well as specialized scientific computing libraries. Here, the use of Julia to automatize the composition of a novel neural potential based on the Atomic Cluster Expansion (ACE) is presented as part of the research activities of the Center for the Exascale Simulation of Materials in Extreme Environments (CESMIX). The proposed scheme aims to facilitate the execution of parallel fitting experiments that search for hyper-parameter values that significantly improve the accuracy in training and test metrics of energies and forces with respect to different Density Functional Theory (DFT) data sets.</div>
+      </div>
+    </li>
+
+    <li class="talk-item">
+      <div class="talk-date">Jul 2022</div>
+      <div class="talk-content">
+        <div class="talk-title-row">
+          <a class="talk-title-text" href="https://juliamolsim.github.io/juliacon22/" target="_blank" rel="noopener">Atomistic Suite for CESMIX in Julia</a>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="talk-authors"><span style="text-decoration:underline">Emmanuel Lujan</span></div>
+        <div class="talk-venue">JuliaCon 2022 · Minisymposium: JuliaMolSim – Computation with Atoms</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://juliamolsim.github.io/juliacon22/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+          <a class="pub-btn" href="https://docs.google.com/presentation/d/1d4vU7Y9wf4YgLu4bjkxzJNIE40i0i7fs/edit?usp=sharing&ouid=118164340519016025759&rtpof=true&sd=true" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="2" width="10" height="7" rx="1"/><line x1="6" y1="9" x2="6" y2="11"/><line x1="4" y1="11" x2="8" y2="11"/></svg>
+            Slides
+          </a>
+          <a class="pub-btn" href="https://www.youtube.com/watch?v=trapn-yIv8g" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><polygon points="2,1 11,6 2,11"/></svg>
+            Video
+          </a>
+          <button class="pub-btn" onclick="copyBib('lujan2022cesmix', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+      </div>
+    </li>
+
+    <li class="talk-item">
+      <div class="talk-date">Jul 2021</div>
+      <div class="talk-content">
+        <div class="talk-title-row">
+          <a class="talk-title-text" href="https://pretalx.com/juliacon2021/talk/ZSCFTW/" target="_blank" rel="noopener">Towards MDP.jl: The Julia Library of MD Potentials</a>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="talk-authors">Ngoc Cuong Nguyen, <span style="text-decoration:underline">Emmanuel Lujan</span>, William S. Moses, Andrew Rohskopf, Valentin Churavy</div>
+        <div class="talk-venue">JuliaCon 2021 (virtual)</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://pretalx.com/juliacon2021/talk/review/GEUBKLALGYCVYE9NR7NKJ3ELFHAQU3UT" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+          <a class="pub-btn" href="https://www.youtube.com/watch?v=wnVXMgdsUqA" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><polygon points="2,1 11,6 2,11"/></svg>
+            Video
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('lujan2021mdp', event)">Abstract ▸</button>
+          <button class="pub-btn" onclick="copyBib('lujan2021mdp', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-lujan2021mdp">MDP.jl, the Julia library of Molecular Dynamics (MD) potentials, is being developed to provide fast and accurate potentials for classical MD simulations on exascale supercomputers. Its goals include coupling empirical and machine learning (ML) potentials and quantifying uncertainties in trained ML potentials. This talk presents the latest developments in MDP.jl regarding descriptors and force field computation.</div>
+      </div>
+    </li>
+
+    <li class="talk-item">
+      <div class="talk-date">Sep 2019</div>
+      <div class="talk-content">
+        <div class="talk-title-row">
+          <span class="talk-title-text">The Role of Damage in Reversible Electroporation Optimization: Theory and Experiments in a Vegetable Model</span>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="talk-authors">Matías Marino, Nahuel Olaiz, Felipe Maglietti, Sebastián Michinski, Pablo Giunta, <span style="text-decoration:underline">Emmanuel Luján</span>, Ezequiel Goldberg, Alejandro Soba, Cecilia Suárez, Guillermo Marshall</div>
+        <div class="talk-venue">3rd World Congress on Electroporation and Pulsed Electric Fields in Biology, Medicine, and Food and Environmental Technologies · Toulouse, France</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://www.researchgate.net/publication/344435018_The_role_of_damage_in_reversible_electroporation_optimization_theory_and_experiments_in_a_vegetable_model" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="2" width="10" height="7" rx="1"/><line x1="6" y1="9" x2="6" y2="11"/><line x1="4" y1="11" x2="8" y2="11"/></svg>
+            Slides
+          </a>
+          <a class="pub-btn" href="https://wc2019.electroporation.net/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+        </div>
+      </div>
+    </li>
+
+    <li class="talk-item">
+      <div class="talk-date">Feb 2019</div>
+      <div class="talk-content">
+        <div class="talk-title-row">
+          <span class="talk-title-text">Workshop Internacional: Planificación de Transporte y Ciudades Inteligentes</span>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="talk-authors"><span style="text-decoration:underline">Emmanuel Lujan</span></div>
+        <div class="talk-venue">University of the Republic · Montevideo, Uruguay · Invited</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://cyted.org/conteudo.php?idnoticia=346&id_rede=127" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+        </div>
+      </div>
+    </li>
+
+    <li class="talk-item">
+      <div class="talk-date">Nov 2018</div>
+      <div class="talk-content">
+        <div class="talk-title-row">
+          <span class="talk-title-text">Mathematical Model of Glioma Evolution and Treatment by Chemo and Radiotherapy</span>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="talk-authors">K. Díaz, <span style="text-decoration:underline">Emmanuel Lujan</span>, Alejandro Soba, Guillermo Marshall, Cecilia Suárez</div>
+        <div class="talk-venue">9th Argentinian Congress of Bioinformatics and Computational Biology (9CAB2C) · Mar del Plata, Argentina</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="http://9cab2c.fi.mdp.edu.ar/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+        </div>
+      </div>
+    </li>
+
+    <li class="talk-item">
+      <div class="talk-date">Sep 2017</div>
+      <div class="talk-content">
+        <div class="talk-title-row">
+          <span class="talk-title-text">Towards an Optimal Dose-Response Relationship in Electroporation-Based Tumor Treatments</span>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="talk-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Matías Marino, Nahuel Olaiz, Guillermo Marshall</div>
+        <div class="talk-venue">2nd World Congress on Electroporation and Pulsed Electric Fields in Biology, Medicine and Food and Environmental Technologies · Norfolk, VA</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://wc2017.electroporation.net/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+        </div>
+      </div>
+    </li>
+
+    <li class="talk-item">
+      <div class="talk-date">Sep 2017</div>
+      <div class="talk-content">
+        <div class="talk-title-row">
+          <span class="talk-title-text">The Concept of Electroporation Energy in Electroporation-Based Models</span>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="talk-authors">Nahuel Olaiz, Pablo Turjanski, Matías Marino, <span style="text-decoration:underline">Emmanuel Lujan</span>, A. Márquez, Fernando Minotti, S. Zucco, Matías Tellado, Sebastián Michinski, Felipe Maglietti, Guillermo Marshall</div>
+        <div class="talk-venue">2nd World Congress on Electroporation and Pulsed Electric Fields · Norfolk, VA</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://wc2017.electroporation.net/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+        </div>
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Jul 2017</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <span class="pub-title-text">An MPI-Based Implementation of a Simplified Actuator Line Model</span>
+          <span class="pub-badge pub-badge-type">Poster</span>
+        </div>
+        <div class="pub-authors">Martín Ventura, Laura Muino, Nahuel Olaiz, <span style="text-decoration:underline">Emmanuel Lujan</span></div>
+        <div class="pub-venue">XIX Giambiagi Winter School, UBA · Buenos Aires, Argentina</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="http://giambiagi2017.df.uba.ar/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+          <button class="pub-btn" onclick="copyBib('ventura2017mpi', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Oct 2015</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <span class="pub-title-text">In Silico Generation of Tumor Invasion Patterns</span>
+          <span class="pub-badge pub-badge-type">Poster</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span>, Alejandro Soba, Nicolás Visacovsky, Liliana Guerra, Guillermo Marshall, Cecilia Suárez</div>
+        <div class="pub-venue">6th Argentinian Conference on Bioinformatics and Computational Biology (A2B2C), 2015</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://www.researchgate.net/publication/283055034_In_silico_generation_of_tumor_invasion_patterns" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <a class="pub-btn" href="http://cs.uns.edu.ar/cab2c2015/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+          <button class="pub-btn" onclick="copyBib('lujan2015silico', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Sep 2014</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <span class="pub-title-text">Tissue Damage in Vaccination Protocols Based on Electroporation: pH Fronts and Tissue Natural Buffering</span>
+          <span class="pub-badge pub-badge-type">Poster</span>
+        </div>
+        <div class="pub-authors">Matías Marino, Nahuel Olaiz, Emanuela Signori, Felipe Maglietti, Cecilia Suárez, Lucas Colombo, Pablo Turjanski, Sebastián Michinski, <span style="text-decoration:underline">Emmanuel Lujan</span></div>
+        <div class="pub-venue">14th International Conference on Progress in Vaccination Against Cancer (PIVAC-14), 2014</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://www.researchgate.net/publication/266317861_Tissue_damage_in_vaccination_protocols_based_on_electroporation_pH_fronts_and_tissue_natural_buffering" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <button class="pub-btn" onclick="copyBib('marino2014tissue', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-date">Aug 2012</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <span class="pub-title-text">Feasibility Study of a Portable Kit for Chagas-Mazza Disease Diagnosis and Data Centralization</span>
+          <span class="pub-badge pub-badge-type">Poster</span>
+        </div>
+        <div class="pub-authors"><span style="text-decoration:underline">Emmanuel Lujan</span></div>
+        <div class="pub-venue">High-Performance Computing Latin America Symposium, Buenos Aires, Argentina, 2012</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://www.researchgate.net/publication/266318154_Feasibility_study_of_a_portable_kit_for_Chagas-Mazza_disease_diagnosis_and_data_centralization" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            PDF
+          </a>
+          <a class="pub-btn" href="https://41jaiio.sadio.org.ar/hpc" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+          <button class="pub-btn" onclick="copyBib('lujan2012feasibility', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+
+      </div>
+    </li>
+
+    <li class="talk-item">
+      <div class="talk-date">Aug 2012</div>
+      <div class="talk-content">
+        <div class="talk-title-row">
+          <span class="talk-title-text">Feasibility Study of a Portable Kit for Chagas-Mazza Disease Diagnosis and Data Centralization</span>
+          <span class="pub-badge pub-badge-type">Talk</span>
+        </div>
+        <div class="talk-authors"><span style="text-decoration:underline">Emmanuel Lujan</span></div>
+        <div class="talk-venue">HPC-Day 2012 — 41 JAIIO, University of La Plata · La Plata, Argentina · Invited</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://41jaiio.sadio.org.ar/hpc" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2H2v8h8V7"/><path d="M7 2h3v3"/><line x1="10" y1="2" x2="5.5" y2="6.5"/></svg>
+            Conference
+          </a>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
   </section>
 
   <footer>
     <span></span>
     <span>Emmanuel Lujan · MIT CSAIL · 2026</span>
   </footer>
+  <p class="disclaimer">Some metadata, abstracts, and links on this page were AI-assisted and may contain inaccuracies.</p>
 
 </main>
 
 
+<script>
+const bibtex = {
+  lujan2021mdp: `@misc{lujan2021mdp,
+  title={Towards {MDP.jl}: The {Julia} Library of {MD} Potentials},
+  author={Nguyen, N. C. and Luj{\'a}n, Emmanuel and Moses, W. S. and Rohskopf, A. and Churavy, V.},
+  howpublished={JuliaCon 2021},
+  year={2021},
+  month={07},
+  url={https://pretalx.com/juliacon2021/talk/review/GEUBKLALGYCVYE9NR7NKJ3ELFHAQU3UT}
+}`,
+  lujan2022cesmix: `@misc{lujan2022cesmix,
+  title={Atomistic Suite for {CESMIX} in {Julia}},
+  author={Luj{\'a}n, Emmanuel},
+  howpublished={JuliaCon 2022, Minisymposium: JuliaMolSim -- Computation with Atoms},
+  year={2022},
+  month={07},
+  url={https://juliamolsim.github.io/juliacon22/}
+}`,
+  lujan2023automating: `@misc{lujan2023automating,
+  title={Automating the Composition of {ML} Interatomic Potentials in {Julia}},
+  author={Luj{\'a}n, Emmanuel},
+  howpublished={JuliaCon 2023},
+  year={2023},
+  month={07},
+  url={https://pretalx.com/juliacon2023/talk/GGEKXE/}
+}`,
+  shah2025llms: `@misc{shah2025llms,
+  title={Automated Algorithm Selection Discovery via {LLMs}},
+  author={Shah, Rushil N. and Luj{\'a}n, Emmanuel and Alomairy, Rabab},
+  howpublished={JuliaCon 2025, Lightning Talk},
+  year={2025},
+  url={https://pretalx.com/juliacon-2025/talk/DH7MKC/}
+}`,
+  lujan2026accelerating: `@inproceedings{lujan2026accelerating,
+  title={Accelerating Linear Solves in Finite Element Simulations with Julia \\& AI},
+  author={Lujan, Emmanuel and Tom{\\'{e}}, Felipe and Alomairy, Rabab and Samaroo, Julian and Pickard, Daniel and Rulko, Theo and Ringoot, Evelyne and Otuzbir, Yaman and Pados, Artemis and Carrica, Victoria and others},
+  booktitle={MIT Center for Exascale Simulation of Coupled High-Enthalpy Fluid--Solid Interactions (CHEFSI) TST Meeting},
+  url={https://dspace.mit.edu/handle/1721.1/166195},
+  year={2026},
+  month={04}
+}`,
+  pados2026neural: `@inproceedings{pados2026neural,
+  title={Neural Sparse Linear Solver Selection},
+  author={Pados, Artemis and Rackauckas, Christopher and Edelman, Alan and Lujan, Emmanuel and Pickard, Daniel and Tom{\\'{e}}, Felipe},
+  booktitle={MIT Center for Exascale Simulation of Coupled High-Enthalpy Fluid--Solid Interactions (CHEFSI) TST Meeting},
+  url={https://dspace.mit.edu/handle/1721.1/166196},
+  year={2026},
+  month={04}
+}`,
+  metcalfe2026arrays: `@inproceedings{metcalfe2026arrays,
+  title={Arrays of Networked Standard Geothermal Wells},
+  author={Metcalfe, Robert and Lujan, Emmanuel and Wittenstein, Collin and Inglis, Andrew and Edelman, Alan},
+  booktitle={PROCEEDINGS, 51st Workshop on Geothermal Reservoir Engineering},
+  year={2026},
+  month={02},
+  organization={Stanford University},
+  address={Stanford, CA},
+  url={https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Metcalfe.pdf}
+}`,
+  wittenstein2026full: `@inproceedings{wittenstein2026full,
+  title={A Full Three-Dimensional {GPU}-Accelerated Model for Deep Borehole Heat Exchangers ({DBHEs}) Enabling Simulation of Well Arrays},
+  author={Wittenstein, Collin and Lujan, Emmanuel and Inglis, Andrew and Metcalfe, Robert and Edelman, Alan and Ranocha, Hendrik},
+  booktitle={PROCEEDINGS, 51st Workshop on Geothermal Reservoir Engineering},
+  year={2026},
+  month={02},
+  organization={Stanford University},
+  address={Stanford, CA},
+  url={https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Wittenstein.pdf}
+}`,
+  lujan2025structure: `@inproceedings{lujan2025structure,
+  title={When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra},
+  author={Lujan, Emmanuel and Edelman, Alan},
+  booktitle={IEEE High Performance Extreme Computing Conference (HPEC)},
+  year={2025},
+  doi={10.1109/HPEC67600.2025.11196484}
+}`,
+  shah2025data: `@inproceedings{shah2025data,
+  title={Data-Driven Dynamic Algorithm Dispatch with Large Language Models},
+  author={Shah, Rushil N. and Lujan, Emmanuel and Alomairy, Rabab and Edelman, Alan},
+  booktitle={IEEE High Performance Extreme Computing Conference (HPEC)},
+  year={2025},
+  url={https://ieee-hpec.org/wp-content/uploads/2026/01/120.pdf}
+}`,
+  lujan2025smartsolve: `@misc{lujan2025smartsolve,
+  title={{SmartSolve.jl}: {AI} for Algorithmic Discovery},
+  author={Lujan, Emmanuel and Shah, Rushil N. and Alomairy, Rabab and Edelman, Alan},
+  year={2025},
+  url={https://zenodo.org/records/15784217}
+}`,
+  ouko2025decision: `@inproceedings{ouko2025decision,
+  title={Decision-Support and Modeling with Large Language Models for Geothermal Well Arrays},
+  author={Ouko, Edwin and Lujan, Emmanuel and Edelman, Alan and Metcalfe, Robert},
+  booktitle={PROCEEDINGS, 50th Workshop on Geothermal Reservoir Engineering},
+  year={2025},
+  month={02},
+  organization={Stanford University},
+  address={Stanford, CA},
+  url={https://pangea.stanford.edu/ERE/pdf/IGAstandard/SGW/2025/Ouko.pdf}
+}`,
+  ventura2017mpi: `@inproceedings{ventura2017mpi,
+  title={An {MPI}-Based Implementation of a Simplified Actuator Line Model},
+  author={Ventura, M. and Muino, L. and Olaiz, N. and Luj{\'a}n, Emmanuel},
+  booktitle={XIX Giambiagi Winter School, UBA},
+  address={Buenos Aires, Argentina},
+  year={2017}
+}`,
+  alomairy2024accelerating: `@misc{alomairy2024accelerating,
+  title={Accelerating Neural Network Interatomic Potentials through Dimension Reduction Using Julia},
+  author={Alomairy, Rabab and Lujan, Emmanuel and Wyant, Spencer and Samaroo, Julian and Zou, Joanna and Meyer, Ralf and Edelman, Alan},
+  howpublished={Women in Data Science (WiDS) Cambridge},
+  year={2024}
+}`,
+  marino2021openep: `@article{marino2021openep,
+  title={{OpenEP}: An Open-Source Simulator for Electroporation-Based Tumor Treatments},
+  author={Marino, Mat{\\'{i}}as and Lujan, Emmanuel and Mocskos, Esteban and Marshall, Guillermo},
+  journal={Scientific Reports},
+  volume={11},
+  number={1},
+  year={2021},
+  publisher={Springer Nature},
+  url={https://www.nature.com/articles/s41598-020-79858-y}
+}`,
+  zubov2021neuralpde: `@article{zubov2021neuralpde,
+  title={{NeuralPDE}: Automating Physics-Informed Neural Networks ({PINNs}) with Error Approximations},
+  author={Zubov, Kirill and McCarthy, Zoe and Ma, Yingbo and Calisto, Francesco and Pagliarino, Valerio and Azeglio, Simone and Bottero, Luca and Luj{\\'{a}}n, Emmanuel and Sulzer, Valentin and Bharambe, Ashutosh and others},
+  journal={arXiv preprint arXiv:2107.09443},
+  year={2021},
+  url={https://arxiv.org/abs/2107.09443}
+}`,
+  matos2021performance: `@inproceedings{matos2021performance,
+  title={Performance of {D2D/NB-IoT} Communications in Urban and Suburban Environments},
+  author={Matos, Rodolfo Leonardo Sumoza and Luj{\\'{a}}n, Emmanuel and Mocskos, Esteban Eduardo},
+  booktitle={2021 Winter Simulation Conference (WSC)},
+  pages={1--12},
+  year={2021},
+  organization={IEEE}
+}`,
+  lujan2019extreme: `@article{lujan2019extreme,
+  title={Extreme Coverage in {5G} Narrowband {IoT}: A {LUT}-Based Strategy to Optimize Shared Channels},
+  author={Luj{\\'{a}}n, Emmanuel and Mellino, Juan A Zuloaga and Otero, Alejandro D and Vega, Leonardo Rey and Galarza, Cecilia G and Mocskos, Esteban E},
+  journal={IEEE Internet of Things Journal},
+  year={2019},
+  doi={10.1109/JIOT.2019.2953609}
+}`,
+  lujan2019libregrowth: `@article{lujan2019libregrowth,
+  title={{LibreGrowth}: A Tumor Growth Code Based on Reaction-Diffusion Equations Using Shared Memory},
+  author={Luj{\\'{a}}n, Emmanuel and Rosito, Mar{\\'{i}}a Sol and Soba, Alejandro and Su{\\'{a}}rez, Cecilia},
+  journal={Computer Physics Communications},
+  year={2019}
+}`,
+  lujan2019towards: `@article{lujan2019towards,
+  title={Towards an Optimal Dose-Response Relationship in Gene Electrotransfer Protocols},
+  author={Luj{\\'{a}}n, Emmanuel and Marino, Mat{\\'{i}}as and Olaiz, Nahuel and Marshall, Guillermo},
+  journal={Electrochimica Acta},
+  year={2019}
+}`,
+  lujan2019integrated: `@article{lujan2019integrated,
+  title={An Integrated Platform for Smart Energy Management: The {CC-SEM} Project},
+  author={Luj{\\'{a}}n, E. and Otero, A. and Valenzuela, S. and Mocskos, E. and Steffenel, L. A. and Nesmachnow, S.},
+  journal={Revista Facultad de Ingenier{\\'{i}}a, Universidad de Antioquia},
+  year={2019}
+}`,
+  mellino2019lite: `@inproceedings{mellino2019lite,
+  title={Lite {NB-IoT} Simulator for Uplink Layer},
+  author={Mellino, J. A. Zuloaga and Luj{\\'{a}}n, E. and Otero, A. and Mocskos, E. and Vega, L. Rey and Galarza, C.},
+  booktitle={XVIII Workshop on Information Processing and Control (RPIC), Argentina},
+  year={2019}
+}`,
+  lujan2018microenvironmental: `@article{lujan2018microenvironmental,
+  title={Microenvironmental Influence on Microtumour Infiltration Patterns: {3D} Mathematical Modelling Supported by In Vitro Studies},
+  author={Luj{\\'{a}}n, Emmanuel and Soto, Daniela and Rosito, Mar{\\'{i}}a S and Soba, Alejandro and Guerra, Liliana N and Calvo, Juan C and Marshall, Guillermo and Su{\\'{a}}rez, Cecilia},
+  journal={Integrative Biology},
+  volume={10},
+  number={5},
+  pages={325--334},
+  year={2018},
+  publisher={Oxford University Press}
+}`,
+  lujan2018cloud: `@inproceedings{lujan2018cloud,
+  title={Cloud Computing for Smart Energy Management ({CC-SEM} Project)},
+  author={Lujan, Emmanuel and Otero, Alejandro and Valenzuela, Sebastian and Mocskos, Esteban and Steffenel, Luiz Angelo and Nesmachnow, Sergio},
+  booktitle={Congreso Iberoamericano de Ciudades Inteligentes (ICSC-CITIES 2018)},
+  year={2018}
+}`,
+  lujan2017modelado: `@inproceedings{lujan2017modelado,
+  title={Modelado matem{\\'{a}}tico de un patr{\\'{o}}n de invasi{\\'{o}}n tumoral a trav{\\'{e}}s de ecuaciones de reacci{\\'{o}}n-difusi{\\'{o}}n y fractales {DLA}},
+  author={Luj{\\'{a}}n, Emmanuel and Soto, Daniela and Rosito, Mar{\\'{i}}a R and Soba, Alejandro and Guerra, Liliana N and Marshall, Guillermo and Su{\\'{a}}rez, Cecilia},
+  booktitle={ENIEF. Mec{\\'{a}}nica Computacional. Bioengineering and Biomechanics},
+  volume={35},
+  number={8},
+  year={2017}
+}`,
+  lujan2016mathematical: `@article{lujan2016mathematical,
+  title={Mathematical Modelling of Microtumour Infiltration Based on In Vitro Experiments},
+  author={Luj{\\'{a}}n, Emmanuel and Guerra, Liliana N and Soba, Alejandro and Visacovsky, Nicol{\\'{a}}s and Gand{\\'{i}}a, Daniel and Calvo, Juan Carlos and Su{\\'{a}}rez, Cecilia Ana},
+  journal={Integrative Biology},
+  year={2016}
+}`,
+  lujan2016electrolytic: `@inproceedings{lujan2016electrolytic,
+  title={Electrolytic Ablation Dose Planning Methodology},
+  author={Luj{\\'{a}}n, Emmanuel and Schinca, H and Olaiz, N and Urquiza, S and Molina, FV and Turjanski, P and Marshall, G},
+  booktitle={1st World Congress on Electroporation and Pulsed Electric Fields in Biology, Medicine and Food \\& Environmental Technologies},
+  pages={101--104},
+  year={2016},
+  organization={Springer Singapore}
+}`,
+  lujan2015optimal: `@article{lujan2015optimal,
+  title={Optimal Dose-Response Relationship in Electrolytic Ablation of Tumors with a One-Probe-Two-Electrode Device},
+  author={Luj{\\'{a}}n, Emmanuel and Schinca, Herman and Olaiz, N and Urquiza, S and Molina, Fernando V{\\'{i}}ctor and Turjanski, P and Marshall, G},
+  journal={Electrochimica Acta},
+  volume={186},
+  pages={494--503},
+  year={2015},
+  publisher={Pergamon}
+}`,
+  lujan2015silico: `@inproceedings{lujan2015silico,
+  title={In Silico Generation of Tumor Invasion Patterns},
+  author={Luj{\\'{a}}n, Emmanuel and Soba, Alejandro and Visacovsky, Nicol{\\'{a}}s and Guerra, Liliana and Marshall, Guillermo and Su{\\'{a}}rez, Cecilia},
+  booktitle={6th Argentinian Conference on Bioinformatics and Computational Biology},
+  year={2015},
+  organization={A2B2C}
+}`,
+  marino2014tissue: `@inproceedings{marino2014tissue,
+  title={Tissue Damage in Vaccination Protocols Based on Electroporation: {pH} Fronts and Tissue Natural Buffering},
+  author={Marino, M. and Olaiz, N. and Signori, E. and Maglietti, F. and Su{\\'{a}}rez, C. and Colombo, L. and Turjanski, P. and Michinski, S. and Luj{\\'{a}}n, E.},
+  booktitle={The 14th International Conference on Progress in Vaccination Against Cancer (PIVAC-14)},
+  year={2014}
+}`,
+  lujan2012feasibility: `@inproceedings{lujan2012feasibility,
+  title={Feasibility Study of a Portable Kit for {Chagas-Mazza} Disease Diagnosis and Data Centralization},
+  author={Luj{\\'{a}}n, Emmanuel},
+  booktitle={High-Performance Computing Latin America Symposium, Buenos Aires, Argentina},
+  year={2012}
+}`
+};
+
+function copyBib(key, e) {
+  const btn = e.currentTarget;
+  navigator.clipboard.writeText(bibtex[key]).then(() => {
+    const orig = btn.innerHTML;
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+function copyAllBib(e) {
+  const all = Object.values(bibtex).join('\n\n');
+  const btn = e.currentTarget;
+  navigator.clipboard.writeText(all).then(() => {
+    const orig = btn.innerHTML;
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+function toggleAbstract(key, e) {
+  const btn = e.currentTarget;
+  const abs = document.getElementById('abs-' + key);
+  if (!abs) return;
+  const isOpen = abs.classList.toggle('open');
+  btn.textContent = isOpen ? 'Abstract ▾' : 'Abstract ▸';
+}
+
+// Highlight the nav link of the section currently in view (scrollspy).
+(function () {
+  const links = document.querySelectorAll('.nav-links a[href^="#"]');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  const byId = {};
+  links.forEach(a => { byId[a.getAttribute('href').slice(1)] = a; });
+  const sections = Object.keys(byId)
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  function setActive(id) {
+    links.forEach(a => a.classList.toggle('active', a === byId[id]));
+  }
+  setActive(sections[0] && sections[0].id);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(s => observer.observe(s));
+})();
+</script>
 
 </body>
 </html>
