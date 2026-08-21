@@ -434,6 +434,32 @@
   <ul class="pub-list">
 
     <li class="pub-item">
+      <div class="pub-date">Sep 2026</div>
+      <div class="pub-content">
+        <div class="pub-title-row">
+          <a href="https://ieee-hpec.org/ieee-hpec-2026-prelim-agenda/" target="_blank" rel="noopener">Learning to Select Sparse Linear Solvers with Convolutional Neural Networks</a>
+          <span class="pub-badge pub-badge-type">Conference Paper</span>
+          <span class="pub-badge pub-badge-type">To Appear</span>
+        </div>
+        <div class="pub-authors">Artemis Pados, Alan Edelman, <span style="text-decoration:underline">Emmanuel Lujan</span>, Daniel Pickard, Felipe Tom&eacute;, Christopher Rackauckas</div>
+        <div class="pub-venue">IEEE High Performance Extreme Computing Conference (HPEC), 2026</div>
+        <div class="pub-actions">
+          <a class="pub-btn" href="https://ieee-hpec.org/ieee-hpec-2026-prelim-agenda/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 1h5.5L10 3.5V11H2V1z"/><path d="M7 1v3h3"/></svg>
+            Program
+          </a>
+          <button class="pub-btn" onclick="toggleAbstract('pados2026learning', event)">Abstract &#9656;</button>
+          <button class="pub-btn" onclick="copyBib('pados2026learning', event)">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V1h7"/></svg>
+            BibTeX
+          </button>
+        </div>
+        <div class="pub-abstract" id="abs-pados2026learning">We investigate convolutional-neural-network (CNN) based automatic solver selection for sparse linear systems, a problem of practical importance where solver performance varies dramatically with matrix sparsity structure. A CNN is trained to regress log timing ratios between candidate solvers using spy plot images of matrix nonzero structure as input, achieving strong prediction accuracy on both held-out SuiteSparse matrices and real-world matrices from high-performance simulation codes.</div>
+
+      </div>
+    </li>
+
+    <li class="pub-item">
       <div class="pub-date">Feb 2026</div>
       <div class="pub-content">
         <div class="pub-title-row">
@@ -1481,6 +1507,15 @@ const bibtex = {
   url={https://dspace.mit.edu/handle/1721.1/166196},
   year={2026},
   month={04}
+}`,
+  pados2026learning: `@inproceedings{pados2026learning,
+  title={Learning to Select Sparse Linear Solvers with Convolutional Neural Networks},
+  author={Pados, Artemis and Edelman, Alan and Lujan, Emmanuel and Pickard, Daniel and Tom{\\'{e}}, Felipe and Rackauckas, Christopher},
+  booktitle={IEEE High Performance Extreme Computing Conference (HPEC)},
+  year={2026},
+  month={09},
+  note={To appear},
+  url={https://ieee-hpec.org/ieee-hpec-2026-prelim-agenda/}
 }`,
   metcalfe2026arrays: `@inproceedings{metcalfe2026arrays,
   title={Arrays of Networked Standard Geothermal Wells},
