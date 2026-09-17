@@ -3139,21 +3139,33 @@ function toggleAbstract(key, e) {
   if (!('IntersectionObserver' in window)) {
     revealEls.forEach(el => el.classList.add('in'));
   } else {
+    /* Reveal on the way down only. A section fades in when it enters from the
+       bottom; once seen it stays visible, so scrolling back up never re-animates
+       anything and never blanks what the reader is looking at. The state is
+       reset only when a section drops below the viewport again - i.e. the reader
+       scrolled up past it - so the next pass downwards plays the effect afresh. */
+    const offscreen = el => {
+      const r = el.getBoundingClientRect();
+      return r.bottom <= 0 || r.top >= window.innerHeight;
+    };
+    const belowViewport = el => el.getBoundingClientRect().top >= window.innerHeight;
     const revObs = new IntersectionObserver(entries => {
       entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('in'); revObs.unobserve(e.target); }
+        if (e.intersectionRatio >= 0.12) { e.target.classList.add('in'); return; }
+        /* Entries are queued, so a "left the viewport" record can arrive after
+           the element is already back on screen. Re-check live geometry before
+           hiding, or a stale entry blanks a section the reader is looking at.
+           Leaving via the top is not a reset - that is the scroll-up case. */
+        if (!e.isIntersecting && belowViewport(e.target)) e.target.classList.remove('in');
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    }, { threshold: [0, 0.12] });
     revealEls.forEach(el => revObs.observe(el));
-    /* Safety sweep: guarantee anything in or above the viewport reveals even if
-       the observer misses it (fast scroll, anchor jumps, browser quirks). */
+    /* Safety sweep: reveal anything already on screen that the observer has not
+       reported yet (fast scroll, anchor jumps). It only adds; hiding is left to
+       the observer so the repeat behaviour is not defeated. */
     const sweep = () => {
-      const vh = window.innerHeight;
       revealEls.forEach(el => {
-        if (el.classList.contains('in')) return;
-        if (el.getBoundingClientRect().top < vh * 0.95) {
-          el.classList.add('in'); revObs.unobserve(el);
-        }
+        if (!el.classList.contains('in') && !offscreen(el)) el.classList.add('in');
       });
     };
     window.addEventListener('scroll', sweep, { passive: true });
