@@ -1679,8 +1679,11 @@
     }
 
     @media (max-width: 640px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 1.8rem; align-items: start; }
-      .hero-portrait { order: -1; justify-self: start; }
+      .hero-grid { grid-template-columns: 1fr; gap: 1.4rem; align-items: start; }
+      /* the 2.6rem bottom margin lifts the portrait off the pill row in the
+         two-column hero; stacked it is just dead space above the name */
+      .hero-portrait { order: -1; justify-self: start; margin-bottom: 0; }
+      .portrait-cap { margin-top: .6rem; }
       .portrait-frame { width: min(50vw, 170px); height: auto; aspect-ratio: 215 / 262; }
       .portrait-frame::before { inset: 9px -9px -9px 9px; }
       .hero-name { max-width: none; }
