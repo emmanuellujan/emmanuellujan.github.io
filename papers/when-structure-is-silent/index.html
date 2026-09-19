@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra — Emmanuel Lujan</title>
+  <meta name="description" content="When does recognizing matrix structure pay off? Emmanuel Lujan and Alan Edelman analyze structure-aware algorithmic dispatch, including detection and conversion overheads. IEEE HPEC 2025.">
+  <link rel="canonical" href="https://www.emmanuellujan.com/papers/when-structure-is-silent/">
+  <meta name="theme-color" content="#750014">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23750014'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='white'%3EEL%3C/text%3E%3C/svg%3E">
+
+  <meta name="citation_title" content="When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra">
+  <meta name="citation_author" content="Lujan, Emmanuel">
+  <meta name="citation_author" content="Edelman, Alan">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="IEEE High Performance Extreme Computing Conference (HPEC)">
+  <meta name="citation_doi" content="10.1109/HPEC67600.2025.11196484">
+  <meta name="citation_firstpage" content="1">
+  <meta name="citation_lastpage" content="7">
+  <meta name="citation_abstract_html_url" content="https://www.emmanuellujan.com/papers/when-structure-is-silent/">
+  <meta name="citation_pdf_url" content="https://www.emmanuellujan.com/papers/when-structure-is-silent/when-structure-is-silent.pdf">
+  <!-- Accepted manuscript, hosted here under IEEE's personal-use terms. Also on
+       arXiv (2608.22099); Scholar merges the two as versions of one record. -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Emmanuel Lujan">
+  <meta property="og:title" content="When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra">
+  <meta property="og:description" content="When does recognizing matrix structure pay off? A study of structure-aware dispatch and its overheads, by Emmanuel Lujan and Alan Edelman. IEEE HPEC 2025.">
+  <meta property="og:url" content="https://www.emmanuellujan.com/papers/when-structure-is-silent/">
+  <meta property="og:image" content="https://www.emmanuellujan.com/papers/when-structure-is-silent/card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="When Structure is Silent — Emmanuel Lujan and Alan Edelman, IEEE HPEC 2025. Figure: speedup opportunities of structure-aware dispatch scaling with matrix size N.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.emmanuellujan.com/papers/when-structure-is-silent/card.png">
+  <meta name="twitter:title" content="When Structure is Silent">
+  <meta name="twitter:description" content="Opportunities for Algorithmic Dispatch in Linear Algebra. Emmanuel Lujan and Alan Edelman · IEEE HPEC 2025.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "@id": "https://www.emmanuellujan.com/papers/when-structure-is-silent/#article",
+    "headline": "When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra",
+    "name": "When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra",
+    "author": [
+      {"@type": "Person", "name": "Emmanuel Lujan", "url": "https://www.emmanuellujan.com/", "sameAs": "https://orcid.org/0000-0002-5945-4766"},
+      {"@type": "Person", "name": "Alan Edelman"}
+    ],
+    "datePublished": "2025",
+    "url": "https://www.emmanuellujan.com/papers/when-structure-is-silent/",
+    "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.1109/HPEC67600.2025.11196484"},
+    "sameAs": ["https://doi.org/10.1109/HPEC67600.2025.11196484", "https://arxiv.org/abs/2608.22099"],
+    "isPartOf": {"@type": "CreativeWork", "name": "2025 IEEE High Performance Extreme Computing Conference (HPEC)"},
+    "pagination": "1–7",
+    "inLanguage": "en",
+    "keywords": ["Algorithmic dispatch", "Structured matrices", "LU factorization", "High-performance computing"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Typography and MIT colors match the main page's final style rules. */
+    :root { --red: #750014; --ink: #000000; --muted: #40464c; --faint: #626a73; --line: #b8c2cc; --line-soft: #dde1e6; --paper: #f2f4f8; --font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; --page-width: 760px; --page-gutter: clamp(1.2rem, 5vw, 2rem); }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { font-size: 17px; scroll-padding-top: 24px; text-rendering: optimizeLegibility; }
+    body { margin: 0; background: #fff; color: var(--ink); font-family: var(--font); font-size: 1rem; line-height: 1.6; font-weight: 400; -webkit-font-smoothing: antialiased; }
+    a { color: var(--red); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #000; }
+    a:focus-visible, button:focus-visible, pre:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; }
+    .skip-link { position: absolute; top: -100px; left: 20px; z-index: 10; background: #fff; padding: 12px; }
+    .skip-link:focus { top: 12px; }
+    .site-header { background: var(--red); color: #fff; }
+    .header-inner { max-width: var(--page-width); margin: auto; min-height: 66px; padding: 16px var(--page-gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header a { color: #fff; text-decoration: none; }
+    .site-header a:hover { text-decoration: underline; }
+    .site-header a:focus-visible { outline-color: #fff; }
+    .brand { font-size: 1rem; font-weight: 700; line-height: 1.08; letter-spacing: -.01em; }
+    .affiliation { color: rgba(255,255,255,.7); margin-left: 18px; font-size: .62rem; font-weight: 700; line-height: 1.08; letter-spacing: .12em; }
+    .back-link { font-size: .72rem; font-weight: 600; letter-spacing: .04em; white-space: nowrap; }
+    /* The homepage's 760px content column sits inside its section padding. */
+    main { box-sizing: content-box; max-width: var(--page-width); margin: auto; padding: 44px var(--page-gutter) 72px; }
+    .eyebrow { display: flex; align-items: center; gap: .65rem; color: var(--red); font-size: .68rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 1.2rem; }
+    .eyebrow::before { content: ""; display: inline-block; width: 34px; height: 1.5px; background: var(--red); flex: none; }
+    /* Same responsive size, weight, and tracking as the homepage name. */
+    h1 { margin: 0 0 1.1rem; font-size: clamp(1.9rem, 6vw, 2.7rem); font-weight: 400; line-height: .98; letter-spacing: -.025em; text-wrap: balance; }
+    .authors { margin: 0 0 .15rem; font-size: .9rem; line-height: 1.45; color: var(--faint); }
+    .authors a { text-decoration: none; font-weight: 700; color: var(--ink); }
+    .authors a:hover { color: var(--red); text-decoration: underline; }
+    .venue { font-size: .88rem; color: var(--faint); margin: 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 23px 0 32px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: .38rem; min-height: 44px; padding: .4rem .72rem; border: 1px solid var(--ink); background: #fff; color: var(--ink); font-family: var(--font); font-size: .74rem; font-weight: 600; line-height: 1.6; text-decoration: none; cursor: pointer; }
+    .button:hover { background: var(--paper); border-color: var(--red); color: var(--red); }
+    .button.primary { background: var(--red); border-color: var(--red); color: #fff; }
+    .button.primary:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+    .button svg { flex: none; width: 13px; height: 13px; }
+    .paper-body { border-top: 1px solid var(--line); padding-top: 30px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    h2 { margin: 0 0 15px; font-size: clamp(1.25rem, 3.5vw, 1.5rem); line-height: 1.14; font-weight: 700; letter-spacing: -.015em; color: var(--ink); }
+    p { margin: 0 0 1.15rem; }
+    .abstract { font-size: .95rem; line-height: 1.6; color: var(--muted); }
+    .source-note { font-size: .74rem; color: var(--faint); margin-top: 20px; }
+    .paper-summary { border-left: 2px solid var(--line); padding-left: 18px; }
+    .paper-summary h2 { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); margin: 0 0 12px; }
+    .takeaway { font-size: 1.06rem; line-height: 1.14; font-weight: 700; letter-spacing: -.015em; }
+    .paper-summary p:last-child { margin-bottom: 0; }
+    .paper-summary .context { color: var(--muted); font-size: .95rem; line-height: 1.6; }
+    .topics { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; margin: 14px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: .68rem; }
+    .section { border-top: 1px solid var(--line); margin-top: 36px; padding-top: 28px; }
+    .citation-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; }
+    .citation-heading > a { font-size: .72rem; font-weight: 600; letter-spacing: .01em; }
+    .citation-text { font-size: .95rem; color: var(--muted); }
+    .doi { overflow-wrap: anywhere; }
+    .bibtex-box { margin-top: 20px; background: var(--paper); border: 1px solid var(--line); }
+    .bibtex-toolbar { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding: 10px 18px; gap: 16px; }
+    .bibtex-label { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+    .copy-button { background: #fff; }
+    .copy-button[hidden] { display: none; }
+    pre { margin: 0; padding: 20px; font: 12px/1.8 ui-monospace, SFMono-Regular, Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .copy-status { min-height: 22px; margin: 6px 0 0; font-size: .74rem; color: var(--faint); }
+    .related { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+    .related p { font-size: .95rem; margin-bottom: 0; }
+    .related > a { font-size: .72rem; font-weight: 600; letter-spacing: .01em; }
+    /* Match the main page footer, including its 760px column and typography. */
+    .site-footer { border-top: 4px solid var(--red); background: #fff; color: #000; font: 400 1rem/1.6 Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0; text-align: left; }
+    .site-footer p { margin: 0; }
+    .footer-inner { max-width: var(--page-width); margin: 0 auto; padding: 2.15rem var(--page-gutter) 1.7rem; display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: start; }
+    .footer-kicker { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #626a73; margin-bottom: .5rem; }
+    .footer-name { font-size: 1.1rem; font-weight: 600; line-height: 1.14; letter-spacing: -.015em; color: #000; margin-bottom: .45rem; }
+    .footer-affil { font-size: .82rem; line-height: 1.55; color: #40464c; max-width: 42rem; }
+    .site-footer .disclaimer { max-width: var(--page-width); margin: 0 auto; padding: 0 var(--page-gutter) 1.6rem; font-size: .74rem; line-height: 1.5; color: #626a73; text-align: left; }
+    .footer-bottom { border-top: 1px solid #b8c2cc; max-width: var(--page-width); margin: 0 auto; padding: .9rem var(--page-gutter) 1rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: .78rem; line-height: 1.45; color: #40464c; }
+    /* Header matches main's content-box sizing; the footer puts its gutter on the
+       outer element so each block is a plain centred column and .footer-bottom's
+       rule shares the text's edges. */
+    .header-inner { box-sizing: content-box; }
+    .site-footer { padding-left: var(--page-gutter); padding-right: var(--page-gutter); }
+    .footer-inner, .site-footer .disclaimer, .footer-bottom { padding-left: 0; padding-right: 0; }
+    @media (max-width: 760px) {
+      .header-inner { padding-block: 15px; }
+      .affiliation { display: none; }
+      main { padding-block: 32px 48px; }
+      .footer-bottom { flex-direction: column; gap: .35rem; }
+    }
+    @media (max-width: 380px) {
+      .header-inner { gap: 12px; }
+      .back-link { white-space: normal; text-align: right; }
+      .button { padding: 9px 12px; }
+    }
+    @media print {
+      .site-header, .site-footer, .actions, .copy-button, .copy-status, .skip-link { display: none; }
+      main { padding: 0; }
+      h1 { font-size: 26px; }
+      .paper-summary { border-left-color: #000; }
+      .bibtex-box { break-inside: avoid; }
+      a { color: #000; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#paper">Skip to paper</a>
+  <header class="site-header">
+    <nav class="header-inner" aria-label="Main navigation">
+      <div><a class="brand" href="../../index.html">Emmanuel Lujan</a><span class="affiliation">MIT CSAIL</span></div>
+      <a class="back-link" href="../../index.html#publications">← All publications</a>
+    </nav>
+  </header>
+  <main id="paper">
+    <article aria-labelledby="paper-title">
+      <header>
+        <p class="eyebrow">Conference paper · IEEE HPEC 2025</p>
+        <h1 id="paper-title">When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra</h1>
+        <p class="authors"><a href="../../index.html">Emmanuel Lujan</a><span aria-hidden="true"> &nbsp;·&nbsp; </span><span class="coauthor">Alan Edelman</span></p>
+        <p class="venue">IEEE High Performance Extreme Computing Conference (HPEC), 2025 · pp. 1–7</p>
+        <div class="actions" aria-label="Paper resources">
+          <a class="button primary" href="when-structure-is-silent.pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h4M9 12h6M9 16h6"/></svg>
+            Read PDF
+          </a>
+          <a class="button" href="https://doi.org/10.1109/HPEC67600.2025.11196484">Publisher <span aria-hidden="true">↗</span></a>
+          <a class="button" href="#cite">Cite this paper <span aria-hidden="true">↓</span></a>
+        </div>
+      </header>
+
+      <div class="paper-body">
+        <section class="abstract" aria-labelledby="abstract-title">
+          <h2 id="abstract-title">Abstract</h2>
+          <!-- Full author-written abstract from arXiv:2608.22099v1;
+               publication venue and DOI refer to the 2025 conference paper. -->
+          <p>Algorithmic dispatch is essential for performance in linear-algebra-intensive systems. A persistent challenge lies in the treatment of structured matrices. Although such matrices are often described as &ldquo;sparse,&rdquo; the term <em>structured</em> is more precise, as it highlights exploitable properties — such as bandedness or triangularity — whose algorithmic advantages extend beyond sparsity alone. When the dispatch strategy leaves these structures unrecognized, valuable opportunities for optimization are lost.</p>
+          <p>Recent advances in generative AI offer the promise of linking these silent structures to more effective algorithmic and architectural choices, supplying much of the missing connective tissue in computational linear algebra. However, AI-synthesized dispatch strategies also raise important questions about their theoretical soundness. This work introduces analytical criteria — grounded in time-complexity analysis — to determine when structure-aware dispatch delivers tangible gains.</p>
+          <p>We examine the overheads of structure detection and data-format conversion, characterizing their impact on speedup and slowdown. We illustrate these concepts through a case study on LU factorization applied to banded matrices stored in a dense format, demonstrating results that align with theoretical bounds and reveal substantial gains in both performance and memory usage.</p>
+          <p>These analyses underscore the need for more intelligent dispatch strategies to recognize and exploit silent structures — an underused path to high-performance linear algebra.</p>
+          <p class="source-note">Accepted manuscript of the paper published at IEEE HPEC 2025, hosted here under IEEE's personal-use terms. Also available on <a href="https://arxiv.org/abs/2608.22099">arXiv</a>.</p>
+        </section>
+        <aside class="paper-summary" aria-labelledby="takeaway-title">
+          <h2 id="takeaway-title">In brief</h2>
+          <p class="takeaway">When does recognizing matrix structure pay off?</p>
+          <p class="context">A specialized algorithm can save work, but detecting structure and converting the data also take time. This paper analyzes that trade-off.</p>
+          <ul class="topics" aria-label="Research topics">
+            <li>Algorithmic dispatch</li>
+            <li>Structured matrices</li>
+            <li>LU factorization</li>
+            <li>High-performance computing</li>
+          </ul>
+        </aside>
+      </div>
+
+      <section class="section" id="cite" aria-labelledby="cite-title">
+        <div class="citation-heading">
+          <h2 id="cite-title">Cite this paper</h2>
+          <a href="citation.bib" download="lujan2025structure.bib">Download .bib ↓</a>
+        </div>
+        <p class="citation-text">Emmanuel Lujan and Alan Edelman, “When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra,” <em>IEEE High Performance Extreme Computing Conference (HPEC)</em>, 2025, pp. 1–7.<br><a class="doi" href="https://doi.org/10.1109/HPEC67600.2025.11196484">doi:10.1109/HPEC67600.2025.11196484</a></p>
+        <div class="bibtex-box">
+          <div class="bibtex-toolbar">
+            <span class="bibtex-label">BibTeX · Conference publication</span>
+            <button class="button copy-button" id="copy-bibtex" type="button" hidden>Copy BibTeX</button>
+          </div>
+          <!-- Keep this entry identical to citation.bib. -->
+          <pre tabindex="0" aria-label="BibTeX citation"><code id="bibtex">@inproceedings{lujan2025structure,
+  title={When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra},
+  author={Lujan, Emmanuel and Edelman, Alan},
+  booktitle={IEEE High Performance Extreme Computing Conference (HPEC)},
+  year={2025},
+  doi={10.1109/HPEC67600.2025.11196484}
+}</code></pre>
+        </div>
+        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="section related" aria-labelledby="related-title">
+        <div>
+          <h2 id="related-title">Explore related research</h2>
+          <p><a href="https://smartsolveai.mit.edu/">SmartSolveAI: AI-guided discovery for fast linear algebra ↗</a></p>
+        </div>
+        <a href="../../index.html#publications">All publications →</a>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-kicker">MIT CSAIL</div>
+        <div class="footer-name">Emmanuel Lujan, Ph.D.</div>
+        <p class="footer-affil">Research Scientist<br>MIT Computer Science &amp; Artificial Intelligence Laboratory</p>
+      </div>
+    </div>
+    <p class="disclaimer">Some metadata, abstracts, and links on this page were AI-assisted and may contain inaccuracies.</p>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Emmanuel Lujan. All rights reserved.</span>
+      <span>Last updated: September 2026</span>
+    </div>
+  </footer>
+  <script>
+    const copyButton = document.getElementById('copy-bibtex');
+    const bibtex = document.getElementById('bibtex');
+    const copyStatus = document.getElementById('copy-status');
+    copyButton.hidden = false;
+    copyButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(bibtex.textContent.trim() + '\n');
+        copyStatus.textContent = 'BibTeX copied to clipboard.';
+      } catch {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(bibtex);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        copyStatus.textContent = 'Automatic copying is unavailable. The citation is selected for you to copy, or you can download the .bib file.';
+      }
+    });
+  </script>
+</body>
+</html>
