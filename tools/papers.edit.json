@@ -185,7 +185,10 @@
       "Collagen matrix"
     ],
     "pdf": null,
-    "link": "https://pubs.rsc.org/en/content/getauthorversionpdf/c6ib00110f"
+    "drop": [
+      "https://pubs.rsc.org/en/content/getauthorversionpdf/c6ib00110f"
+    ],
+    "_note": "RSC 'getauthorversionpdf' redirects to the abstract and reports 'You do not currently have access to this content', so it is dropped."
   },
   "lujan2016electrolytic": {
     "slug": "electrolytic-ablation-dose-planning",

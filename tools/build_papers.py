@@ -307,7 +307,10 @@ for key, meta in edit.items():
             return False
         return a.replace("/download/", "/view/") == b.replace("/download/", "/view/")
 
+    drop = set(meta.get("drop", []))
     for l in p["links"]:
+        if l["url"] in drop:
+            continue                       # verified inaccessible; see papers.edit.json
         if same_target(l["url"], meta.get("pdf")) or same_target(l["url"], meta.get("link")):
             continue
         if l["label"] in ("Publisher", "DOI") and p["doi"]:
