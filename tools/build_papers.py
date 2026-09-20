@@ -187,14 +187,6 @@ PAGE = """<!doctype html>
 {abstract_html}
           <p class="source-note">{source_note}</p>
         </section>
-        <aside class="paper-summary" aria-labelledby="takeaway-title">
-          <h2 id="takeaway-title">In brief</h2>
-          <p class="takeaway">{takeaway}</p>
-          <p class="context">{context}</p>
-          <ul class="topics" aria-label="Research topics">
-{topics}
-          </ul>
-        </aside>
       </div>
 
       <section class="section" id="cite" aria-labelledby="cite-title">

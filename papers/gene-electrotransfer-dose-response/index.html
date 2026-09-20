@@ -124,12 +124,6 @@
     p { margin: 0 0 1.15rem; }
     .abstract { font-size: .95rem; line-height: 1.6; color: var(--muted); }
     .source-note { font-size: .74rem; color: var(--faint); margin-top: 20px; }
-    .paper-summary { border-left: 2px solid var(--line); padding-left: 18px; }
-    .paper-summary h2 { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); margin: 0 0 12px; }
-    .takeaway { font-size: 1.06rem; line-height: 1.14; font-weight: 700; letter-spacing: -.015em; }
-    .paper-summary p:last-child { margin-bottom: 0; }
-    .paper-summary .context { color: var(--muted); font-size: .95rem; line-height: 1.6; }
-    .topics { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; margin: 14px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: .68rem; }
     .section { border-top: 1px solid var(--line); margin-top: 36px; padding-top: 28px; }
     .citation-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; }
     .citation-heading > a { font-size: .72rem; font-weight: 600; letter-spacing: .01em; }
@@ -175,7 +169,6 @@
       .site-header, .site-footer, .actions, .copy-button, .copy-status, .skip-link { display: none; }
       main { padding: 0; }
       h1 { font-size: 26px; }
-      .paper-summary { border-left-color: #000; }
       .bibtex-box { break-inside: avoid; }
       a { color: #000; }
     }
@@ -210,17 +203,6 @@
           <p>An optimal dose-response relationship in a GET protocol is predicted as the critical pulse dosage yielding maximum reversibly electroporated tissue area with minimal tissue area damage induced by pH fronts. Moreover, since damage induced by pH changes is proportional to the Coulomb dosage, damage induced by pH fronts is negligible in typical EP-based tumor protocols such as in electrochemotherapy (ECT) and irreversible electroporation (IRE) but not in GET, due to the most often longer pulses applied.</p>
           <p class="source-note">The version of record is at <a href="https://doi.org/10.1016/j.electacta.2019.07.029">doi:10.1016/j.electacta.2019.07.029</a>.</p>
         </section>
-        <aside class="paper-summary" aria-labelledby="takeaway-title">
-          <h2 id="takeaway-title">In brief</h2>
-          <p class="takeaway">What is the right pulse dosage for gene delivery?</p>
-          <p class="context">Frames gene electrotransfer as a dose-response problem: maximum reversibly electroporated tissue against damage from pH fronts — damage that is negligible in shorter-pulse protocols but not in GET.</p>
-          <ul class="topics" aria-label="Research topics">
-            <li>Gene electrotransfer</li>
-            <li>Electroporation</li>
-            <li>Dose-response</li>
-            <li>pH fronts</li>
-          </ul>
-        </aside>
       </div>
 
       <section class="section" id="cite" aria-labelledby="cite-title">

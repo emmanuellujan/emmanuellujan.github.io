@@ -107,12 +107,6 @@
     p { margin: 0 0 1.15rem; }
     .abstract { font-size: .95rem; line-height: 1.6; color: var(--muted); }
     .source-note { font-size: .74rem; color: var(--faint); margin-top: 20px; }
-    .paper-summary { border-left: 2px solid var(--line); padding-left: 18px; }
-    .paper-summary h2 { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); margin: 0 0 12px; }
-    .takeaway { font-size: 1.06rem; line-height: 1.14; font-weight: 700; letter-spacing: -.015em; }
-    .paper-summary p:last-child { margin-bottom: 0; }
-    .paper-summary .context { color: var(--muted); font-size: .95rem; line-height: 1.6; }
-    .topics { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; margin: 14px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: .68rem; }
     .section { border-top: 1px solid var(--line); margin-top: 36px; padding-top: 28px; }
     .figure { margin: 26px 0 0; }
     .figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line-soft); }
@@ -161,7 +155,6 @@
       .site-header, .site-footer, .actions, .copy-button, .copy-status, .skip-link { display: none; }
       main { padding: 0; }
       h1 { font-size: 26px; }
-      .paper-summary { border-left-color: #000; }
       .bibtex-box { break-inside: avoid; }
       a { color: #000; }
     }
@@ -211,18 +204,6 @@
           </figure>
           <p class="source-note">Published open access in <em>Scientific Reports</em> under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a> licence. The publisher PDF is hosted here under that licence; the <a href="https://doi.org/10.1038/s41598-020-79858-y">version of record</a> is at Springer Nature.</p>
         </section>
-        <aside class="paper-summary" aria-labelledby="takeaway-title">
-          <h2 id="takeaway-title">In brief</h2>
-          <p class="takeaway">How many pulses should a treatment use?</p>
-          <p class="context">Electroporating a tumor means finding the pulse dosage that permeabilizes the most tissue while damaging the least. OpenEP simulates how that threshold moves with each pulse, so a protocol can be tuned before it reaches a patient.</p>
-          <ul class="topics" aria-label="Research topics">
-            <li>Electroporation</li>
-            <li>Tumor treatment simulation</li>
-            <li>Electrochemotherapy</li>
-            <li>Gene electrotransfer</li>
-            <li>Shared-memory parallelism</li>
-          </ul>
-        </aside>
       </div>
 
       <section class="section" id="cite" aria-labelledby="cite-title">

@@ -98,12 +98,6 @@
     p { margin: 0 0 1.15rem; }
     .abstract { font-size: .95rem; line-height: 1.6; color: var(--muted); }
     .source-note { font-size: .74rem; color: var(--faint); margin-top: 20px; }
-    .paper-summary { border-left: 2px solid var(--line); padding-left: 18px; }
-    .paper-summary h2 { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); margin: 0 0 12px; }
-    .takeaway { font-size: 1.06rem; line-height: 1.14; font-weight: 700; letter-spacing: -.015em; }
-    .paper-summary p:last-child { margin-bottom: 0; }
-    .paper-summary .context { color: var(--muted); font-size: .95rem; line-height: 1.6; }
-    .topics { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; margin: 14px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: .68rem; }
     .section { border-top: 1px solid var(--line); margin-top: 36px; padding-top: 28px; }
     .citation-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; }
     .citation-heading > a { font-size: .72rem; font-weight: 600; letter-spacing: .01em; }
@@ -149,7 +143,6 @@
       .site-header, .site-footer, .actions, .copy-button, .copy-status, .skip-link { display: none; }
       main { padding: 0; }
       h1 { font-size: 26px; }
-      .paper-summary { border-left-color: #000; }
       .bibtex-box { break-inside: avoid; }
       a { color: #000; }
     }
@@ -191,17 +184,6 @@
           <p>These analyses underscore the need for more intelligent dispatch strategies to recognize and exploit silent structures — an underused path to high-performance linear algebra.</p>
           <p class="source-note">Accepted manuscript of the paper published at IEEE HPEC 2025, hosted here under IEEE's personal-use terms. Also available on <a href="https://arxiv.org/abs/2608.22099">arXiv</a>.</p>
         </section>
-        <aside class="paper-summary" aria-labelledby="takeaway-title">
-          <h2 id="takeaway-title">In brief</h2>
-          <p class="takeaway">When does recognizing matrix structure pay off?</p>
-          <p class="context">A specialized algorithm can save work, but detecting structure and converting the data also take time. This paper analyzes that trade-off.</p>
-          <ul class="topics" aria-label="Research topics">
-            <li>Algorithmic dispatch</li>
-            <li>Structured matrices</li>
-            <li>LU factorization</li>
-            <li>High-performance computing</li>
-          </ul>
-        </aside>
       </div>
 
       <section class="section" id="cite" aria-labelledby="cite-title">
