@@ -295,10 +295,28 @@ for key, meta in edit.items():
     if meta.get("pdf"):
         actions.append(f'          <a class="button primary" href="{E(meta["pdf"])}">\n'
                        f'            {DOC_ICON}\n            Read PDF <span aria-hidden="true">↗</span>\n          </a>')
+    # Prefer the DOI for the publisher link: raw publisher URLs rot, and some
+    # (Elsevier in particular) answer visitors with a bot challenge.
+    if p["doi"]:
+        cls = "button" if actions else "button primary"
+        actions.append(f'          <a class="{cls}" href="https://doi.org/{E(p["doi"])}">'
+                       f'Publisher <span aria-hidden="true">↗</span></a>')
+    def same_target(a, b):
+        """OJS serves one galley at both /view/ and /download/."""
+        if not a or not b:
+            return False
+        return a.replace("/download/", "/view/") == b.replace("/download/", "/view/")
+
     for l in p["links"]:
-        if l["url"] in (meta.get("pdf"), meta.get("link")):
+        if same_target(l["url"], meta.get("pdf")) or same_target(l["url"], meta.get("link")):
             continue
-        label = "Publisher" if l["label"] in ("Publisher", "DOI") else l["label"]
+        if l["label"] in ("Publisher", "DOI") and p["doi"]:
+            continue                        # already covered by the DOI button
+        label = l["label"]
+        if "drive.google.com" in l["url"] or "researchgate.net" in l["url"]:
+            label = "Author copy"           # a landing page, not a direct PDF
+        elif label == "DOI":
+            label = "Publisher"
         cls = "button" if actions else "button primary"
         actions.append(f'          <a class="{cls}" href="{E(l["url"])}">{label} <span aria-hidden="true">↗</span></a>')
 
