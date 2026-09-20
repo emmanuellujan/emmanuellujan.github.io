@@ -110,6 +110,10 @@
     .copy-button[hidden] { display: none; }
     pre { margin: 0; padding: 20px; font: 12px/1.8 ui-monospace, SFMono-Regular, Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
     .copy-status { min-height: 22px; margin: 6px 0 0; font-size: .74rem; color: var(--faint); }
+    .related-list { list-style: none; margin: 0 0 1.15rem; padding: 0; display: grid; gap: .55rem; }
+    .related-list a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line-soft); }
+    .related-list a:hover { color: var(--red); border-bottom-color: var(--red); }
+    .rel-year { color: var(--faint); font-size: .8rem; margin-left: .35rem; }
     .related { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; flex-wrap: wrap; }
     .related p { font-size: .95rem; margin-bottom: 0; }
     .related > a { font-size: .72rem; font-weight: 600; letter-spacing: .01em; }
@@ -211,7 +215,11 @@
 
       <section class="section related" aria-labelledby="related-title">
         <div>
-          <h2 id="related-title">Explore related research</h2>
+          <h2 id="related-title">Related work</h2>
+          <ul class="related-list">
+            <li><a href="../llm-algorithm-dispatch/">Data-Driven Dynamic Algorithm Dispatch with Large Language Models</a> <span class="rel-year">2025</span></li>
+            <li><a href="../cnn-sparse-solver-selection/">Learning to Select Sparse Linear Solvers with Convolutional Neural Networks</a> <span class="rel-year">2026</span></li>
+          </ul>
           <p><a href="https://smartsolveai.mit.edu/">SmartSolveAI: AI-guided discovery for fast linear algebra ↗</a></p>
         </div>
         <a href="../../index.html#publications">All publications →</a>

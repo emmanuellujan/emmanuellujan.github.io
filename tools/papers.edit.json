@@ -12,7 +12,8 @@
       "Sparse linear solvers",
       "Solver selection",
       "Convolutional neural networks",
-      "SuiteSparse"
+      "SuiteSparse",
+      "Algorithmic dispatch"
     ],
     "pdf": null
   },
@@ -24,7 +25,8 @@
       "Geothermal energy",
       "Well arrays",
       "Levelized cost of electricity",
-      "Grid electricity"
+      "Grid electricity",
+      "Geothermal well arrays"
     ],
     "pdf": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Metcalfe.pdf"
   },
@@ -156,7 +158,8 @@
       "Tumour infiltration",
       "Mathematical oncology",
       "Multicellular spheroids",
-      "Fractal analysis"
+      "Fractal analysis",
+      "Tumour invasion"
     ],
     "pdf": null,
     "link": "https://ri.conicet.gov.ar/bitstream/handle/11336/80640/CONICET_Digital_Nro.dfe01121-0652-4580-acfe-3a7c26abe6c5_J.pdf?sequence=11&isAllowed=y"
@@ -182,7 +185,8 @@
       "Tumour spheroids",
       "Mathematical modelling",
       "Monte Carlo",
-      "Collagen matrix"
+      "Collagen matrix",
+      "Tumour invasion"
     ],
     "pdf": null,
     "drop": [

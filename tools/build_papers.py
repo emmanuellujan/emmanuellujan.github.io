@@ -207,10 +207,12 @@ PAGE = """<!doctype html>
 
       <section class="section related" aria-labelledby="related-title">
         <div>
-          <h2 id="related-title">Explore related research</h2>
-          <p><a href="../../index.html#publications">All publications by Emmanuel Lujan →</a></p>
+          <h2 id="related-title">Related work</h2>
+          <ul class="related-list">
+{related}
+          </ul>
         </div>
-        <a href="../../index.html#research">Research areas →</a>
+        <a href="../../index.html#publications">All publications →</a>
       </section>
     </article>
   </main>
@@ -254,6 +256,37 @@ PAGE = """<!doctype html>
 DOC_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
             'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
             '<path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h4M9 12h6M9 16h6"/></svg>')
+
+ALL = {k: v for k, v in edit.items() if not k.startswith("_")}
+ALL["lujan2025structure"] = {"slug": "when-structure-is-silent",
+                             "keywords": ["Algorithmic dispatch", "Structured matrices",
+                                          "LU factorization", "High-performance computing"]}
+ALL["marino2021openep"] = {"slug": "openep-electroporation-simulator",
+                           "keywords": ["Electroporation", "Tumor treatment simulation",
+                                        "Electrochemotherapy", "Gene electrotransfer",
+                                        "Shared-memory parallelism"]}
+
+
+def related_to(key, n=3):
+    """Nearest papers by shared keywords, then by shared title words."""
+    mine = {k.lower() for k in ALL[key]["keywords"]}
+    my_words = set(auto[key]["title"].lower().split())
+    scored = []
+    for other, meta_o in ALL.items():
+        if other == key:
+            continue
+        theirs = {k.lower() for k in meta_o["keywords"]}
+        shared = mine & theirs
+        if not shared:
+            continue          # a shared topic, not a shared common word
+        score = 2 * len(shared)
+        score += len((my_words & set(auto[other]["title"].lower().split())) -
+                     {"a", "the", "of", "for", "in", "and", "with", "to", "on",
+                      "an", "using", "shared", "based", "on", "its"}) * 0.1
+        scored.append((score, auto[other]["year"], other))
+    scored.sort(key=lambda t: (-t[0], -int(t[1]) if t[1].isdigit() else 0))
+    return [k for _, _, k in scored[:n]]
+
 
 KIND_LABEL = {"journal": "Journal article", "conference": "Conference paper", "preprint": "Preprint"}
 built, report = [], []
@@ -377,6 +410,12 @@ for key, meta in edit.items():
         takeaway=E(meta["takeaway"]), context=E(meta["context"]),
         topics="\n".join(f"            <li>{E(k)}</li>" for k in meta["keywords"]),
         key=key, citation_text=citation_text, bibtex=E(bib.strip()),
+        related="\n".join([
+            f'            <li><a href="../../index.html#publications">All publications by Emmanuel Lujan</a></li>'
+        ] if not related_to(key) else [
+            f'            <li><a href="../{ALL[r]["slug"]}/">{E(auto[r]["title"])}</a>'
+            f' <span class="rel-year">{E(auto[r]["year"])}</span></li>'
+            for r in related_to(key)]),
         jsonld=json.dumps(jsonld, indent=4, ensure_ascii=False), css=CSS)
     io.open(f"{outdir}/index.html", "w", encoding="utf-8").write(page)
 
