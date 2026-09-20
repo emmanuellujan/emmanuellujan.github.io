@@ -1,0 +1,228 @@
+{
+  "_note": "Hand-authored layer: slug, In-brief copy, keywords, and which PDF (if any) citation_pdf_url should point at. Merged with papers.auto.json (extracted from index.html) by build_papers.py. Papers listed in _skip already have hand-built pages.",
+  "_skip": [
+    "lujan2025structure",
+    "marino2021openep"
+  ],
+  "pados2026learning": {
+    "slug": "neural-sparse-solver-selection",
+    "takeaway": "Can a network read a matrix and pick the solver?",
+    "context": "Solver speed on sparse systems swings wildly with sparsity structure. A CNN is trained on spy-plot images of that structure to predict which candidate solver will be faster.",
+    "keywords": [
+      "Sparse linear solvers",
+      "Solver selection",
+      "Convolutional neural networks",
+      "SuiteSparse"
+    ],
+    "pdf": null
+  },
+  "metcalfe2026arrays": {
+    "slug": "networked-geothermal-well-arrays",
+    "takeaway": "Scale geothermal by networking many standard wells, not by building bigger ones.",
+    "context": "The case for geothermal arrays: smaller, competitively sourced, standard wells linked together, rather than ever-larger single installations — aiming at high capacity factors and sub-cent electricity.",
+    "keywords": [
+      "Geothermal energy",
+      "Well arrays",
+      "Levelized cost of electricity",
+      "Grid electricity"
+    ],
+    "pdf": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Metcalfe.pdf"
+  },
+  "wittenstein2026full": {
+    "slug": "gpu-borehole-heat-exchanger-model",
+    "takeaway": "Can a whole array of deep boreholes be simulated in three dimensions?",
+    "context": "An operator splitting tailored to the physics — vertical diffusion, horizontal diffusion and advection handled separately — makes multi-well arrays tractable on a single GPU, released as GeothermalWells.jl.",
+    "keywords": [
+      "Deep borehole heat exchangers",
+      "GPU acceleration",
+      "Operator splitting",
+      "Julia"
+    ],
+    "pdf": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Wittenstein.pdf"
+  },
+  "shah2025data": {
+    "slug": "llm-algorithm-dispatch",
+    "takeaway": "Can a language model write the dispatch heuristic?",
+    "context": "Given a curated performance database and careful prompting, LLaMA 3 synthesizes algorithm-selection heuristics that replicate expert-designed strategies for LU factorization.",
+    "keywords": [
+      "Algorithmic dispatch",
+      "Large language models",
+      "LU factorization",
+      "High-performance linear algebra"
+    ],
+    "pdf": "https://ieee-hpec.org/wp-content/uploads/2026/01/120.pdf"
+  },
+  "ouko2025decision": {
+    "slug": "llm-geothermal-decision-support",
+    "takeaway": "How far can language models be trusted as geothermal expert assistants?",
+    "context": "Assesses frontier and domain-specific models as decision support for well arrays and closed-loop coaxial wells, using them to generate quantitative benchmarks while weighing bias and hallucination.",
+    "keywords": [
+      "Large language models",
+      "Geothermal well arrays",
+      "Decision support",
+      "Benchmarking"
+    ],
+    "pdf": "https://pangea.stanford.edu/ERE/pdf/IGAstandard/SGW/2025/Ouko.pdf"
+  },
+  "matos2021performance": {
+    "slug": "d2d-nbiot-coverage",
+    "takeaway": "Can relaying keep IoT devices connected at the edge of coverage?",
+    "context": "Device-to-device relaying added to NB-IoT, evaluated across urban and suburban environments where out-of-coverage devices would otherwise lose connectivity unnecessarily.",
+    "keywords": [
+      "NB-IoT",
+      "Device-to-device communication",
+      "Coverage enhancement",
+      "Network simulation"
+    ],
+    "pdf": "https://informs-sim.org/wsc21papers/303.pdf"
+  },
+  "lujan2019extreme": {
+    "slug": "nbiot-extreme-coverage",
+    "takeaway": "Which link parameters still work underground?",
+    "context": "In extreme coverage only a few modulation-and-repetition combinations are viable at all. A lookup table returns the optimal choice quickly, and that scarcity turns out to make the scheme robust against measurement uncertainty.",
+    "keywords": [
+      "NB-IoT",
+      "5G",
+      "Link adaptation",
+      "Extreme coverage"
+    ],
+    "pdf": "https://arxiv.org/pdf/1908.02798"
+  },
+  "mellino2019lite": {
+    "slug": "nbiot-uplink-simulator",
+    "takeaway": "A protocol simulator for the NB-IoT uplink.",
+    "context": "Implements the NB-IoT physical layer and uplink scheduling, then uses it to trace block-error-rate curves and derive optimal link adaptation for an AWGN channel.",
+    "keywords": [
+      "NB-IoT",
+      "Protocol simulation",
+      "Uplink scheduling",
+      "Link adaptation"
+    ],
+    "pdf": null
+  },
+  "lujan2019libregrowth": {
+    "slug": "libregrowth-tumor-growth-code",
+    "takeaway": "Tumour growth and infiltration, simulated in parallel.",
+    "context": "A libre C++/OpenMP code solving a reaction-diffusion model with spatially variable diffusion in three dimensions, covering both benign and malignant stages.",
+    "keywords": [
+      "Tumor growth modelling",
+      "Reaction-diffusion",
+      "OpenMP",
+      "Open-source scientific software"
+    ],
+    "pdf": null
+  },
+  "lujan2019towards": {
+    "slug": "gene-electrotransfer-dose-response",
+    "takeaway": "What is the right pulse dosage for gene delivery?",
+    "context": "Frames gene electrotransfer as a dose-response problem: maximum reversibly electroporated tissue against damage from pH fronts — damage that is negligible in shorter-pulse protocols but not in GET.",
+    "keywords": [
+      "Gene electrotransfer",
+      "Electroporation",
+      "Dose-response",
+      "pH fronts"
+    ],
+    "pdf": null
+  },
+  "lujan2019integrated": {
+    "slug": "smart-energy-management-platform",
+    "takeaway": "One platform for monitoring, controlling and planning urban energy.",
+    "context": "The CC-SEM project: a low-cost IoT device for home appliances, NB-IoT assessed as the carrier, and cloud analytics for both consumption and generation.",
+    "keywords": [
+      "Smart energy management",
+      "Internet of Things",
+      "Cloud computing",
+      "Smart cities"
+    ],
+    "pdf": null,
+    "link": "https://revistas.udea.edu.co/index.php/ingenieria/article/view/336282/20795137"
+  },
+  "lujan2018cloud": {
+    "slug": "cloud-computing-smart-energy",
+    "takeaway": "Cloud, IoT and HPC brought together for city energy.",
+    "context": "The CC-SEM platform serves citizens controlling home devices and operators simulating generation scenarios, with purpose-built monitoring hardware and its communication infrastructure.",
+    "keywords": [
+      "Cloud computing",
+      "Smart cities",
+      "Energy monitoring",
+      "Big data"
+    ],
+    "pdf": null
+  },
+  "lujan2018microenvironmental": {
+    "slug": "microtumour-infiltration-3d-model",
+    "takeaway": "Why does the same tumour infiltrate differently?",
+    "context": "Pairing in vitro spheroids with a 3D diffusion-convection-reaction model shows adipocyte-conditioned media switching the infiltration pattern from collective and laminar to individual and atomized.",
+    "keywords": [
+      "Tumour infiltration",
+      "Mathematical oncology",
+      "Multicellular spheroids",
+      "Fractal analysis"
+    ],
+    "pdf": null,
+    "link": "https://ri.conicet.gov.ar/bitstream/handle/11336/80640/CONICET_Digital_Nro.dfe01121-0652-4580-acfe-3a7c26abe6c5_J.pdf?sequence=11&isAllowed=y"
+  },
+  "lujan2017modelado": {
+    "slug": "modelado-invasion-tumoral-dla",
+    "lang": "es",
+    "takeaway": "How do you describe a tumour invasion pattern?",
+    "context": "A reaction-diffusion-convection model whose spatially variable diffusion follows a DLA fractal matrix, with parameters estimated from experiment and validated by box-counting and lacunarity. Published in Spanish.",
+    "keywords": [
+      "Tumour invasion",
+      "Reaction-diffusion",
+      "DLA fractals",
+      "Lacunarity"
+    ],
+    "pdf": "https://cimec.org.ar/ojs/index.php/mc/article/download/5268/5217"
+  },
+  "lujan2016mathematical": {
+    "slug": "tumour-spheroid-invasion-model",
+    "takeaway": "Can one model both describe and predict spheroid invasion?",
+    "context": "The same model runs case-specific or population-dependent, depending on whether its shape function comes from one experiment or from data mining and Monte Carlo across the whole dataset.",
+    "keywords": [
+      "Tumour spheroids",
+      "Mathematical modelling",
+      "Monte Carlo",
+      "Collagen matrix"
+    ],
+    "pdf": null,
+    "link": "https://pubs.rsc.org/en/content/getauthorversionpdf/c6ib00110f"
+  },
+  "lujan2016electrolytic": {
+    "slug": "electrolytic-ablation-dose-planning",
+    "takeaway": "How much charge ablates the tumour and no more?",
+    "context": "A dose-planning methodology for electrolytic ablation with a one-probe two-electrode device, in terms of the coulomb dosage administered and the pH fronts that do the destroying.",
+    "keywords": [
+      "Electrolytic ablation",
+      "Dose planning",
+      "pH fronts",
+      "Tumour ablation"
+    ],
+    "pdf": null
+  },
+  "lujan2015optimal": {
+    "slug": "electrolytic-ablation-dose-response",
+    "takeaway": "What is the optimal charge for electrolytic ablation?",
+    "context": "Nernst-Planck modelling of ion transport identifies coulomb dosage as the reliable dose parameter, and predicts necrotized tumour volume scaling nonlinearly, as Q to the 1.4.",
+    "keywords": [
+      "Electrolytic ablation",
+      "Nernst-Planck equations",
+      "Dose-response",
+      "Minimally invasive treatment"
+    ],
+    "pdf": null,
+    "link": "https://ri.conicet.gov.ar/bitstream/handle/11336/94606/CONICET_Digital_Nro.05c97c2d-7360-47ef-a15d-0c496caa6aa7_A.pdf?sequence=2&isAllowed=y"
+  },
+  "zubov2021neuralpde": {
+    "slug": "neuralpde-physics-informed-networks",
+    "takeaway": "Physics-informed neural networks, generated from a symbolic PDE.",
+    "context": "NeuralPDE.jl builds its training code from an abstract symbolic formulation, with quadrature-based losses that adapt toward bounded error tolerances — demonstrated on the Doyle-Fuller-Newman battery model.",
+    "keywords": [
+      "Physics-informed neural networks",
+      "Scientific machine learning",
+      "Julia",
+      "Partial differential equations"
+    ],
+    "pdf": "https://arxiv.org/pdf/2107.09443"
+  }
+}

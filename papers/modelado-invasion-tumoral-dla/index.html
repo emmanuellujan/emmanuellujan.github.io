@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modelado Matemático de un Patrón de Invasión Tumoral a través de Ecuaciones de Reacción-Difusión y Fractales DLA — Emmanuel Lujan</title>
+  <meta name="description" content="How do you describe a tumour invasion pattern? ENIEF — Mecánica Computacional, Bioengineering and Biomechanics, vol. 35, 2017.">
+  <link rel="canonical" href="https://www.emmanuellujan.com/papers/modelado-invasion-tumoral-dla/">
+  <meta name="theme-color" content="#750014">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23750014'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='white'%3EEL%3C/text%3E%3C/svg%3E">
+
+  <meta name="citation_title" content="Modelado Matemático de un Patrón de Invasión Tumoral a través de Ecuaciones de Reacción-Difusión y Fractales DLA">
+  <meta name="citation_author" content="Lujan, Emmanuel">
+  <meta name="citation_author" content="Soto, Daniela">
+  <meta name="citation_author" content="Rosito, María R.">
+  <meta name="citation_author" content="Soba, Alejandro">
+  <meta name="citation_author" content="Guerra, Liliana N.">
+  <meta name="citation_author" content="Marshall, Guillermo">
+  <meta name="citation_author" content="Suárez, Cecilia">
+  <meta name="citation_publication_date" content="2017">
+  <meta name="citation_conference_title" content="ENIEF — Mecánica Computacional, Bioengineering and Biomechanics, vol. 35, 2017">
+  <meta name="citation_abstract_html_url" content="https://www.emmanuellujan.com/papers/modelado-invasion-tumoral-dla/">
+  <meta name="citation_pdf_url" content="https://cimec.org.ar/ojs/index.php/mc/article/download/5268/5217">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Emmanuel Lujan">
+  <meta property="og:title" content="Modelado Matemático de un Patrón de Invasión Tumoral a través de Ecuaciones de Reacción-Difusión y Fractales DLA">
+  <meta property="og:description" content="How do you describe a tumour invasion pattern? ENIEF — Mecánica Computacional, Bioengineering and Biomechanics, vol. 35, 2017.">
+  <meta property="og:url" content="https://www.emmanuellujan.com/papers/modelado-invasion-tumoral-dla/">
+  <meta property="og:image" content="https://www.emmanuellujan.com/papers/modelado-invasion-tumoral-dla/card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Modelado Matemático de un Patrón de Invasión Tumoral a través de Ecuaciones de Reacción-Difusión y Fractales DLA — Emmanuel Lujan, Daniela Soto, María R. Rosito, Alejandro Soba, Liliana N. Guerra, Guillermo Marshall, Cecilia Suárez. ENIEF — Mecánica Computacional, Bioengineering and Biomechanics, vol. 35, 2017.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.emmanuellujan.com/papers/modelado-invasion-tumoral-dla/card.png">
+  <meta name="twitter:title" content="Modelado Matemático de un Patrón de Invasión Tumoral a travé">
+  <meta name="twitter:description" content="How do you describe a tumour invasion pattern? ENIEF — Mecánica Computacional, Bioengineering and Biomechanics, vol. 35, 2017.">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "@id": "https://www.emmanuellujan.com/papers/modelado-invasion-tumoral-dla/#article",
+    "headline": "Modelado Matemático de un Patrón de Invasión Tumoral a través de Ecuaciones de Reacción-Difusión y Fractales DLA",
+    "name": "Modelado Matemático de un Patrón de Invasión Tumoral a través de Ecuaciones de Reacción-Difusión y Fractales DLA",
+    "author": [
+        {
+            "@type": "Person",
+            "name": "Emmanuel Lujan",
+            "url": "https://www.emmanuellujan.com/",
+            "sameAs": "https://orcid.org/0000-0002-5945-4766"
+        },
+        {
+            "@type": "Person",
+            "name": "Daniela Soto"
+        },
+        {
+            "@type": "Person",
+            "name": "María R. Rosito"
+        },
+        {
+            "@type": "Person",
+            "name": "Alejandro Soba"
+        },
+        {
+            "@type": "Person",
+            "name": "Liliana N. Guerra"
+        },
+        {
+            "@type": "Person",
+            "name": "Guillermo Marshall"
+        },
+        {
+            "@type": "Person",
+            "name": "Cecilia Suárez"
+        }
+    ],
+    "datePublished": "2017",
+    "url": "https://www.emmanuellujan.com/papers/modelado-invasion-tumoral-dla/",
+    "isPartOf": {
+        "@type": "PublicationEvent",
+        "name": "ENIEF — Mecánica Computacional, Bioengineering and Biomechanics, vol. 35, 2017"
+    },
+    "inLanguage": "es",
+    "keywords": [
+        "Tumour invasion",
+        "Reaction-diffusion",
+        "DLA fractals",
+        "Lacunarity"
+    ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Typography and MIT colors match the main page's final style rules. */
+    :root { --red: #750014; --ink: #000000; --muted: #40464c; --faint: #626a73; --line: #b8c2cc; --line-soft: #dde1e6; --paper: #f2f4f8; --font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; --page-width: 760px; --page-gutter: clamp(1.2rem, 5vw, 2rem); }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { font-size: 17px; scroll-padding-top: 24px; text-rendering: optimizeLegibility; }
+    body { margin: 0; background: #fff; color: var(--ink); font-family: var(--font); font-size: 1rem; line-height: 1.6; font-weight: 400; -webkit-font-smoothing: antialiased; }
+    a { color: var(--red); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #000; }
+    a:focus-visible, button:focus-visible, pre:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; }
+    .skip-link { position: absolute; top: -100px; left: 20px; z-index: 10; background: #fff; padding: 12px; }
+    .skip-link:focus { top: 12px; }
+    .site-header { background: var(--red); color: #fff; }
+    .header-inner { max-width: var(--page-width); margin: auto; min-height: 66px; padding: 16px var(--page-gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header a { color: #fff; text-decoration: none; }
+    .site-header a:hover { text-decoration: underline; }
+    .site-header a:focus-visible { outline-color: #fff; }
+    .brand { font-size: 1rem; font-weight: 700; line-height: 1.08; letter-spacing: -.01em; }
+    .affiliation { color: rgba(255,255,255,.7); margin-left: 18px; font-size: .62rem; font-weight: 700; line-height: 1.08; letter-spacing: .12em; }
+    .back-link { font-size: .72rem; font-weight: 600; letter-spacing: .04em; white-space: nowrap; }
+    /* The homepage's 760px content column sits inside its section padding. */
+    main { box-sizing: content-box; max-width: var(--page-width); margin: auto; padding: 44px var(--page-gutter) 72px; }
+    .eyebrow { display: flex; align-items: center; gap: .65rem; color: var(--red); font-size: .68rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 1.2rem; }
+    .eyebrow::before { content: ""; display: inline-block; width: 34px; height: 1.5px; background: var(--red); flex: none; }
+    /* Same responsive size, weight, and tracking as the homepage name. */
+    h1 { margin: 0 0 1.1rem; font-size: clamp(1.9rem, 6vw, 2.7rem); font-weight: 400; line-height: .98; letter-spacing: -.025em; text-wrap: balance; }
+    .authors { margin: 0 0 .15rem; font-size: .9rem; line-height: 1.45; color: var(--faint); }
+    .authors a { text-decoration: none; font-weight: 700; color: var(--ink); }
+    .authors a:hover { color: var(--red); text-decoration: underline; }
+    .venue { font-size: .88rem; color: var(--faint); margin: 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 23px 0 32px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: .38rem; min-height: 44px; padding: .4rem .72rem; border: 1px solid var(--ink); background: #fff; color: var(--ink); font-family: var(--font); font-size: .74rem; font-weight: 600; line-height: 1.6; text-decoration: none; cursor: pointer; }
+    .button:hover { background: var(--paper); border-color: var(--red); color: var(--red); }
+    .button.primary { background: var(--red); border-color: var(--red); color: #fff; }
+    .button.primary:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+    .button svg { flex: none; width: 13px; height: 13px; }
+    .paper-body { border-top: 1px solid var(--line); padding-top: 30px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    h2 { margin: 0 0 15px; font-size: clamp(1.25rem, 3.5vw, 1.5rem); line-height: 1.14; font-weight: 700; letter-spacing: -.015em; color: var(--ink); }
+    p { margin: 0 0 1.15rem; }
+    .abstract { font-size: .95rem; line-height: 1.6; color: var(--muted); }
+    .source-note { font-size: .74rem; color: var(--faint); margin-top: 20px; }
+    .paper-summary { border-left: 2px solid var(--line); padding-left: 18px; }
+    .paper-summary h2 { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); margin: 0 0 12px; }
+    .takeaway { font-size: 1.06rem; line-height: 1.14; font-weight: 700; letter-spacing: -.015em; }
+    .paper-summary p:last-child { margin-bottom: 0; }
+    .paper-summary .context { color: var(--muted); font-size: .95rem; line-height: 1.6; }
+    .topics { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; margin: 14px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: .68rem; }
+    .section { border-top: 1px solid var(--line); margin-top: 36px; padding-top: 28px; }
+    .citation-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; }
+    .citation-heading > a { font-size: .72rem; font-weight: 600; letter-spacing: .01em; }
+    .citation-text { font-size: .95rem; color: var(--muted); }
+    .doi { overflow-wrap: anywhere; }
+    .bibtex-box { margin-top: 20px; background: var(--paper); border: 1px solid var(--line); }
+    .bibtex-toolbar { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding: 10px 18px; gap: 16px; }
+    .bibtex-label { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+    .copy-button { background: #fff; }
+    .copy-button[hidden] { display: none; }
+    pre { margin: 0; padding: 20px; font: 12px/1.8 ui-monospace, SFMono-Regular, Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .copy-status { min-height: 22px; margin: 6px 0 0; font-size: .74rem; color: var(--faint); }
+    .related { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+    .related p { font-size: .95rem; margin-bottom: 0; }
+    .related > a { font-size: .72rem; font-weight: 600; letter-spacing: .01em; }
+    /* Match the main page footer, including its 760px column and typography. */
+    .site-footer { border-top: 4px solid var(--red); background: #fff; color: #000; font: 400 1rem/1.6 Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0; text-align: left; }
+    .site-footer p { margin: 0; }
+    .footer-inner { max-width: var(--page-width); margin: 0 auto; padding: 2.15rem var(--page-gutter) 1.7rem; display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: start; }
+    .footer-kicker { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #626a73; margin-bottom: .5rem; }
+    .footer-name { font-size: 1.1rem; font-weight: 600; line-height: 1.14; letter-spacing: -.015em; color: #000; margin-bottom: .45rem; }
+    .footer-affil { font-size: .82rem; line-height: 1.55; color: #40464c; max-width: 42rem; }
+    .site-footer .disclaimer { max-width: var(--page-width); margin: 0 auto; padding: 0 var(--page-gutter) 1.6rem; font-size: .74rem; line-height: 1.5; color: #626a73; text-align: left; }
+    .footer-bottom { border-top: 1px solid #b8c2cc; max-width: var(--page-width); margin: 0 auto; padding: .9rem var(--page-gutter) 1rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: .78rem; line-height: 1.45; color: #40464c; }
+    /* Header matches main's content-box sizing; the footer puts its gutter on the
+       outer element so each block is a plain centred column and .footer-bottom's
+       rule shares the text's edges. */
+    .header-inner { box-sizing: content-box; }
+    .site-footer { padding-left: var(--page-gutter); padding-right: var(--page-gutter); }
+    .footer-inner, .site-footer .disclaimer, .footer-bottom { padding-left: 0; padding-right: 0; }
+    @media (max-width: 760px) {
+      .header-inner { padding-block: 15px; }
+      .affiliation { display: none; }
+      main { padding-block: 32px 48px; }
+      .footer-bottom { flex-direction: column; gap: .35rem; }
+    }
+    @media (max-width: 380px) {
+      .header-inner { gap: 12px; }
+      .back-link { white-space: normal; text-align: right; }
+      .button { padding: 9px 12px; }
+    }
+    @media print {
+      .site-header, .site-footer, .actions, .copy-button, .copy-status, .skip-link { display: none; }
+      main { padding: 0; }
+      h1 { font-size: 26px; }
+      .paper-summary { border-left-color: #000; }
+      .bibtex-box { break-inside: avoid; }
+      a { color: #000; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#paper">Skip to paper</a>
+  <header class="site-header">
+    <nav class="header-inner" aria-label="Main navigation">
+      <div><a class="brand" href="../../index.html">Emmanuel Lujan</a><span class="affiliation">MIT CSAIL</span></div>
+      <a class="back-link" href="../../index.html#publications">← All publications</a>
+    </nav>
+  </header>
+  <main id="paper">
+    <article aria-labelledby="paper-title">
+      <header>
+        <p class="eyebrow">Conference paper · ENIEF — Mecánica Computacional 2017</p>
+        <h1 id="paper-title">Modelado Matemático de un Patrón de Invasión Tumoral a través de Ecuaciones de Reacción-Difusión y Fractales DLA</h1>
+        <p class="authors"><a href="../../index.html">Emmanuel Lujan</a><span aria-hidden="true"> &nbsp;·&nbsp; </span><span class="coauthor">Daniela Soto</span><span aria-hidden="true"> &nbsp;·&nbsp; </span><span class="coauthor">María R. Rosito</span><span aria-hidden="true"> &nbsp;·&nbsp; </span><span class="coauthor">Alejandro Soba</span><span aria-hidden="true"> &nbsp;·&nbsp; </span><span class="coauthor">Liliana N. Guerra</span><span aria-hidden="true"> &nbsp;·&nbsp; </span><span class="coauthor">Guillermo Marshall</span><span aria-hidden="true"> &nbsp;·&nbsp; </span><span class="coauthor">Cecilia Suárez</span></p>
+        <p class="venue">ENIEF — Mecánica Computacional, Bioengineering and Biomechanics, vol. 35, 2017</p>
+        <div class="actions" aria-label="Paper resources">
+          <a class="button primary" href="https://cimec.org.ar/ojs/index.php/mc/article/download/5268/5217">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h4M9 12h6M9 16h6"/></svg>
+            Read PDF <span aria-hidden="true">↗</span>
+          </a>
+          <a class="button" href="https://cimec.org.ar/ojs/index.php/mc/article/view/5268">Publisher <span aria-hidden="true">↗</span></a>
+          <a class="button" href="https://cimec.org.ar/ojs/index.php/mc/article/view/5268/5217">PDF <span aria-hidden="true">↗</span></a>
+          <a class="button" href="#cite">Cite this paper <span aria-hidden="true">↓</span></a>
+        </div>
+      </header>
+
+      <div class="paper-body">
+        <section class="abstract" aria-labelledby="abstract-title">
+          <h2 id="abstract-title">Abstract</h2>
+          <p lang="es">Se presenta un modelo matemático basado en una ecuación de reacción-difusión-convección que logra describir un patrón de infiltración microtumoral resultante de la incorporación de medio condicionado proveniente de adipocitos al microambiente tumoral de esferoides multicelulares. La descripción del tipo de invasión se logra incorporando una difusión espacialmente variable dependiente de una matriz fractal generada por el método DLA (Diffusion Limited Aggregation).</p>
+          <p lang="es">Los valores de los principales parámetros del modelo se estiman a partir de datos experimentales. Las simulaciones obtenidas se ajustan cualitativa y semicuantitativamente a los resultados in vitro, según muestran los análisis de fractalidad realizados por los métodos de boxcounting y lagunaridad.</p>
+          <p class="source-note">The full text is available as a <a href="https://cimec.org.ar/ojs/index.php/mc/article/download/5268/5217">PDF</a>.</p>
+        </section>
+        <aside class="paper-summary" aria-labelledby="takeaway-title">
+          <h2 id="takeaway-title">In brief</h2>
+          <p class="takeaway">How do you describe a tumour invasion pattern?</p>
+          <p class="context">A reaction-diffusion-convection model whose spatially variable diffusion follows a DLA fractal matrix, with parameters estimated from experiment and validated by box-counting and lacunarity. Published in Spanish.</p>
+          <ul class="topics" aria-label="Research topics">
+            <li>Tumour invasion</li>
+            <li>Reaction-diffusion</li>
+            <li>DLA fractals</li>
+            <li>Lacunarity</li>
+          </ul>
+        </aside>
+      </div>
+
+      <section class="section" id="cite" aria-labelledby="cite-title">
+        <div class="citation-heading">
+          <h2 id="cite-title">Cite this paper</h2>
+          <a href="citation.bib" download="lujan2017modelado.bib">Download .bib ↓</a>
+        </div>
+        <p class="citation-text">Emmanuel Lujan, Daniela Soto, María R. Rosito, Alejandro Soba, Liliana N. Guerra, Guillermo Marshall and Cecilia Suárez, &ldquo;Modelado Matemático de un Patrón de Invasión Tumoral a través de Ecuaciones de Reacción-Difusión y Fractales DLA,&rdquo; <em>ENIEF — Mecánica Computacional, Bioengineering and Biomechanics, vol. 35, 2017</em>.</p>
+        <div class="bibtex-box">
+          <div class="bibtex-toolbar">
+            <span class="bibtex-label">BibTeX · Conference paper</span>
+            <button class="button copy-button" id="copy-bibtex" type="button" hidden>Copy BibTeX</button>
+          </div>
+          <pre tabindex="0" aria-label="BibTeX citation"><code id="bibtex">@inproceedings{lujan2017modelado,
+  title={Modelado matem{\&#x27;{a}}tico de un patr{\&#x27;{o}}n de invasi{\&#x27;{o}}n tumoral a trav{\&#x27;{e}}s de ecuaciones de reacci{\&#x27;{o}}n-difusi{\&#x27;{o}}n y fractales {DLA}},
+  author={Luj{\&#x27;{a}}n, Emmanuel and Soto, Daniela and Rosito, Mar{\&#x27;{i}}a R. and Soba, Alejandro and Guerra, Liliana N. and Marshall, Guillermo and Su{\&#x27;{a}}rez, Cecilia},
+  booktitle={ENIEF. Mec{\&#x27;{a}}nica Computacional. Bioengineering and Biomechanics},
+  volume={35},
+  number={8},
+  year={2017}
+}</code></pre>
+        </div>
+        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="section related" aria-labelledby="related-title">
+        <div>
+          <h2 id="related-title">Explore related research</h2>
+          <p><a href="../../index.html#publications">All publications by Emmanuel Lujan →</a></p>
+        </div>
+        <a href="../../index.html#research">Research areas →</a>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-kicker">MIT CSAIL</div>
+        <div class="footer-name">Emmanuel Lujan, Ph.D.</div>
+        <p class="footer-affil">Research Scientist<br>MIT Computer Science &amp; Artificial Intelligence Laboratory</p>
+      </div>
+    </div>
+    <p class="disclaimer">Some metadata, abstracts, and links on this page were AI-assisted and may contain inaccuracies.</p>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Emmanuel Lujan. All rights reserved.</span>
+      <span>Last updated: September 2026</span>
+    </div>
+  </footer>
+  <script>
+    const copyButton = document.getElementById('copy-bibtex');
+    const bibtex = document.getElementById('bibtex');
+    const copyStatus = document.getElementById('copy-status');
+    copyButton.hidden = false;
+    copyButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(bibtex.textContent.trim() + '\n');
+        copyStatus.textContent = 'BibTeX copied to clipboard.';
+      } catch {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(bibtex);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        copyStatus.textContent = 'Automatic copying is unavailable. The citation is selected for you to copy, or you can download the .bib file.';
+      }
+    });
+  </script>
+</body>
+</html>

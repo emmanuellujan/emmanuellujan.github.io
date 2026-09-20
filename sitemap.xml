@@ -2,19 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.emmanuellujan.com/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.emmanuellujan.com/papers/when-structure-is-silent/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <loc>https://www.emmanuellujan.com/papers/cloud-computing-smart-energy/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/d2d-nbiot-coverage/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/electrolytic-ablation-dose-planning/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/electrolytic-ablation-dose-response/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/gene-electrotransfer-dose-response/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/gpu-borehole-heat-exchanger-model/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/libregrowth-tumor-growth-code/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/llm-algorithm-dispatch/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/llm-geothermal-decision-support/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/microtumour-infiltration-3d-model/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/modelado-invasion-tumoral-dla/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/nbiot-extreme-coverage/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/nbiot-uplink-simulator/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/networked-geothermal-well-arrays/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/neural-sparse-solver-selection/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/neuralpde-physics-informed-networks/</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.emmanuellujan.com/papers/openep-electroporation-simulator/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/smart-energy-management-platform/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/tumour-spheroid-invasion-model/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.emmanuellujan.com/papers/when-structure-is-silent/</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>

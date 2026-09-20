@@ -1,0 +1,899 @@
+[
+  {
+    "key": "pados2026learning",
+    "title": "Learning to Select Sparse Linear Solvers with Convolutional Neural Networks",
+    "authors": [
+      {
+        "name": "Artemis Pados",
+        "me": false
+      },
+      {
+        "name": "Alan Edelman",
+        "me": false
+      },
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Daniel Pickard",
+        "me": false
+      },
+      {
+        "name": "Felipe Tomé",
+        "me": false
+      },
+      {
+        "name": "Christopher Rackauckas",
+        "me": false
+      }
+    ],
+    "venue": "IEEE High Performance Extreme Computing Conference (HPEC), 2026",
+    "year": "2026",
+    "tags": [
+      "Conference Short Paper"
+    ],
+    "abstract": "We investigate convolutional-neural-network (CNN) based automatic solver selection for sparse linear systems, a problem of practical importance where solver performance varies dramatically with matrix sparsity structure. A CNN is trained to regress log timing ratios between candidate solvers using spy plot images of matrix nonzero structure as input, achieving strong prediction accuracy on both held-out SuiteSparse matrices and real-world matrices from high-performance simulation codes.",
+    "links": [
+      {
+        "url": "https://ieee-hpec.org/ieee-hpec-2026-agenda/",
+        "label": "Program"
+      }
+    ],
+    "doi": null,
+    "bibtex": "@inproceedings{pados2026learning,\n  title={Learning to Select Sparse Linear Solvers with Convolutional Neural Networks},\n  author={Pados, Artemis and Edelman, Alan and Lujan, Emmanuel and Pickard, Daniel and Tom{\\\\'{e}}, Felipe and Rackauckas, Christopher},\n  booktitle={IEEE High Performance Extreme Computing Conference (HPEC)},\n  year={2026},\n  month={09},\n  url={https://ieee-hpec.org/ieee-hpec-2026-agenda/}\n}"
+  },
+  {
+    "key": "metcalfe2026arrays",
+    "title": "Arrays of Networked Standard Geothermal Wells",
+    "authors": [
+      {
+        "name": "Robert Metcalfe",
+        "me": false
+      },
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Collin Wittenstein",
+        "me": false
+      },
+      {
+        "name": "Andrew Inglis",
+        "me": false
+      },
+      {
+        "name": "Alan Edelman",
+        "me": false
+      }
+    ],
+    "venue": "PROCEEDINGS, 51st Workshop on Geothermal Reservoir Engineering, Stanford University, 2026",
+    "year": "2026",
+    "tags": [
+      "Conference Paper"
+    ],
+    "abstract": "Time to scale the harvesting of geothermal heat for conversion to grid electricity. And not just because geothermal is clean. No, we choose geothermal because it is firm, inexhaustible, safe, and competitively harvestable almost anywhere (cheap). How best to scale geothermal? We urge the development of geothermal arrays. With our Internet mindsets in place, let’s not continue toward ever bigger geothermal mainframes. Instead, let’s deploy geothermal arrays by networking smaller, standard, competitively-sourced wells. While accelerating progress continues at the well level, in this paper let’s move up to the “array” level. We engage in dialogue with a large language model (GPT) about how soon we can deliver energy with capacity factors (CFs) approaching 100% and with levelized costs of electricity (LCOE) at a new plateau, less than a cent per kilowatt-hour (<1¢/kWh).",
+    "links": [
+      {
+        "url": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Metcalfe.pdf",
+        "label": "Publisher"
+      }
+    ],
+    "doi": null,
+    "bibtex": "@inproceedings{metcalfe2026arrays,\n  title={Arrays of Networked Standard Geothermal Wells},\n  author={Metcalfe, Robert and Lujan, Emmanuel and Wittenstein, Collin and Inglis, Andrew and Edelman, Alan},\n  booktitle={PROCEEDINGS, 51st Workshop on Geothermal Reservoir Engineering},\n  year={2026},\n  month={02},\n  organization={Stanford University},\n  address={Stanford, CA},\n  url={https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Metcalfe.pdf}\n}"
+  },
+  {
+    "key": "wittenstein2026full",
+    "title": "A Full Three-Dimensional GPU-Accelerated Model for Deep Borehole Heat Exchangers (DBHEs) Enabling Simulation of Well Arrays",
+    "authors": [
+      {
+        "name": "Collin Wittenstein",
+        "me": false
+      },
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Andrew Inglis",
+        "me": false
+      },
+      {
+        "name": "Robert Metcalfe",
+        "me": false
+      },
+      {
+        "name": "Alan Edelman",
+        "me": false
+      },
+      {
+        "name": "Hendrik Ranocha",
+        "me": false
+      }
+    ],
+    "venue": "PROCEEDINGS, 51st Workshop on Geothermal Reservoir Engineering, Stanford University, 2026",
+    "year": "2026",
+    "tags": [
+      "Conference Paper"
+    ],
+    "abstract": "Deep borehole heat exchangers (DBHEs) present significant computational challenges due to their multi-scale geometry and long operational timescales. We present a GPU-accelerated three-dimensional model that makes well array simulations computationally tractable through an operator splitting strategy tailored to the problem’s physics. The method separates vertical diffusion (stabilized explicit Runge–Kutta–Chebyshev), horizontal diffusion (alternating direction implicit), and advection (semi-Lagrangian), achieving near-unconditional stability with high efficiency. We validate against three published models using different numerical approaches, showing excellent to good agreement. The vendor-agnostic Julia implementation enables full three-dimensional simulation of multi-well arrays on a single GPU, opening new possibilities for systematic design optimization and long-term performance assessment of geothermal well systems. The implementation is released as the open-source Julia package GeothermalWells.jl.",
+    "links": [
+      {
+        "url": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Wittenstein.pdf",
+        "label": "Publisher"
+      }
+    ],
+    "doi": null,
+    "bibtex": "@inproceedings{wittenstein2026full,\n  title={A Full Three-Dimensional {GPU}-Accelerated Model for Deep Borehole Heat Exchangers ({DBHEs}) Enabling Simulation of Well Arrays},\n  author={Wittenstein, Collin and Lujan, Emmanuel and Inglis, Andrew and Metcalfe, Robert and Edelman, Alan and Ranocha, Hendrik},\n  booktitle={PROCEEDINGS, 51st Workshop on Geothermal Reservoir Engineering},\n  year={2026},\n  month={02},\n  organization={Stanford University},\n  address={Stanford, CA},\n  url={https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Wittenstein.pdf}\n}"
+  },
+  {
+    "key": "lujan2025structure",
+    "title": "When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Alan Edelman",
+        "me": false
+      }
+    ],
+    "venue": "IEEE High Performance Extreme Computing Conference (HPEC), 2025",
+    "year": "2025",
+    "tags": [
+      "Conference Paper"
+    ],
+    "abstract": "Algorithmic dispatch is essential for performance in linear-algebra–intensive systems. A persistent challenge lies in the treatment of structured matrices. Although such matrices are often described as “sparse,” the term structured is more precise, as it highlights exploitable properties—such as bandedness or triangularity—whose algorithmic advantages extend beyond sparsity alone. When the dispatch strategy leaves these structures unrecognized, valuable opportunities for optimization are lost. Recent advances in generative AI offer the promise of linking these silent structures to more effective algorithmic and architectural choices, supplying much of the missing connective tissue in computational linear algebra. However, AI-synthesized dispatch strategies also raise important questions about their theoretical soundness. This work introduces analytical criteria—grounded in time-complexity analysis—to determine when structure-aware dispatch delivers tangible gains. We examine the overheads of structure detection and data-format conversion, characterizing their impact on speedup and slowdown. We illustrate these concepts through a case study on LU factorization applied to banded matrices stored in a dense format, demonstrating results that align with theoretical bounds and reveal substantial gains in both performance and memory usage. These analyses underscore the need for more intelligent dispatch strategies to recognize and exploit silent structures—an underused path to high-performance linear algebra.",
+    "links": [
+      {
+        "url": "https://doi.org/10.1109/HPEC67600.2025.11196484",
+        "label": "DOI"
+      }
+    ],
+    "doi": "10.1109/HPEC67600.2025.11196484",
+    "bibtex": "@inproceedings{lujan2025structure,\n  title={When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra},\n  author={Lujan, Emmanuel and Edelman, Alan},\n  booktitle={IEEE High Performance Extreme Computing Conference (HPEC)},\n  year={2025},\n  doi={10.1109/HPEC67600.2025.11196484}\n}"
+  },
+  {
+    "key": "shah2025data",
+    "title": "Data-Driven Dynamic Algorithm Dispatch with Large Language Models",
+    "authors": [
+      {
+        "name": "Rushil N. Shah",
+        "me": false
+      },
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Rabab Alomairy",
+        "me": false
+      },
+      {
+        "name": "Alan Edelman",
+        "me": false
+      }
+    ],
+    "venue": "IEEE High Performance Extreme Computing Conference (HPEC), 2025",
+    "year": "2025",
+    "tags": [
+      "Conference Paper",
+      "Outstanding Short Paper Award"
+    ],
+    "abstract": "We introduce a large language model (LLM)-driven approach for generating dynamic algorithmic dispatch heuristics in high-performance linear algebra. By combining prompt engineering with LLaMA 3 and a curated performance database, the model learns to synthesize selection heuristics that exploit structural patterns to identify fast algorithmic choices. A case study on LU factorization demonstrates the model’s ability to replicate expert-designed strategies. This work, developed as part of the DARPA–MIT SmartSolve project, highlights the promise of LLMs for algorithmic discovery and the development of more adaptive, fast linear algebra software.",
+    "links": [
+      {
+        "url": "https://ieee-hpec.org/wp-content/uploads/2026/01/120.pdf",
+        "label": "Publisher"
+      }
+    ],
+    "doi": null,
+    "bibtex": "@inproceedings{shah2025data,\n  title={Data-Driven Dynamic Algorithm Dispatch with Large Language Models},\n  author={Shah, Rushil N. and Lujan, Emmanuel and Alomairy, Rabab and Edelman, Alan},\n  booktitle={IEEE High Performance Extreme Computing Conference (HPEC)},\n  year={2025},\n  url={https://ieee-hpec.org/wp-content/uploads/2026/01/120.pdf}\n}"
+  },
+  {
+    "key": "ouko2025decision",
+    "title": "Decision-Support and Modeling with Large Language Models for Geothermal Well Arrays",
+    "authors": [
+      {
+        "name": "Edwin Ouko",
+        "me": false
+      },
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Alan Edelman",
+        "me": false
+      },
+      {
+        "name": "Robert Metcalfe",
+        "me": false
+      }
+    ],
+    "venue": "PROCEEDINGS, 50th Workshop on Geothermal Reservoir Engineering, Stanford University, 2025",
+    "year": "2025",
+    "tags": [
+      "Conference Paper"
+    ],
+    "abstract": "Geothermal well arrays, which organize multiple geothermal wells into carefully planned geometric configurations, provide opportunities to enhance energy production capacity and increase fault tolerance. The development and adoption of these emerging geothermal technologies could be accelerated through the recent advances in large language models (LLMs) and high-level high-performance languages. A challenge in LLM-based applications is the reliability of the generated outputs, as they can be prone to subjective biases and “hallucinations”. This study assesses the potential of cutting-edge LLMs—such as ChatGPT, Gemini, Claude, Grok, and domain-specific models like AskGDR—as expert assistants that can synthesize insightful interpretations of complex geothermal data, as well as improve feature capabilities of geothermal models and numerical software. We developed a novel approach, leveraging Google’s recently introduced AI assistant, NotebookLM, to accelerate the generation of unpublished quantitative geothermal benchmarks. In particular, we use these benchmarks and LLM-based interviews to analyze opportunities and limitations of two promising technologies: geothermal well arrays and closed-loop coaxial wells. This line of research could play a transformative role in the geothermal sector by enabling the next-generation of decision-support applications.",
+    "links": [
+      {
+        "url": "https://pangea.stanford.edu/ERE/pdf/IGAstandard/SGW/2025/Ouko.pdf",
+        "label": "Publisher"
+      }
+    ],
+    "doi": null,
+    "bibtex": "@inproceedings{ouko2025decision,\n  title={Decision-Support and Modeling with Large Language Models for Geothermal Well Arrays},\n  author={Ouko, Edwin and Lujan, Emmanuel and Edelman, Alan and Metcalfe, Robert},\n  booktitle={PROCEEDINGS, 50th Workshop on Geothermal Reservoir Engineering},\n  year={2025},\n  month={02},\n  organization={Stanford University},\n  address={Stanford, CA},\n  url={https://pangea.stanford.edu/ERE/pdf/IGAstandard/SGW/2025/Ouko.pdf}\n}"
+  },
+  {
+    "key": "matos2021performance",
+    "title": "Performance of D2D/NB-IoT Communications in Urban and Suburban Environments",
+    "authors": [
+      {
+        "name": "Rodolfo Leonardo Sumoza Matos",
+        "me": false
+      },
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Esteban Eduardo Mocskos",
+        "me": false
+      }
+    ],
+    "venue": "2021 Winter Simulation Conference (WSC), IEEE, 2021",
+    "year": "2021",
+    "tags": [
+      "Conference Paper"
+    ],
+    "abstract": "Smart cities are witnessing exceptional growth in their connections, increasing the need for LPWA communications, i.e. low-bitrate, coverage enhancement, ultra-low power consumption, and massive terminal access. 5G Narrowband-IoT has emerged to satisfy these requirements. Notwithstanding, it presents limitations in extreme coverage scenarios, where devices can lose connectivity unnecessarily. The addition of Device-to-Device (D2D) communications, connecting out-of-coverage devices with a base station through a relay, is a solid approach for mitigating these issues. This study targets two typical scenarios, urban and suburban, measuring the impact of the duty cycle, path-loss, retransmissions and interference, regarding the expected delivery ratio, end-to-end delay, and the QoS. Our simulations show how the behavior of these quantities leads to a novel strategy to avoid disconnection.",
+    "links": [
+      {
+        "url": "https://ieeexplore.ieee.org/document/9715330",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://informs-sim.org/wsc21papers/303.pdf",
+        "label": "PDF"
+      }
+    ],
+    "doi": "10.1109/WSC52266.2021.9715330",
+    "bibtex": "@inproceedings{matos2021performance,\n  title={Performance of {D2D/NB-IoT} Communications in Urban and Suburban Environments},\n  author={Matos, Rodolfo Leonardo Sumoza and Luj{\\\\'{a}}n, Emmanuel and Mocskos, Esteban Eduardo},\n  booktitle={2021 Winter Simulation Conference (WSC)},\n  pages={1--12},\n  year={2021},\n  organization={IEEE},\n  doi={10.1109/WSC52266.2021.9715330}\n}"
+  },
+  {
+    "key": "marino2021openep",
+    "title": "OpenEP: An Open-Source Simulator for Electroporation-Based Tumor Treatments",
+    "authors": [
+      {
+        "name": "Matías Marino",
+        "me": false
+      },
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Esteban Mocskos",
+        "me": false
+      },
+      {
+        "name": "Guillermo Marshall",
+        "me": false
+      }
+    ],
+    "venue": "Scientific Reports, Nature, 2021",
+    "year": "2021",
+    "tags": [
+      "Journal Paper"
+    ],
+    "abstract": "Electroporation (EP), the increase of cell membrane permeability due to the application of electric pulses, is a universal phenomenon with a broad range of applications. In medicine, some of the foremost EP-based tumor treatments are electrochemotherapy (ECT), irreversible electroporation, and gene electrotransfer (GET). The electroporation phenomenon is explained as the formation of cell membrane pores when a transmembrane cell voltage reaches a threshold value. Predicting the outcome of an EP-based tumor treatment consists of finding the electric field distribution with an electric threshold value covering the tumor (electroporated tissue). Threshold and electroporated tissue are also a function of the number of pulses, constituting a complex phenomenon requiring mathematical modeling. We present OpenEP, an open-source specific purpose simulator for EP-based tumor treatments, modeling among other variables, threshold, and electroporated tissue variations in time. Distributed under a free/libre user license, OpenEP allows the customization of tissue type; electrode geometry and material; pulse type, intensity, length, and frequency. OpenEP facilitates the prediction of an optimal EP-based protocol, such as ECT or GET, defined as the critical pulse dosage yielding maximum electroporated tissue with minimal damage. OpenEP displays a highly efficient shared memory implementation by taking advantage of parallel resources; this permits a rapid prediction of optimal EP-based treatment efficiency by pulse number tuning.",
+    "links": [
+      {
+        "url": "https://doi.org/10.1038/s41598-020-79858-y",
+        "label": "DOI"
+      }
+    ],
+    "doi": "10.1038/s41598-020-79858-y",
+    "bibtex": "@article{marino2021openep,\n  title={{OpenEP}: An Open-Source Simulator for Electroporation-Based Tumor Treatments},\n  author={Marino, Mat{\\\\'{i}}as and Lujan, Emmanuel and Mocskos, Esteban and Marshall, Guillermo},\n  journal={Scientific Reports},\n  volume={11},\n  number={1},\n  pages={1423},\n  year={2021},\n  publisher={Springer Nature},\n  url={https://www.nature.com/articles/s41598-020-79858-y},\n  doi={10.1038/s41598-020-79858-y}\n}"
+  },
+  {
+    "key": "lujan2019extreme",
+    "title": "Extreme Coverage in 5G Narrowband IoT: A LUT-Based Strategy to Optimize Shared Channels",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Juan A. Zuloaga Mellino",
+        "me": false
+      },
+      {
+        "name": "Alejandro D. Otero",
+        "me": false
+      },
+      {
+        "name": "Leonardo Rey Vega",
+        "me": false
+      },
+      {
+        "name": "Cecilia G. Galarza",
+        "me": false
+      },
+      {
+        "name": "Esteban E. Mocskos",
+        "me": false
+      }
+    ],
+    "venue": "IEEE Internet of Things Journal, 2019",
+    "year": "2019",
+    "tags": [
+      "Journal Paper"
+    ],
+    "abstract": "One of the main challenges in Internet of Things (IoT) is providing communication support to an increasing number of connected devices. In recent years, the narrowband radio technology has emerged to address this situation: narrowband IoT (NB-IoT), which is now part of 5G. Supporting massive connectivity becomes particularly demanding in extreme coverage scenarios, such as underground or deep inside building sites. We propose a novel strategy for these situations focused on optimizing NB-IoT shared channels through the selection of link parameters: modulation and coding scheme, as well as the number of repetitions. Specifically, our strategy is based on a lookup table (LUT) scheme which is used for rapidly delivering the optimal link parameters given a target QoS. Results show that, especially under extreme conditions, only a few options for link parameters are available, favoring robustness against measurement uncertainties. Our strategy minimizes resource usage in all scenarios of the acknowledged mode and remarkably reduces losses in the unacknowledged mode.",
+    "links": [
+      {
+        "url": "https://ieeexplore.ieee.org/document/8932462",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1908.02798",
+        "label": "PDF"
+      }
+    ],
+    "doi": "10.1109/JIOT.2019.2959552",
+    "bibtex": "@article{lujan2019extreme,\n  title={Extreme Coverage in {5G} Narrowband {IoT}: A {LUT}-Based Strategy to Optimize Shared Channels},\n  author={Luj{\\\\'{a}}n, Emmanuel and Mellino, Juan A. Zuloaga and Otero, Alejandro D. and Vega, Leonardo Rey and Galarza, Cecilia G. and Mocskos, Esteban E.},\n  journal={IEEE Internet of Things Journal},\n  year={2019},\n  doi={10.1109/JIOT.2019.2959552}\n}"
+  },
+  {
+    "key": "mellino2019lite",
+    "title": "Lite NB-IoT Simulator for Uplink Layer",
+    "authors": [
+      {
+        "name": "Juan A. Zuloaga Mellino",
+        "me": false
+      },
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Alejandro Otero",
+        "me": false
+      },
+      {
+        "name": "Esteban Mocskos",
+        "me": false
+      },
+      {
+        "name": "Leonardo Rey Vega",
+        "me": false
+      },
+      {
+        "name": "Cecilia Galarza",
+        "me": false
+      }
+    ],
+    "venue": "XVIII Workshop on Information Processing and Control (RPIC), Argentina, 2019",
+    "year": "2019",
+    "tags": [
+      "Conference Paper"
+    ],
+    "abstract": "The Internet of Things (IoT) is a new paradigm that gives rise to Low Power Wide Area Networks (LP-WAN). Narrow Band Internet of Things (NB-IoT) is a particular network architecture built on the legacy of LTE that is most suitable for IoT applications. In this paper, we present our work towards the implementation of a protocol simulator for NB-IoT communications. A summary of the NB-IoT physical layer is presented, deepening on the description of the uplink channel and ending with a description of the uplink scheduling process. As an application of our toolbox, we present NB-IoT uplink block error rate (BLER) curves traced via link layer simulations and derive the optimal link adaptation for an Additive White Gaussian Noise (AWGN) channel.",
+    "links": [
+      {
+        "url": "https://ieeexplore.ieee.org/document/8882144/",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://www.researchgate.net/publication/334707381_Lite_NB-IoT_Simulator_for_Uplink_Layer#fullTextFileContent",
+        "label": "PDF"
+      }
+    ],
+    "doi": "10.1109/RPIC.2019.8882144",
+    "bibtex": "@inproceedings{mellino2019lite,\n  title={Lite {NB-IoT} Simulator for Uplink Layer},\n  author={Mellino, Juan A. Zuloaga and Luj{\\\\'{a}}n, Emmanuel and Otero, Alejandro and Mocskos, Esteban and Vega, Leonardo Rey and Galarza, Cecilia},\n  booktitle={XVIII Workshop on Information Processing and Control (RPIC), Argentina},\n  year={2019},\n  doi={10.1109/RPIC.2019.8882144}\n}"
+  },
+  {
+    "key": "lujan2019libregrowth",
+    "title": "LibreGrowth: A Tumor Growth Code Based on Reaction-Diffusion Equations Using Shared Memory",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "María Sol Rosito",
+        "me": false
+      },
+      {
+        "name": "Alejandro Soba",
+        "me": false
+      },
+      {
+        "name": "Cecilia Suárez",
+        "me": false
+      }
+    ],
+    "venue": "Computer Physics Communications, 2019",
+    "year": "2019",
+    "tags": [
+      "Journal Paper"
+    ],
+    "abstract": "In recent years, in-silico experimentation within the field of oncological medicine has been intensively investigated with the aim of better understanding tumor dynamics and dose–response relationships in cancer treatments. Here we present LibreGrowth, a libre tumor growth code able to simulate the core growth and peripheral tumor cell infiltration, considering a benign and a malignant stages. We implemented a reaction–diffusion based model, with spatially variable diffusion coefficient, into a three-dimensional domain, using C++ and OpenMP over a GNU/Linux system. LibreGrowth aims to provide a flexible implementation for depicting heterogeneous tissues and infiltration processes, and to shed light in current therapy optimization strategies.",
+    "links": [
+      {
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0010465519301547",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1tL236t3_Z232LtMSzJybazsx8borqJoy/view",
+        "label": "PDF"
+      }
+    ],
+    "doi": "10.1016/j.cpc.2019.05.005",
+    "bibtex": "@article{lujan2019libregrowth,\n  title={{LibreGrowth}: A Tumor Growth Code Based on Reaction-Diffusion Equations Using Shared Memory},\n  author={Luj{\\\\'{a}}n, Emmanuel and Rosito, Mar{\\\\'{i}}a Sol and Soba, Alejandro and Su{\\\\'{a}}rez, Cecilia},\n  journal={Computer Physics Communications},\n  year={2019},\n  doi={10.1016/j.cpc.2019.05.005}\n}"
+  },
+  {
+    "key": "lujan2019towards",
+    "title": "Towards an Optimal Dose-Response Relationship in Gene Electrotransfer Protocols",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Matías Marino",
+        "me": false
+      },
+      {
+        "name": "Nahuel Olaiz",
+        "me": false
+      },
+      {
+        "name": "Guillermo Marshall",
+        "me": false
+      }
+    ],
+    "venue": "Electrochimica Acta, 2019",
+    "year": "2019",
+    "tags": [
+      "Journal Paper"
+    ],
+    "abstract": "In search of an optimal gene electrotransfer (GET) protocol, an electroporation-based (EP) tumor treatment with great potential as a non-viral gene-delivery system, the concept of the dose-response relationship is introduced. It is shown that a reliable dose parameter is the pulse dosage and reliable response parameters are the reversibly electroporated tissue area as well as the unwanted damaged tissue area and plasmid damage due to pH. An optimal dose-response relationship in a GET protocol is predicted as the critical pulse dosage yielding maximum reversibly electroporated tissue area with minimal tissue area damage induced by pH fronts. Moreover, since damage induced by pH changes is proportional to the Coulomb dosage, damage induced by pH fronts is negligible in typical EP-based tumor protocols such as in electrochemotherapy (ECT) and irreversible electroporation (IRE) but not in GET, due to the most often longer pulses applied.",
+    "links": [
+      {
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0013468619313544",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1G0sttM9G263pGftRF76odTpmcohBZkiY/view",
+        "label": "PDF"
+      }
+    ],
+    "doi": "10.1016/j.electacta.2019.07.029",
+    "bibtex": "@article{lujan2019towards,\n  title={Towards an Optimal Dose-Response Relationship in Gene Electrotransfer Protocols},\n  author={Luj{\\\\'{a}}n, Emmanuel and Marino, Mat{\\\\'{i}}as and Olaiz, Nahuel and Marshall, Guillermo},\n  journal={Electrochimica Acta},\n  year={2019},\n  doi={10.1016/j.electacta.2019.07.029}\n}"
+  },
+  {
+    "key": "lujan2019integrated",
+    "title": "An Integrated Platform for Smart Energy Management: The CC-SEM Project",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Alejandro Otero",
+        "me": false
+      },
+      {
+        "name": "Sebastian Valenzuela",
+        "me": false
+      },
+      {
+        "name": "Esteban Mocskos",
+        "me": false
+      },
+      {
+        "name": "Luiz Angelo Steffenel",
+        "me": false
+      },
+      {
+        "name": "Sergio Nesmachnow",
+        "me": false
+      }
+    ],
+    "venue": "Revista Facultad de Ingeniería, Universidad de Antioquia, 2019",
+    "year": "2019",
+    "tags": [
+      "Journal Paper"
+    ],
+    "abstract": "Energy management focuses on improving the efficient use of resources and increasing energy access in a path towards a more sustainable society. Cloud Computing for Smart Energy Management project (CC-SEM) is a research effort for building an integrated platform for smart monitoring, controlling, and planning energy consumption and generation in urban scenarios. CC-SEM includes the design of a low-cost IoT device capable of monitoring, operating, and controlling home appliances; an analysis of 5G Narrowband IoT as a suitable cellular technology for Smart Grid outage restoration; an analysis of domestic consumption patterns to help predict home consumption; and a forecasting and performance evaluation methodology for the generation of individual photovoltaic systems. CC-SEM presents a set of tools for controlling home devices, planning/simulating scenarios of energy generation, and advances in the communication infrastructure for transmitting the generated data.",
+    "links": [
+      {
+        "url": "https://revistas.udea.edu.co/index.php/ingenieria/article/view/336282",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://revistas.udea.edu.co/index.php/ingenieria/article/view/336282/20795137",
+        "label": "PDF"
+      }
+    ],
+    "doi": "10.17533/udea.redin.20191147",
+    "bibtex": "@article{lujan2019integrated,\n  title={An Integrated Platform for Smart Energy Management: The {CC-SEM} Project},\n  author={Luj{\\\\'{a}}n, Emmanuel and Otero, Alejandro and Valenzuela, Sebastian and Mocskos, Esteban and Steffenel, Luiz Angelo and Nesmachnow, Sergio},\n  journal={Revista Facultad de Ingenier{\\\\'{i}}a, Universidad de Antioquia},\n  year={2019},\n  doi={10.17533/udea.redin.20191147}\n}"
+  },
+  {
+    "key": "lujan2018cloud",
+    "title": "Cloud Computing for Smart Energy Management (CC-SEM Project)",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Alejandro Otero",
+        "me": false
+      },
+      {
+        "name": "Sebastian Valenzuela",
+        "me": false
+      },
+      {
+        "name": "Esteban Mocskos",
+        "me": false
+      },
+      {
+        "name": "Luiz Angelo Steffenel",
+        "me": false
+      },
+      {
+        "name": "Sergio Nesmachnow",
+        "me": false
+      }
+    ],
+    "venue": "Congreso Iberoamericano de Ciudades Inteligentes (ICSC-CITIES), 2018",
+    "year": "2018",
+    "tags": [
+      "Conference Paper"
+    ],
+    "abstract": "This paper describes the Cloud Computing for Smart Energy Management (CC-SEM) project, a research effort focused on building an integrated platform for smart monitoring, controlling, and planning energy consumption and generation in urban scenarios. The project integrates cutting-edge technologies (Big Data analysis, computational intelligence, Internet of Things, High Performance Computing and Cloud Computing), specific hardware for energy monitoring/controlling built within the project, and explores their communication. The proposed platform considers the point of view of both citizens and administrators, providing a set of tools for controlling home devices (for end users), planning/simulating scenarios of energy generation (for energy companies and administrators), and shows some advances in communication infrastructure for transmitting the generated data.",
+    "links": [
+      {
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-12804-3_10",
+        "label": "Publisher"
+      }
+    ],
+    "doi": "10.1007/978-3-030-12804-3_10",
+    "bibtex": "@inproceedings{lujan2018cloud,\n  title={Cloud Computing for Smart Energy Management ({CC-SEM} Project)},\n  author={Lujan, Emmanuel and Otero, Alejandro and Valenzuela, Sebastian and Mocskos, Esteban and Steffenel, Luiz Angelo and Nesmachnow, Sergio},\n  booktitle={Congreso Iberoamericano de Ciudades Inteligentes (ICSC-CITIES 2018)},\n  year={2018},\n  doi={10.1007/978-3-030-12804-3_10}\n}"
+  },
+  {
+    "key": "lujan2018microenvironmental",
+    "title": "Microenvironmental Influence on Microtumour Infiltration Patterns: 3D Mathematical Modelling Supported by In Vitro Studies",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Daniela Soto",
+        "me": false
+      },
+      {
+        "name": "María S. Rosito",
+        "me": false
+      },
+      {
+        "name": "Alejandro Soba",
+        "me": false
+      },
+      {
+        "name": "Liliana N. Guerra",
+        "me": false
+      },
+      {
+        "name": "Juan C. Calvo",
+        "me": false
+      },
+      {
+        "name": "Guillermo Marshall",
+        "me": false
+      },
+      {
+        "name": "Cecilia Suárez",
+        "me": false
+      }
+    ],
+    "venue": "Integrative Biology, Oxford University Press, 2018",
+    "year": "2018",
+    "tags": [
+      "Journal Paper"
+    ],
+    "abstract": "Tumour infiltration extent and its spatial organization depend both on the tumour type and stage and on the bio-physicochemical characteristics of the microenvironment. This work presents an experimental/numerical combined method for the development of a three-dimensional mathematical model with the ability to reproduce the growth and infiltration patterns of a given avascular microtumour in response to different microenvironmental conditions. The model is based on a diffusion–convection reaction equation that considers logistic proliferation, volumetric growth, a rim of proliferative cells at the tumour surface, and invasion with diffusive and convective components. The in vitro model consists of multicellular tumour spheroids (MTSs) of an epithelial mammary tumour cell line (LM3) immersed in a collagen I gel matrix. It was experimentally determined that adipocyte conditioned media had the ability to change the MTS infiltration pattern from collective and laminar to an individual and atomized one. Numerical simulations adequately reproduced both kinds of infiltration patterns, which were determined by area quantification, analysis of fractal dimensions and lacunarity, and Bland–Altman analysis.",
+    "links": [
+      {
+        "url": "https://doi.org/10.1039/c8ib00049b",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://ri.conicet.gov.ar/bitstream/handle/11336/80640/CONICET_Digital_Nro.dfe01121-0652-4580-acfe-3a7c26abe6c5_J.pdf?sequence=11&isAllowed=y",
+        "label": "PDF"
+      }
+    ],
+    "doi": "10.1039/c8ib00049b",
+    "bibtex": "@article{lujan2018microenvironmental,\n  title={Microenvironmental Influence on Microtumour Infiltration Patterns: {3D} Mathematical Modelling Supported by In Vitro Studies},\n  author={Luj{\\\\'{a}}n, Emmanuel and Soto, Daniela and Rosito, Mar{\\\\'{i}}a S. and Soba, Alejandro and Guerra, Liliana N. and Calvo, Juan C. and Marshall, Guillermo and Su{\\\\'{a}}rez, Cecilia},\n  journal={Integrative Biology},\n  volume={10},\n  number={5},\n  pages={325--334},\n  year={2018},\n  publisher={Oxford University Press},\n  doi={10.1039/c8ib00049b}\n}"
+  },
+  {
+    "key": "lujan2017modelado",
+    "title": "Modelado Matemático de un Patrón de Invasión Tumoral a través de Ecuaciones de Reacción-Difusión y Fractales DLA",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Daniela Soto",
+        "me": false
+      },
+      {
+        "name": "María R. Rosito",
+        "me": false
+      },
+      {
+        "name": "Alejandro Soba",
+        "me": false
+      },
+      {
+        "name": "Liliana N. Guerra",
+        "me": false
+      },
+      {
+        "name": "Guillermo Marshall",
+        "me": false
+      },
+      {
+        "name": "Cecilia Suárez",
+        "me": false
+      }
+    ],
+    "venue": "ENIEF — Mecánica Computacional, Bioengineering and Biomechanics, vol. 35, 2017",
+    "year": "2017",
+    "tags": [
+      "Conference Paper"
+    ],
+    "abstract": "Se presenta un modelo matemático basado en una ecuación de reacción-difusión-convección que logra describir un patrón de infiltración microtumoral resultante de la incorporación de medio condicionado proveniente de adipocitos al microambiente tumoral de esferoides multicelulares. La descripción del tipo de invasión se logra incorporando una difusión espacialmente variable dependiente de una matriz fractal generada por el método DLA (Diffusion Limited Aggregation). Los valores de los principales parámetros del modelo se estiman a partir de datos experimentales. Las simulaciones obtenidas se ajustan cualitativa y semicuantitativamente a los resultados in vitro, según muestran los análisis de fractalidad realizados por los métodos de boxcounting y lagunaridad.",
+    "links": [
+      {
+        "url": "https://cimec.org.ar/ojs/index.php/mc/article/view/5268",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://cimec.org.ar/ojs/index.php/mc/article/view/5268/5217",
+        "label": "PDF"
+      }
+    ],
+    "doi": null,
+    "bibtex": "@inproceedings{lujan2017modelado,\n  title={Modelado matem{\\\\'{a}}tico de un patr{\\\\'{o}}n de invasi{\\\\'{o}}n tumoral a trav{\\\\'{e}}s de ecuaciones de reacci{\\\\'{o}}n-difusi{\\\\'{o}}n y fractales {DLA}},\n  author={Luj{\\\\'{a}}n, Emmanuel and Soto, Daniela and Rosito, Mar{\\\\'{i}}a R. and Soba, Alejandro and Guerra, Liliana N. and Marshall, Guillermo and Su{\\\\'{a}}rez, Cecilia},\n  booktitle={ENIEF. Mec{\\\\'{a}}nica Computacional. Bioengineering and Biomechanics},\n  volume={35},\n  number={8},\n  year={2017}\n}"
+  },
+  {
+    "key": "lujan2016mathematical",
+    "title": "Mathematical Modelling of Microtumour Infiltration Based on In Vitro Experiments",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Liliana N. Guerra",
+        "me": false
+      },
+      {
+        "name": "Alejandro Soba",
+        "me": false
+      },
+      {
+        "name": "Nicolás Visacovsky",
+        "me": false
+      },
+      {
+        "name": "Daniel Gandía",
+        "me": false
+      },
+      {
+        "name": "Juan Carlos Calvo",
+        "me": false
+      },
+      {
+        "name": "Cecilia Ana Suárez",
+        "me": false
+      }
+    ],
+    "venue": "Integrative Biology, 2016",
+    "year": "2016",
+    "tags": [
+      "Journal Paper"
+    ],
+    "abstract": "The objective of this study was to build a mathematical model able to describe the growth and the real invasion pattern of multicellular tumour spheroids immersed in a collagen matrix. The model may be used in a descriptive (case-specific) as well as in a predictive (population-dependent) way, depending on the type of the input parameters (a shape function obtained from a given experimental case or an aleatory shape function generated by data mining and Monte Carlo tools from the entire dataset, respectively). This kind of empirical-numerical interaction has wide application potential at the basic research and at the clinical level.",
+    "links": [
+      {
+        "url": "https://pubs.rsc.org/EN/content/articlelanding/2016/ib/c6ib00110f",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://pubs.rsc.org/en/content/getauthorversionpdf/c6ib00110f",
+        "label": "PDF"
+      }
+    ],
+    "doi": "10.1039/c6ib00110f",
+    "bibtex": "@article{lujan2016mathematical,\n  title={Mathematical Modelling of Microtumour Infiltration Based on In Vitro Experiments},\n  author={Luj{\\\\'{a}}n, Emmanuel and Guerra, Liliana N. and Soba, Alejandro and Visacovsky, Nicol{\\\\'{a}}s and Gand{\\\\'{i}}a, Daniel and Calvo, Juan Carlos and Su{\\\\'{a}}rez, Cecilia Ana},\n  journal={Integrative Biology},\n  year={2016},\n  doi={10.1039/c6ib00110f}\n}"
+  },
+  {
+    "key": "lujan2016electrolytic",
+    "title": "Electrolytic Ablation Dose Planning Methodology",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Herman Schinca",
+        "me": false
+      },
+      {
+        "name": "Nahuel Olaiz",
+        "me": false
+      },
+      {
+        "name": "Santiago Urquiza",
+        "me": false
+      },
+      {
+        "name": "Fernando Víctor Molina",
+        "me": false
+      },
+      {
+        "name": "Pablo Turjanski",
+        "me": false
+      },
+      {
+        "name": "Guillermo Marshall",
+        "me": false
+      }
+    ],
+    "venue": "1st World Congress on Electroporation and Pulsed Electric Fields in Biology, Medicine and Food & Environmental Technologies, Springer, 2016",
+    "year": "2016",
+    "tags": [
+      "Conference Paper"
+    ],
+    "abstract": "Electrolytic ablation (EA), a medical treatment increasingly used in solid tumor ablation, consists in the passage of a low direct electric current through two or more electrodes inserted in the tissue thus inducing pH fronts that destroys the tumor. The combined use of EA with a recently introduced one-probe two electrode device (OPTED) results in a minimally invasive tissue ablation technique. Despite its success related to low cost and minimum side effects, EA has drawbacks such as the difficulty in determining the current and time needed to assure total tumor ablation while avoiding healthy tissue intrusion. Here we introduce a realistic dose planning methodology in terms of the coulomb dosage administered and the associated pH tracking, that predicts an optimal EA/OPTED protocol treatment for a given tumor size.",
+    "links": [
+      {
+        "url": "https://link.springer.com/chapter/10.1007/978-981-287-817-5_23",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://www.researchgate.net/publication/281731444_Electrolytic_Ablation_Dose_Planning_Methodology",
+        "label": "PDF"
+      }
+    ],
+    "doi": "10.1007/978-981-287-817-5_23",
+    "bibtex": "@inproceedings{lujan2016electrolytic,\n  title={Electrolytic Ablation Dose Planning Methodology},\n  author={Luj{\\\\'{a}}n, Emmanuel and Schinca, Herman and Olaiz, Nahuel and Urquiza, Santiago and Molina, Fernando V{\\\\'{i}}ctor and Turjanski, Pablo and Marshall, Guillermo},\n  booktitle={1st World Congress on Electroporation and Pulsed Electric Fields in Biology, Medicine and Food \\\\& Environmental Technologies},\n  pages={101--104},\n  year={2016},\n  organization={Springer Singapore},\n  doi={10.1007/978-981-287-817-5_23}\n}"
+  },
+  {
+    "key": "lujan2015optimal",
+    "title": "Optimal Dose-Response Relationship in Electrolytic Ablation of Tumors with a One-Probe-Two-Electrode Device",
+    "authors": [
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Herman Schinca",
+        "me": false
+      },
+      {
+        "name": "Nahuel Olaiz",
+        "me": false
+      },
+      {
+        "name": "Santiago Urquiza",
+        "me": false
+      },
+      {
+        "name": "Fernando Víctor Molina",
+        "me": false
+      },
+      {
+        "name": "Pablo Turjanski",
+        "me": false
+      },
+      {
+        "name": "Guillermo Marshall",
+        "me": false
+      }
+    ],
+    "venue": "Electrochimica Acta, vol. 186, pp. 494–503, Pergamon, 2015",
+    "year": "2015",
+    "tags": [
+      "Journal Paper"
+    ],
+    "abstract": "Electrolytic ablation (EA) of tumors consists in the passage of a low constant electric current through two or more electrodes inserted in the tissue thus inducing pH fronts that produce tumor necrosis. Combined with a recently introduced one-probe two electrode device (OPTED) this procedure results in a minimally invasive treatment. In this work, a theoretical model is introduced describing the EA/OPTED as an electrolytic process and the underlying electrochemical reactions through the Nernst-Planck equations for ion transport. Model results show that the coulomb dosage is a reliable dose parameter and predicts an optimal dose-response relationship for a given tumor size subjected to an EA/OPTED, considering the optimum as the minimum coulomb dosage necessary to achieve total tumor destruction while minimizing healthy tissue damage. Moreover, it predicts a nonlinear relationship between coulomb dosage and necrotized tumor volume, dosage and NTV scaling as Q¹⋅⁴.",
+    "links": [
+      {
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0013468615307283?via%3Dihub",
+        "label": "Publisher"
+      },
+      {
+        "url": "https://ri.conicet.gov.ar/bitstream/handle/11336/94606/CONICET_Digital_Nro.05c97c2d-7360-47ef-a15d-0c496caa6aa7_A.pdf?sequence=2&isAllowed=y",
+        "label": "PDF"
+      }
+    ],
+    "doi": "10.1016/j.electacta.2015.10.147",
+    "bibtex": "@article{lujan2015optimal,\n  title={Optimal Dose-Response Relationship in Electrolytic Ablation of Tumors with a One-Probe-Two-Electrode Device},\n  author={Luj{\\\\'{a}}n, Emmanuel and Schinca, Herman and Olaiz, Nahuel and Urquiza, Santiago and Molina, Fernando V{\\\\'{i}}ctor and Turjanski, Pablo and Marshall, Guillermo},\n  journal={Electrochimica Acta},\n  volume={186},\n  pages={494--503},\n  year={2015},\n  publisher={Pergamon},\n  doi={10.1016/j.electacta.2015.10.147}\n}"
+  },
+  {
+    "key": "zubov2021neuralpde",
+    "title": "NeuralPDE: Automating Physics-Informed Neural Networks (PINNs) with Error Approximations",
+    "authors": [
+      {
+        "name": "Kirill Zubov",
+        "me": false
+      },
+      {
+        "name": "Zoe McCarthy",
+        "me": false
+      },
+      {
+        "name": "Yingbo Ma",
+        "me": false
+      },
+      {
+        "name": "Francesco Calisto",
+        "me": false
+      },
+      {
+        "name": "Valerio Pagliarino",
+        "me": false
+      },
+      {
+        "name": "Simone Azeglio",
+        "me": false
+      },
+      {
+        "name": "Luca Bottero",
+        "me": false
+      },
+      {
+        "name": "Emmanuel Lujan",
+        "me": true
+      },
+      {
+        "name": "Valentin Sulzer",
+        "me": false
+      },
+      {
+        "name": "Ashutosh Bharambe",
+        "me": false
+      },
+      {
+        "name": "et al.",
+        "me": false
+      }
+    ],
+    "venue": "arXiv:2107.09443, 2021",
+    "year": "2021",
+    "tags": [
+      "Preprint"
+    ],
+    "abstract": "Physics-informed neural networks (PINNs) are an increasingly powerful way to solve partial differential equations, generate digital twins, and create neural surrogates of physical models. In this manuscript we detail the various methodologies of PINNs and showcase the various types of problems a PINN software can solve. We then detail the inner workings of NeuralPDE.jl and show how a formulation structured around numerical quadrature gives rise to new loss functions which allow for adaptivity towards bounded error tolerances. We showcase how NeuralPDE uses a purely symbolic formulation so that all of the underlying training code is generated from an abstract formulation, and show how to make use of GPUs and solve systems of PDEs. We end by focusing on a complex multiphysics example, the Doyle-Fuller-Newman (DFN) Model, and showcase how this PDE can be formulated and solved with NeuralPDE.",
+    "links": [
+      {
+        "url": "https://arxiv.org/abs/2107.09443",
+        "label": "Publisher"
+      }
+    ],
+    "doi": "10.48550/arXiv.2107.09443",
+    "bibtex": "@article{zubov2021neuralpde,\n  title={{NeuralPDE}: Automating Physics-Informed Neural Networks ({PINNs}) with Error Approximations},\n  author={Zubov, Kirill and McCarthy, Zoe and Ma, Yingbo and Calisto, Francesco and Pagliarino, Valerio and Azeglio, Simone and Bottero, Luca and Luj{\\\\'{a}}n, Emmanuel and Sulzer, Valentin and Bharambe, Ashutosh and others},\n  journal={arXiv preprint arXiv:2107.09443},\n  year={2021},\n  url={https://arxiv.org/abs/2107.09443},\n  doi={10.48550/arXiv.2107.09443}\n}"
+  }
+]
