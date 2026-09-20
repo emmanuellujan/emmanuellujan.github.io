@@ -26,11 +26,16 @@ linked, already = [], []
 
 for key, slug in sorted(slugs.items()):
     page = f"papers/{slug}/"
-    m = re.search(r'<li class="pub-item[^"]*">.*?toggleAbstract\(\'' + re.escape(key) + r'\'.*?</li>', s, re.S)
-    if not m:
+    # Match each <li> on its own, then pick the one holding this key. A single
+    # regex anchored at the document start would span from the first entry.
+    block = None
+    for cand in re.finditer(r'<li class="pub-item[^"]*">.*?</li>', s, re.S):
+        if f"toggleAbstract('{key}'" in cand.group(0) or f"copyBib('{key}'" in cand.group(0):
+            block = cand.group(0)
+            break
+    if block is None:
         print(f"  !! entry not found for {key}")
         continue
-    block = m.group(0)
     if f'href="{page}"' in block:
         already.append(key)
         continue

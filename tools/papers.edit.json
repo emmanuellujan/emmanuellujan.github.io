@@ -5,7 +5,7 @@
     "marino2021openep"
   ],
   "pados2026learning": {
-    "slug": "neural-sparse-solver-selection",
+    "slug": "cnn-sparse-solver-selection",
     "takeaway": "Can a network read a matrix and pick the solver?",
     "context": "Solver speed on sparse systems swings wildly with sparsity structure. A CNN is trained on spy-plot images of that structure to predict which candidate solver will be faster.",
     "keywords": [
