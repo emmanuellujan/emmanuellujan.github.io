@@ -312,11 +312,7 @@ for key, meta in edit.items():
             continue
         if l["label"] in ("Publisher", "DOI") and p["doi"]:
             continue                        # already covered by the DOI button
-        label = l["label"]
-        if "drive.google.com" in l["url"] or "researchgate.net" in l["url"]:
-            label = "Author copy"           # a landing page, not a direct PDF
-        elif label == "DOI":
-            label = "Publisher"
+        label = "Publisher" if l["label"] == "DOI" else l["label"]
         cls = "button" if actions else "button primary"
         actions.append(f'          <a class="{cls}" href="{E(l["url"])}">{label} <span aria-hidden="true">↗</span></a>')
 
