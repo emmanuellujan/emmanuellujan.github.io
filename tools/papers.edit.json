@@ -15,7 +15,8 @@
       "SuiteSparse",
       "Algorithmic dispatch"
     ],
-    "pdf": null
+    "pdf": null,
+    "cluster": "Algorithmic discovery"
   },
   "metcalfe2026arrays": {
     "slug": "networked-geothermal-well-arrays",
@@ -28,7 +29,8 @@
       "Grid electricity",
       "Geothermal well arrays"
     ],
-    "pdf": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Metcalfe.pdf"
+    "pdf": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Metcalfe.pdf",
+    "cluster": "Geothermal"
   },
   "wittenstein2026full": {
     "slug": "gpu-borehole-heat-exchanger-model",
@@ -40,7 +42,8 @@
       "Operator splitting",
       "Julia"
     ],
-    "pdf": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Wittenstein.pdf"
+    "pdf": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2026/Wittenstein.pdf",
+    "cluster": "Geothermal"
   },
   "shah2025data": {
     "slug": "llm-algorithm-dispatch",
@@ -52,7 +55,8 @@
       "LU factorization",
       "High-performance linear algebra"
     ],
-    "pdf": "https://ieee-hpec.org/wp-content/uploads/2026/01/120.pdf"
+    "pdf": "https://ieee-hpec.org/wp-content/uploads/2026/01/120.pdf",
+    "cluster": "Algorithmic discovery"
   },
   "ouko2025decision": {
     "slug": "llm-geothermal-decision-support",
@@ -64,7 +68,8 @@
       "Decision support",
       "Benchmarking"
     ],
-    "pdf": "https://pangea.stanford.edu/ERE/pdf/IGAstandard/SGW/2025/Ouko.pdf"
+    "pdf": "https://pangea.stanford.edu/ERE/pdf/IGAstandard/SGW/2025/Ouko.pdf",
+    "cluster": "Geothermal"
   },
   "matos2021performance": {
     "slug": "d2d-nbiot-coverage",
@@ -76,7 +81,8 @@
       "Coverage enhancement",
       "Network simulation"
     ],
-    "pdf": "https://informs-sim.org/wsc21papers/303.pdf"
+    "pdf": "https://informs-sim.org/wsc21papers/303.pdf",
+    "cluster": "NB-IoT"
   },
   "lujan2019extreme": {
     "slug": "nbiot-extreme-coverage",
@@ -88,7 +94,8 @@
       "Link adaptation",
       "Extreme coverage"
     ],
-    "pdf": "https://arxiv.org/pdf/1908.02798"
+    "pdf": "https://arxiv.org/pdf/1908.02798",
+    "cluster": "NB-IoT"
   },
   "mellino2019lite": {
     "slug": "nbiot-uplink-simulator",
@@ -100,7 +107,8 @@
       "Uplink scheduling",
       "Link adaptation"
     ],
-    "pdf": null
+    "pdf": null,
+    "cluster": "NB-IoT"
   },
   "lujan2019libregrowth": {
     "slug": "libregrowth-tumor-growth-code",
@@ -112,7 +120,8 @@
       "OpenMP",
       "Open-source scientific software"
     ],
-    "pdf": null
+    "pdf": null,
+    "cluster": "Tumor growth"
   },
   "lujan2019towards": {
     "slug": "gene-electrotransfer-dose-response",
@@ -124,7 +133,8 @@
       "Dose-response",
       "pH fronts"
     ],
-    "pdf": null
+    "pdf": null,
+    "cluster": "Electroporation"
   },
   "lujan2019integrated": {
     "slug": "smart-energy-management-platform",
@@ -136,7 +146,8 @@
       "Cloud computing",
       "Smart cities"
     ],
-    "pdf": "https://zenodo.org/records/3856489/files/336282-Article%20Text-182527-5-10-20200515.pdf?download=1"
+    "pdf": "https://zenodo.org/records/3856489/files/336282-Article%20Text-182527-5-10-20200515.pdf?download=1",
+    "cluster": "NB-IoT"
   },
   "lujan2018cloud": {
     "slug": "cloud-computing-smart-energy",
@@ -148,7 +159,8 @@
       "Energy monitoring",
       "Big data"
     ],
-    "pdf": null
+    "pdf": null,
+    "cluster": "NB-IoT"
   },
   "lujan2018microenvironmental": {
     "slug": "microtumour-infiltration-3d-model",
@@ -162,7 +174,8 @@
       "Tumour invasion"
     ],
     "pdf": null,
-    "link": "https://ri.conicet.gov.ar/bitstream/handle/11336/80640/CONICET_Digital_Nro.dfe01121-0652-4580-acfe-3a7c26abe6c5_J.pdf?sequence=11&isAllowed=y"
+    "link": "https://ri.conicet.gov.ar/bitstream/handle/11336/80640/CONICET_Digital_Nro.dfe01121-0652-4580-acfe-3a7c26abe6c5_J.pdf?sequence=11&isAllowed=y",
+    "cluster": "Tumor growth"
   },
   "lujan2017modelado": {
     "slug": "modelado-invasion-tumoral-dla",
@@ -175,7 +188,8 @@
       "DLA fractals",
       "Lacunarity"
     ],
-    "pdf": "https://cimec.org.ar/ojs/index.php/mc/article/download/5268/5217"
+    "pdf": "https://cimec.org.ar/ojs/index.php/mc/article/download/5268/5217",
+    "cluster": "Tumor growth"
   },
   "lujan2016mathematical": {
     "slug": "tumour-spheroid-invasion-model",
@@ -192,7 +206,8 @@
     "drop": [
       "https://pubs.rsc.org/en/content/getauthorversionpdf/c6ib00110f"
     ],
-    "_note": "RSC 'getauthorversionpdf' redirects to the abstract and reports 'You do not currently have access to this content', so it is dropped."
+    "_note": "RSC 'getauthorversionpdf' redirects to the abstract and reports 'You do not currently have access to this content', so it is dropped.",
+    "cluster": "Tumor growth"
   },
   "lujan2016electrolytic": {
     "slug": "electrolytic-ablation-dose-planning",
@@ -204,7 +219,8 @@
       "pH fronts",
       "Tumour ablation"
     ],
-    "pdf": null
+    "pdf": null,
+    "cluster": "Electroporation"
   },
   "lujan2015optimal": {
     "slug": "electrolytic-ablation-dose-response",
@@ -217,7 +233,8 @@
       "Minimally invasive treatment"
     ],
     "pdf": null,
-    "link": "https://ri.conicet.gov.ar/bitstream/handle/11336/94606/CONICET_Digital_Nro.05c97c2d-7360-47ef-a15d-0c496caa6aa7_A.pdf?sequence=2&isAllowed=y"
+    "link": "https://ri.conicet.gov.ar/bitstream/handle/11336/94606/CONICET_Digital_Nro.05c97c2d-7360-47ef-a15d-0c496caa6aa7_A.pdf?sequence=2&isAllowed=y",
+    "cluster": "Electroporation"
   },
   "zubov2021neuralpde": {
     "slug": "neuralpde-physics-informed-networks",
@@ -229,6 +246,8 @@
       "Julia",
       "Partial differential equations"
     ],
-    "pdf": "https://arxiv.org/pdf/2107.09443"
-  }
+    "pdf": "https://arxiv.org/pdf/2107.09443",
+    "cluster": "ML"
+  },
+  "_clusters": "Taken from ~/publications/<folder>/: the author's own grouping. Drives Related work."
 }

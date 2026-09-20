@@ -259,33 +259,34 @@ DOC_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 
 ALL = {k: v for k, v in edit.items() if not k.startswith("_")}
 ALL["lujan2025structure"] = {"slug": "when-structure-is-silent",
+                             "cluster": "Algorithmic discovery",
                              "keywords": ["Algorithmic dispatch", "Structured matrices",
                                           "LU factorization", "High-performance computing"]}
 ALL["marino2021openep"] = {"slug": "openep-electroporation-simulator",
+                           "cluster": "Electroporation",
                            "keywords": ["Electroporation", "Tumor treatment simulation",
                                         "Electrochemotherapy", "Gene electrotransfer",
                                         "Shared-memory parallelism"]}
 
 
 def related_to(key, n=3):
-    """Nearest papers by shared keywords, then by shared title words."""
-    mine = {k.lower() for k in ALL[key]["keywords"]}
-    my_words = set(auto[key]["title"].lower().split())
-    scored = []
+    """Same cluster first — the author's own grouping from ~/publications/.
+
+    Ordered by shared keywords then recency. Papers alone in their cluster get
+    no siblings rather than a link invented from a coincidental keyword.
+    """
+    mine_cluster = ALL[key].get("cluster")
+    if not mine_cluster:
+        return []
+    mine_kw = {k.lower() for k in ALL[key]["keywords"]}
+    sibs = []
     for other, meta_o in ALL.items():
-        if other == key:
+        if other == key or meta_o.get("cluster") != mine_cluster:
             continue
-        theirs = {k.lower() for k in meta_o["keywords"]}
-        shared = mine & theirs
-        if not shared:
-            continue          # a shared topic, not a shared common word
-        score = 2 * len(shared)
-        score += len((my_words & set(auto[other]["title"].lower().split())) -
-                     {"a", "the", "of", "for", "in", "and", "with", "to", "on",
-                      "an", "using", "shared", "based", "on", "its"}) * 0.1
-        scored.append((score, auto[other]["year"], other))
-    scored.sort(key=lambda t: (-t[0], -int(t[1]) if t[1].isdigit() else 0))
-    return [k for _, _, k in scored[:n]]
+        shared = len(mine_kw & {k.lower() for k in meta_o["keywords"]})
+        sibs.append((shared, int(auto[other]["year"]) if auto[other]["year"].isdigit() else 0, other))
+    sibs.sort(key=lambda t: (-t[0], -t[1]))
+    return [k for _, _, k in sibs[:n]]
 
 
 KIND_LABEL = {"journal": "Journal article", "conference": "Conference paper", "preprint": "Preprint"}
