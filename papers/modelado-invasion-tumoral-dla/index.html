@@ -103,12 +103,14 @@
     .skip-link { position: absolute; top: -100px; left: 20px; z-index: 10; background: #fff; padding: 12px; }
     .skip-link:focus { top: 12px; }
     .site-header { background: var(--red); color: #fff; }
-    .header-inner { max-width: var(--page-width); margin: auto; min-height: 66px; padding: 16px var(--page-gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    /* Matches the homepage nav: 64px tall, two-line brand, no vertical padding. */
+    .header-inner { max-width: var(--page-width); margin: auto; min-height: 64px; padding: 0 var(--page-gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .site-header a { color: #fff; text-decoration: none; }
     .site-header a:hover { text-decoration: underline; }
     .site-header a:focus-visible { outline-color: #fff; }
-    .brand { font-size: 1rem; font-weight: 700; line-height: 1.08; letter-spacing: -.01em; }
-    .affiliation { color: rgba(255,255,255,.7); margin-left: 18px; font-size: .62rem; font-weight: 700; line-height: 1.08; letter-spacing: .12em; }
+    .brand { display: flex; flex-direction: column; align-items: flex-start; gap: .1rem; line-height: 1.08; }
+    .brand .kicker { color: rgba(255,255,255,.7); font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .brand .name { font-size: 1rem; font-weight: 700; letter-spacing: -.01em; }
     .back-link { font-size: .72rem; font-weight: 600; letter-spacing: .04em; white-space: nowrap; }
     /* The homepage's 760px content column sits inside its section padding. */
     main { box-sizing: content-box; max-width: var(--page-width); margin: auto; padding: 44px var(--page-gutter) 72px; }
@@ -167,7 +169,7 @@
     .footer-inner, .site-footer .disclaimer, .footer-bottom { padding-left: 0; padding-right: 0; }
     @media (max-width: 760px) {
       .header-inner { padding-block: 15px; }
-      .affiliation { display: none; }
+      .brand .kicker { display: none; }
       main { padding-block: 32px 48px; }
       .footer-bottom { flex-direction: column; gap: .35rem; }
     }
@@ -189,7 +191,7 @@
   <a class="skip-link" href="#paper">Skip to paper</a>
   <header class="site-header">
     <nav class="header-inner" aria-label="Main navigation">
-      <div><a class="brand" href="../../index.html">Emmanuel Lujan</a><span class="affiliation">MIT CSAIL</span></div>
+      <a class="brand" href="../../index.html"><span class="kicker">MIT CSAIL</span><span class="name">Emmanuel Lujan, Ph.D.</span></a>
       <a class="back-link" href="../../index.html#publications">← All publications</a>
     </nav>
   </header>

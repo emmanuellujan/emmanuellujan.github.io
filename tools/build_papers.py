@@ -165,7 +165,7 @@ PAGE = """<!doctype html>
   <a class="skip-link" href="#paper">Skip to paper</a>
   <header class="site-header">
     <nav class="header-inner" aria-label="Main navigation">
-      <div><a class="brand" href="../../index.html">Emmanuel Lujan</a><span class="affiliation">MIT CSAIL</span></div>
+      <a class="brand" href="../../index.html"><span class="kicker">MIT CSAIL</span><span class="name">Emmanuel Lujan, Ph.D.</span></a>
       <a class="back-link" href="../../index.html#publications">← All publications</a>
     </nav>
   </header>
