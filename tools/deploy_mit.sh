@@ -13,10 +13,15 @@ set -euo pipefail
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 STAGE="${TMPDIR:-/tmp}/eljn-mit-site.$$"
 # Set MIT_REMOTE to your own Athena target, e.g.
-#   export MIT_REMOTE=username@athena.dialup.mit.edu:~/www/
+#   export MIT_REMOTE=username@athena.dialup.mit.edu:www/
 # With an ssh ControlMaster entry (see README) an alias works too:
-#   export MIT_REMOTE=athena:~/www/
-REMOTE="${MIT_REMOTE:-USER@athena.dialup.mit.edu:~/www/}"
+#   export MIT_REMOTE=athena:www/
+#
+# Use a RELATIVE path (www/), not ~/www/: the local shell expands the tilde
+# before scp sees it, so the target becomes the laptop's home path and the
+# upload fails with "path canonicalization failed". A relative path is
+# resolved against the remote home, which is what we want.
+REMOTE="${MIT_REMOTE:-USER@athena.dialup.mit.edu:www/}"
 
 cleanup() { rm -rf "$STAGE"; }
 trap cleanup EXIT
@@ -34,7 +39,7 @@ echo "staged $(du -sh "$STAGE" | cut -f1) — $(find "$STAGE/papers" -name index
 if [ "${1:-}" = "--push" ]; then
   case "$REMOTE" in
     USER@*) echo "error: set MIT_REMOTE first, e.g."; \
-            echo "  export MIT_REMOTE=username@athena.dialup.mit.edu:~/www/"; exit 1 ;;
+            echo "  export MIT_REMOTE=username@athena.dialup.mit.edu:www/"; exit 1 ;;
   esac
   host="${REMOTE%%:*}"
   if ssh -O check "$host" 2>/dev/null; then
