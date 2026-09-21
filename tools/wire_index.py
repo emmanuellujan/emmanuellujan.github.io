@@ -7,7 +7,8 @@ import io
 import json
 import re
 
-ROOT = "/home/eljn/projects/emmanuellujan.github.io"
+import os
+ROOT = os.environ.get("SITE_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://www.emmanuellujan.com"
 IDX = f"{ROOT}/index.html"
 SITEMAP = f"{ROOT}/sitemap.xml"

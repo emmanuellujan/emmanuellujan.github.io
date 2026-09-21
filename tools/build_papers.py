@@ -14,7 +14,8 @@ import re
 
 from PIL import Image, ImageDraw, ImageFont
 
-ROOT = "/home/eljn/projects/emmanuellujan.github.io"
+import os
+ROOT = os.environ.get("SITE_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://www.emmanuellujan.com"
 FONTS = "/usr/share/fonts/opentype/inter"
 
@@ -269,6 +270,16 @@ ALL["marino2021openep"] = {"slug": "openep-electroporation-simulator",
                                         "Shared-memory parallelism"]}
 
 
+def _same_as_doi(url, doi):
+    """A link that just restates the DOI, e.g. link.springer.com/chapter/<doi>
+    or arxiv.org/abs/<id> next to doi.org/10.48550/arXiv.<id>."""
+    suffix = doi.split("/", 1)[-1]
+    if suffix and suffix.lower() in url.lower():
+        return True
+    m = re.search(r"arxiv\.(\d{4}\.\d{4,5})", doi, re.I)
+    return bool(m and m.group(1) in url)
+
+
 def related_to(key, n=3):
     """Same cluster first — the author's own grouping from ~/publications/.
 
@@ -349,6 +360,8 @@ for key, meta in edit.items():
             continue
         if l["label"] in ("Publisher", "DOI") and p["doi"]:
             continue                        # already covered by the DOI button
+        if p["doi"] and _same_as_doi(l["url"], p["doi"]):
+            continue                        # publisher/arXiv URL the DOI resolves to
         label = "Publisher" if l["label"] == "DOI" else l["label"]
         cls = "button" if actions else "button primary"
         actions.append(f'          <a class="{cls}" href="{E(l["url"])}">{label} <span aria-hidden="true">↗</span></a>')

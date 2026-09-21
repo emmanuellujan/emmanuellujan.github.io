@@ -1,3 +1,5 @@
+import os
+
 from PIL import Image, ImageDraw, ImageFont
 
 SP = "/tmp/claude-1000/-home-eljn-projects-emmanuellujan-github-io/47216750-be82-4d82-9ec6-330efff50e2b/scratchpad"
@@ -65,7 +67,7 @@ d.text((PAD, H - 40), "MIT CSAIL  ·  emmanuellujan.com", font=f_foot, fill=RED)
 credit = "Fig. 2 · Marino et al., Sci Rep 11:1423 · CC BY 4.0"
 d.text((W - PAD - d.textlength(credit, font=f_foot), H - 40), credit, font=f_foot, fill=FAINT)
 
-out = ("/home/eljn/projects/emmanuellujan.github.io/papers/"
-       "openep-electroporation-simulator/card.png")
+ROOT = os.environ.get("SITE_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+out = os.path.join(ROOT, "papers/openep-electroporation-simulator/card.png")
 card.save(out, optimize=True)
 print("wrote", out, card.size)

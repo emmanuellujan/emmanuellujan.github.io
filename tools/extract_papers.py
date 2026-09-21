@@ -8,7 +8,8 @@ import io
 import json
 import re
 
-ROOT = "/home/eljn/projects/emmanuellujan.github.io"
+import os
+ROOT = os.environ.get("SITE_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = f"{ROOT}/index.html"
 OUT = f"{ROOT}/tools/papers.auto.json"
 
@@ -69,6 +70,20 @@ for m in re.finditer(r'<li class="pub-item[^"]*">(.*?)</li>', s, re.S):
         "doi": doi.group(1) if doi else None,
         "bibtex": bib,
     })
+
+# wire_index.py rewrites each title link to papers/<slug>/, so a later run of
+# this script can no longer see the publisher URL that used to be there. Merge
+# with whatever was captured before so re-running never loses a link.
+if os.path.exists(OUT):
+    previous = {p["key"]: p for p in json.load(io.open(OUT, encoding="utf-8"))}
+    for p in papers:
+        old_links = previous.get(p["key"], {}).get("links", [])
+        have = {l["url"] for l in p["links"]}
+        for l in old_links:
+            if l["url"] not in have:
+                p["links"].append(l)
+        if not p["doi"]:
+            p["doi"] = previous.get(p["key"], {}).get("doi")
 
 io.open(OUT, "w", encoding="utf-8").write(json.dumps(papers, indent=2, ensure_ascii=False) + "\n")
 print(f"extracted {len(papers)} papers -> {OUT}")
