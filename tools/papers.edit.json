@@ -56,7 +56,8 @@
       "High-performance linear algebra"
     ],
     "pdf": "https://ieee-hpec.org/wp-content/uploads/2026/01/120.pdf",
-    "cluster": "Algorithmic discovery"
+    "cluster": "Algorithmic discovery",
+    "award": "Outstanding Short Paper Award · IEEE HPEC 2025"
   },
   "ouko2025decision": {
     "slug": "llm-geothermal-decision-support",

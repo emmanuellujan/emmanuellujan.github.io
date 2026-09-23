@@ -176,7 +176,7 @@ PAGE = """<!doctype html>
         <h1 id="paper-title">{title}</h1>
         <p class="authors">{authors_html}</p>
         <p class="venue">{venue_full}</p>
-        <div class="actions" aria-label="Paper resources">
+{award_html}        <div class="actions" aria-label="Paper resources">
 {actions}
           <a class="button" href="#cite">Cite this paper <span aria-hidden="true">↓</span></a>
         </div>
@@ -414,10 +414,22 @@ for key, meta in edit.items():
     io.open(f"{outdir}/citation.bib", "w", encoding="utf-8").write(bib.strip() + "\n")
     make_card(p, meta, f"{outdir}/card.png")
 
+    # Optional: a distinction on the paper itself, from the edit layer.
+    award_html = ""
+    if meta.get("award"):
+        award_html = (
+            '        <p class="award">'
+            '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"'
+            ' stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+            '<circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>'
+            f'{E(meta["award"])}</p>\n'
+        )
+
     page = PAGE.format(
         title=E(p["title"]), short_title=E(p["title"][:60]), description=E(desc),
         url=url, year=E(p["year"]), citation_authors=citation_authors,
         venue_field=venue_field, venue_full=E(p["venue"]), venue_short=E(venue_short(p)),
+        award_html=award_html,
         doi_meta=doi_meta, pdf_meta=pdf_meta, authors_plain=E(", ".join(names)),
         authors_html=authors_html, kind_label=KIND_LABEL[kind],
         actions="\n".join(actions), abstract_html=abstract_html, source_note=source_note,
